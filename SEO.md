@@ -18,13 +18,13 @@ The parser preserves the original HTML and replaces complete element contents us
 
 The build is idempotent: it replaces existing SEO metadata rather than appending duplicates. No npm dependencies are needed. `buildPages({ distDir, siteUrl, write: false })` can also be imported for checks without changing files.
 
-The current production origin defaults to `https://szpont-engine.violet-quail-2164.chatgpt.site`. A future domain can be supplied at build time:
+The current production origin defaults to `https://plompy-engine.violet-quail-2164.chatgpt.site`. The Site's slug has been updated alongside its title, product copy, source links and structured-data names. A future domain can be supplied at build time:
 
 ```sh
 SITE_URL=https://example.com node scripts/build-pages.mjs
 ```
 
-`SITE_URL` must be an origin, with no subdirectory, query, fragment or credentials. The generator uses it consistently for canonical links, language alternatives, social images, structured data, the sitemap and the robots sitemap location. A custom domain has not yet been selected. When changing domains, configure the domain and redirects at the hosting layer, rebuild, and verify the live responses; setting `SITE_URL` alone does not connect a domain.
+`SITE_URL` must be an origin, with no subdirectory, query, fragment or credentials. The generator uses it consistently for canonical links, language alternatives, social images, structured data, the sitemap and the robots sitemap location. The preferred candidate `plompy.dev` has not been purchased or connected. When changing domains, configure the domain and redirects at the hosting layer, rebuild, and verify the live responses; setting `SITE_URL` alone does not connect a domain.
 
 ## Publication and verification
 

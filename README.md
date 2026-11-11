@@ -1,6 +1,6 @@
-# szpont-engine website
+# plompy-engine website
 
-A portable, bilingual English/Polish presentation of [szpont-engine](https://github.com/dalkedev/szpont-engine). Static HTML, CSS and JavaScript, with a dependency-free Node build for localized pages and SEO metadata.
+A portable, bilingual English/Polish presentation of [plompy-engine](https://github.com/dalkedev/plompy-engine). Static HTML, CSS and JavaScript, with a dependency-free Node build for localized pages and SEO metadata.
 
 ## Run
 
@@ -27,13 +27,13 @@ Open [the English preview](http://127.0.0.1:4173/) or [the Polish preview](http:
 
 `dist/index.html`: English copy, page structure and links. `dist/app.js`: Polish copy, interactive scenes, integration descriptions and file examples. `dist/style.css`: core layout, approved navbar/footer interactions and responsive styles. `dist/catalog.css`: tool catalog and visible FAQ layout. `dist/motion.css`: repeating signal animation. `dist/assets/`: local fonts, artwork and licenses. `scripts/build-pages.mjs`: static language pages and SEO output. Edit the English source and Polish dictionary, then rebuild; do not hand-edit generated `dist/pl/index.html`.
 
-Product claims were checked against upstream v0.11.1 and documentation on 2026-11-11. Update the release link and installation command together when the supported version changes. Examples are synthetic and no real model, Discord account or VPS is connected to the page.
+Product claims were checked against upstream v0.12.0 and documentation on 2026-11-11. Update the release link and installation command together when the supported version changes. Examples are synthetic and no real model, Discord account or VPS is connected to the page.
 
-The repository logo is used without redrawing. Source artwork and social preview: `dalkedev/szpont-engine/assets/brand/`, under its included MIT license. Sora and IBM Plex Mono are distributed with their OFL licenses in `dist/assets/`.
+Plompy's mascot logo and social preview live in `dist/assets/`; the corresponding engine brand assets live in `dalkedev/plompy-engine/assets/brand/`. Keep these synchronized when the identity changes. Sora and IBM Plex Mono are distributed with their OFL licenses in `dist/assets/`.
 
 ## Domain
 
-No domain has been chosen, purchased or connected. Naming clearance is pending. Once the name and domain are settled, set `SITE_URL` and rebuild before deployment.
+The selected project name is plompy-engine. The preferred domain candidate, `plompy.dev`, has not been purchased or connected. The Sites preview uses https://plompy-engine.violet-quail-2164.chatgpt.site. Once a domain is connected, set `SITE_URL` and rebuild before deployment.
 
 ## Preview access
 

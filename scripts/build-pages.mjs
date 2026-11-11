@@ -4,8 +4,8 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import { runInNewContext } from 'node:vm';
 
 const projectDir = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const defaultOrigin = 'https://szpont-engine.violet-quail-2164.chatgpt.site';
-const repository = 'https://github.com/dalkedev/szpont-engine';
+const defaultOrigin = 'https://plompy-engine.violet-quail-2164.chatgpt.site';
+const repository = 'https://github.com/dalkedev/plompy-engine';
 const voidTags = new Set('area base br col embed hr img input link meta param source track wbr'.split(' '));
 const rawTextTags = new Set(['script', 'style', 'textarea', 'title']);
 const escapeHTML = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
@@ -87,11 +87,26 @@ function setAttribute(opening, name, value) {
   return value === null ? clean : clean.replace(/\s*(\/?>)$/, ` ${name}="${escapeHTML(value)}"$1`);
 }
 
+const polishLabels = new Map([
+  ['plompy-engine home', 'plompy-engine — strona główna'],
+  ['plompy-engine on GitHub', 'plompy-engine na GitHubie'],
+  ['Main navigation', 'Nawigacja główna'],
+  ['Language', 'Język'],
+  ['Discord connects to plompy-engine on your Linux VPS, then to your chosen coding runner and tools.', 'Discord łączy się z plompy-engine na Twoim VPS z Linuksem, a następnie z wybranym agentem i narzędziami.'],
+  ['Demonstration steps', 'Kroki demonstracji'],
+  ['Coding runner', 'Agent do kodu'],
+  ['Choose an integration', 'Wybierz integrację'],
+  ['Agent context files', 'Pliki kontekstu agenta'],
+]);
+
 function setPageLanguage(html, language) {
   const edits = [];
   for (const node of parseHTML(html)) {
     let opening = html.slice(node.start, node.openEnd);
     if (node.tag === 'html') opening = setAttribute(opening, 'lang', language);
+    if (language === 'pl' && polishLabels.has(node.attrs['aria-label'])) {
+      opening = setAttribute(opening, 'aria-label', polishLabels.get(node.attrs['aria-label']));
+    }
     if (node.attrs['data-lang']) {
       const selected = node.attrs['data-lang'] === language;
       if (node.tag === 'a') opening = setAttribute(opening, 'aria-current', selected ? 'page' : null);
@@ -133,16 +148,16 @@ function translatePage(html, dictionary) {
 
 const metadata = {
   en: {
-    title: 'szpont-engine — Self-hosted Discord AI agent engine',
+    title: 'plompy-engine — Self-hosted Discord AI agent engine',
     description: 'Run AI coding agents from Discord on your own Linux server. Persistent sessions, Markdown context and tools you choose. Open-source TypeScript engine.',
     locale: 'en_US', alternateLocale: 'pl_PL',
-    imageAlt: 'szpont-engine — Your agents. Your machine. Your rules.',
+    imageAlt: 'plompy-engine — Your agents. Your machine. Your rules.',
   },
   pl: {
-    title: 'szpont-engine — Agenci AI na Discordzie, na Twoim serwerze',
+    title: 'plompy-engine — Agenci AI na Discordzie, na Twoim serwerze',
     description: 'Uruchamiaj agentów AI z Discorda na własnym serwerze Linux. Trwałe sesje, kontekst w Markdown i wybrane narzędzia. Otwarty kod w TypeScript na licencji MIT.',
     locale: 'pl_PL', alternateLocale: 'en_US',
-    imageAlt: 'szpont-engine — Twoi agenci. Twoja maszyna. Twoje zasady.',
+    imageAlt: 'plompy-engine — Twoi agenci. Twoja maszyna. Twoje zasady.',
   },
 };
 
@@ -163,8 +178,8 @@ function replaceMetadata(html, language, origin) {
   const structured = {
     '@context': 'https://schema.org',
     '@graph': [
-      { '@type': 'WebSite', '@id': `${rootURL}#website`, name: 'szpont-engine', url: rootURL, inLanguage: ['en', 'pl'] },
-      { '@type': 'SoftwareSourceCode', '@id': `${rootURL}#software`, name: 'szpont-engine', description: meta.description, url: pageURL,
+      { '@type': 'WebSite', '@id': `${rootURL}#website`, name: 'plompy-engine', url: rootURL, inLanguage: ['en', 'pl'] },
+      { '@type': 'SoftwareSourceCode', '@id': `${rootURL}#software`, name: 'plompy-engine', description: meta.description, url: pageURL,
         codeRepository: repository, license: `${repository}/blob/main/LICENSE`, programmingLanguage: 'TypeScript', runtimePlatform: 'Node.js on Linux' },
     ],
   };
@@ -177,7 +192,7 @@ function replaceMetadata(html, language, origin) {
     `  <link rel="alternate" hreflang="en" href="${escapeHTML(rootURL)}">`,
     `  <link rel="alternate" hreflang="pl" href="${escapeHTML(`${origin}/pl/`)}">`,
     `  <link rel="alternate" hreflang="x-default" href="${escapeHTML(rootURL)}">`,
-    ...Object.entries({ type: 'website', site_name: 'szpont-engine', title: meta.title, description: meta.description, url: pageURL, locale: meta.locale, 'locale:alternate': meta.alternateLocale, image: imageURL, 'image:alt': meta.imageAlt }).map(([key, value]) => `  <meta property="og:${key}" content="${escapeHTML(value)}">`),
+    ...Object.entries({ type: 'website', site_name: 'plompy-engine', title: meta.title, description: meta.description, url: pageURL, locale: meta.locale, 'locale:alternate': meta.alternateLocale, image: imageURL, 'image:alt': meta.imageAlt }).map(([key, value]) => `  <meta property="og:${key}" content="${escapeHTML(value)}">`),
     ...Object.entries({ card: 'summary_large_image', title: meta.title, description: meta.description, image: imageURL, 'image:alt': meta.imageAlt }).map(([key, value]) => `  <meta name="twitter:${key}" content="${escapeHTML(value)}">`),
     `  <script type="application/ld+json" id="site-structured-data">\n${json}\n  </script>`,
   ].join('\n');

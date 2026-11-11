@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-11-11T21:53:15.606847+00:00",
-  "title": "Design System: szpont-engine",
+  "title": "Design System: plompy-engine",
   "extensions": {
     "colorMeta": {
       "graphite": {
@@ -307,7 +307,7 @@
   ],
   "narrative": {
     "northStar": "An animated connection",
-    "overview": "An animated connection grounded in the existing continuous-thread identity: graphite, warm paper and a precise orange signal. Large Sora headings give the page its voice; compact Plex commands, filenames and route labels make the technical detail legible. The original logo remains the visual anchor.\n\nDepth comes from tonal surfaces, hairline borders and the server illustration’s restrained perspective. Motion explains the path between Discord, the user’s machine and tools. English and Polish share the same system, with responsive type and direct controls preserving the experience on small screens.",
+    "overview": "An animated connection built around Plompy’s playful fish identity: graphite, warm paper and a precise orange signal. Large Sora headings give the page its voice; compact Plex commands, filenames and route labels make the technical detail legible. The Plompy mascot is the visual anchor.\n\nDepth comes from tonal surfaces, hairline borders and the server illustration’s restrained perspective. Motion explains the path between Discord, the user’s machine and tools. English and Polish share the same system, with responsive type and direct controls preserving the experience on small screens.",
     "keyCharacteristics": [
       "Graphite surfaces, warm paper and one orange accent.",
       "Large balanced headlines beside compact technical detail.",
@@ -322,7 +322,7 @@
       }
     ],
     "dos": [
-      "Do retain the original logo and the graphite, paper and orange identity.",
+      "Do use the Plompy mascot and retain the graphite, paper and orange identity.",
       "Do use dark text on orange and dark body copy on paper.",
       "Do keep commands and filenames in Plex and explanatory prose in Sora.",
       "Do keep integration tabs, runner choices, file tabs and scene controls usable with a keyboard.",

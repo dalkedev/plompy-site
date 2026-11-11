@@ -1,6 +1,6 @@
 ---
-name: szpont-engine
-description: An animated connection, grounded in the continuous-thread identity.
+name: plompy-engine
+description: An animated connection with a playful Plompy fish mascot.
 colors:
   graphite: "#111315"
   panel: "#191c1e"
@@ -102,13 +102,13 @@ components:
     padding: "17px 12px"
 ---
 
-# Design System: szpont-engine
+# Design System: plompy-engine
 
 ## Overview
 
 **Creative North Star: "An animated connection"**
 
-An animated connection grounded in the existing continuous-thread identity: graphite, warm paper and a precise orange signal. Large Sora headings give the page its voice; compact Plex commands, filenames and route labels make the technical detail legible. The original logo remains the visual anchor.
+An animated connection built around Plompy’s playful fish identity: graphite, warm paper and a precise orange signal. Large Sora headings give the page its voice; compact Plex commands, filenames and route labels make the technical detail legible. The Plompy mascot is the visual anchor.
 
 Depth comes from tonal surfaces, hairline borders and the server illustration’s restrained perspective. Motion explains the path between Discord, the user’s machine and tools. English and Polish share the same system, with responsive type and direct controls preserving the experience on small screens.
 
@@ -173,7 +173,7 @@ Focus is a visible 2px orange outline with 6px offset; the orange section uses a
 
 ### Navigation and language
 
-The header combines the original logo, text navigation, EN/PL controls and a GitHub link. The selected language has an orange inset tile with graphite text, driven by `aria-current="page"`. EN and PL are native links to `/` and `/pl/`, each served as generated static HTML. Unselected language links and GitHub reveal a charcoal surface with an orange border on hover or keyboard focus. The GitHub icon tips slightly on pointer hover. The GitHub text label hides on phones while its accessible icon link remains.
+The header combines the Plompy logo, text navigation, EN/PL controls and a GitHub link. The selected language has an orange inset tile with graphite text, driven by `aria-current="page"`. EN and PL are native links to `/` and `/pl/`, each served as generated static HTML. Unselected language links and GitHub reveal a charcoal surface with an orange border on hover or keyboard focus. The GitHub icon tips slightly on pointer hover. The GitHub text label hides on phones while its accessible icon link remains.
 
 Header navigation and every footer link, including the wordmark, turn orange and reveal an underline from left to right on hover or keyboard focus. Pointer hover raises them by 2px; pressing moves them down 1px and scales to 0.96. GitHub and language presses fill orange with graphite text. Transitions use 160–260ms ease-out, shortened to 70ms on press. Feedback preserves the existing layout footprint; footer links have 44px hit areas. Hover motion is limited to fine pointers and respects the global motion control. Focus retains the visible orange outline. A link's pressed state is momentary; only the language selector represents a persistent selection.
 
@@ -200,7 +200,7 @@ The hero repeats a complete ten-second route: orange request into the engine, se
 ## Do's and Don'ts
 
 ### Do:
-- Do retain the original logo and the graphite, paper and orange identity.
+- Do use the Plompy mascot and retain the graphite, paper and orange identity.
 - Do use dark text on orange and dark body copy on paper.
 - Do keep commands and filenames in Plex and explanatory prose in Sora.
 - Do keep integration tabs, runner choices, file tabs and scene controls usable with a keyboard.
