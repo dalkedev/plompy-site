@@ -83,6 +83,8 @@ footer a {
 .header-github .icon { transition: transform 260ms cubic-bezier(.16, 1, .3, 1); }
 footer a { display: inline-flex; align-items: center; min-height: 44px; }
 .site-header nav a::after,
+footer .coffee-link { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+footer .coffee-link .icon { width: 18px; height: 18px; }
 footer a::after {
   content: '';
   position: absolute;

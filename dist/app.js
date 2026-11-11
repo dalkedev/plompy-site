@@ -3,6 +3,7 @@ const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 const icon = (name) => `<svg class="icon" aria-hidden="true"><use href="#i-${name}"/></svg>`;
 const en = Object.fromEntries($$('[data-i18n]').map(el => [el.dataset.i18n, el.innerHTML]));
 const pl = {
+  coffee:"Postaw mi kawę",
   faqHeading:"Warto wiedzieć przed startem.",
   catalogLabel:"Wybierz narzędzie",
   setupPreview:"Podgląd konfiguracji",

@@ -31,6 +31,8 @@ Product claims were checked against upstream v0.12.0 and documentation on 2026-1
 
 Plompy's mascot logo and social preview live in `dist/assets/`; the corresponding engine brand assets live in `dalkedev/plompy-engine/assets/brand/`. Keep these synchronized when the identity changes. Sora and IBM Plex Mono are distributed with their OFL licenses in `dist/assets/`.
 
+Both language routes include a native footer link to [Buy Me a Coffee](https://buymeacoffee.com/dalkedev), without a third-party widget or tracking script.
+
 ## Domain
 
 The selected project name is plompy-engine. The preferred domain candidate, `plompy.dev`, has not been purchased or connected. The Sites preview uses https://plompy-engine.violet-quail-2164.chatgpt.site. Once a domain is connected, set `SITE_URL` and rebuild before deployment.
