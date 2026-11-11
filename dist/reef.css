@@ -1,0 +1,66 @@
+/* The quieter shore after the scroll journey. */
+:root{--aqua:#9cded3;--ocean-line:#35494a;--sea:#152225}
+.integrations-section{position:relative;border-top:0;padding-top:112px}
+.integrations-section .section-heading h2{max-width:640px}
+.tool-catalog{gap:42px;position:relative}
+.tool-choices{gap:0 18px}
+.tool-choice{border:0;border-bottom:1px solid var(--line);border-radius:0;min-height:100px;padding:18px 12px 18px 0;background:transparent}
+.tool-choice>.icon:first-child{width:34px;height:34px;padding:6px;border:1px solid var(--line);border-radius:50%;color:var(--paper);transition:color 180ms,border-color 180ms,transform 260ms}
+.tool-choice strong{font-size:14px}
+.tool-choice small{font-size:11px}
+.tool-choice[aria-selected=true]{background:transparent;border-color:var(--orange)}
+.tool-choice[aria-selected=true]>.icon:first-child{border-color:var(--orange);color:var(--orange);transform:rotate(-10deg)}
+.tool-choice>.icon:last-child{top:14px;right:2px}
+.tool-stage{background:var(--sea);border-color:#385052;position:relative;border-radius:14px}
+.tool-stage::before{content:'';position:absolute;right:-100px;top:-120px;width:300px;height:300px;border:1px solid #2c4244;border-radius:50%;pointer-events:none}
+.tool-preview{position:relative;min-height:506px;padding:32px}
+.tool-preview h3{font-size:40px;letter-spacing:-.04em}
+.tool-mark{border-radius:50%;color:var(--aqua);border-color:#628e88;background:transparent;width:58px;height:58px}
+.tool-protocol{color:#afd0cb}
+.tool-description{color:#c5d2ce!important}
+.tool-guide{font-size:12px}
+.tool-command{border-color:#385052;background:#111a1c}
+.tool-command-top{border-color:#385052}
+.tool-command-top button,.install-header button{min-height:44px;min-width:44px}
+.tool-requirements{color:#abbfbb!important}
+.tool-count{font-family:Sora,sans-serif}
+.runner-bar>div:first-child>small{font-family:Sora,sans-serif;font-size:11px}
+.runner-options button{min-height:52px}
+.custom-section,.github-section{position:relative;isolation:isolate}
+.shoreline{display:block;position:absolute;left:0;top:-1px;width:100%;height:66px;background:var(--bg);stroke:none;pointer-events:none}
+.custom-section{padding-top:154px;padding-bottom:125px}
+.custom-section .shoreline path{fill:var(--paper)}
+.custom-copy{position:relative;z-index:1}
+.custom-copy>p{max-width:48ch}
+.editor{transform:none;border:1px solid #343b3c}
+.editor-top{padding-top:25px}
+.file-tabs button{min-height:52px}
+.custom-section .text-link{min-height:44px}
+.custom-file-description{min-height:125px}
+.github-section{padding-top:100px;padding-bottom:75px;overflow:hidden}
+.github-section .shoreline path{fill:var(--orange)}
+.github-section>.wrap{position:relative}
+.github-section h2{max-width:76%;font-size:clamp(3rem,6.7vw,6rem)}
+.splash-fish{position:absolute;width:240px;height:240px;right:64px;top:90px;transform:rotate(-13deg);pointer-events:none}
+.splash-fish img{display:block;width:100%;height:100%;object-fit:contain}
+.splash-fish::before,.splash-fish::after{content:'';position:absolute;border:1.5px solid #84381e;border-radius:50%;right:0;width:20px;height:20px;top:10px}
+.splash-fish::after{right:-20px;top:-27px;width:11px;height:11px}
+.github-bottom{position:relative}
+.faq-index{display:none}
+.faq-answer h3{font-size:20px}
+.faq-answer p{font-size:14px;padding:0}
+@media(hover:hover) and (pointer:fine){
+ .tool-choice:hover,.tool-choice[aria-selected=true]:hover{background:transparent;border-color:var(--aqua);transform:none}
+ .tool-choice:hover>.icon:first-child{color:var(--aqua);border-color:var(--aqua);transform:translateY(-3px) rotate(-10deg)}
+ .tool-choice:active{transform:translateY(1px)}
+}
+@media(max-width:1150px){.tool-catalog{gap:28px}.tool-choice{gap:9px}.tool-choice strong{font-size:12px}.tool-choice small{font-size:11px}.tool-preview{padding:25px}.splash-fish{right:40px;width:210px;height:210px;top:85px}}
+@media(max-width:850px){.integrations-section{padding-top:85px}.tool-choice{min-height:106px;align-items:start}.tool-choice strong{font-size:12px}.tool-preview h3{font-size:32px}.tool-preview{padding:22px}.custom-section{padding-top:130px;padding-bottom:90px}.splash-fish{width:170px;height:170px;top:85px}.github-section h2{max-width:75%}.github-section{padding-bottom:60px}.faq-answer h3{font-size:17px}}
+@media(max-width:600px){
+ .integrations-section{padding-top:72px}.tool-catalog{gap:24px}.tool-choices{gap:0 13px}.tool-choice{min-height:95px;gap:8px;align-items:center;padding-right:4px}.tool-choice>.icon:first-child{width:30px;height:30px;padding:5px}.tool-choice small{font-size:11px}.tool-choice strong{font-size:12px}.tool-preview{min-height:505px;padding:25px}.tool-mark{width:52px;height:52px}.tool-preview h3{font-size:34px}.tool-description{min-height:130px}.tool-command code{font-size:11px;padding:14px}.tool-preview .tool-requirements{font-size:11px}.shoreline{height:40px}.custom-section{padding-top:102px;padding-bottom:76px}.custom-file-description{min-height:145px}.github-section{padding-top:74px;padding-bottom:48px}.github-section h2{font-size:clamp(2.1rem,9vw,3.5rem);max-width:100%;margin:38px 0 26px}.splash-fish{position:relative;right:auto;top:auto;width:120px;height:120px;margin:5px 8px -8px auto}.github-bottom p{font-size:14px}.faq-answer p{font-size:13px}
+}
+@media(max-width:360px){.tool-choices{gap:0 10px}.tool-choice strong{font-size:11px}.tool-choice small{font-size:11px}.tool-choice>.icon:first-child{width:27px;height:27px}.tool-preview{padding:22px}.tool-protocol{font-size:11px}}
+
+/* Legible controls at phone widths. */
+.runner-options button small,.tool-count,.tool-command-top>span,.tool-choice small{font-size:11px}
+.runner-options button small{overflow-wrap:anywhere;hyphens:auto}

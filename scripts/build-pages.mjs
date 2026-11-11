@@ -4,7 +4,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import { runInNewContext } from 'node:vm';
 
 const projectDir = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const defaultOrigin = 'https://plompy-engine.violet-quail-2164.chatgpt.site';
+const defaultOrigin = 'https://plompy.dev';
 const repository = 'https://github.com/dalkedev/plompy-engine';
 const voidTags = new Set('area base br col embed hr img input link meta param source track wbr'.split(' '));
 const rawTextTags = new Set(['script', 'style', 'textarea', 'title']);
@@ -91,6 +91,9 @@ const polishLabels = new Map([
   ['plompy-engine home', 'plompy-engine — strona główna'],
   ['plompy-engine on GitHub', 'plompy-engine na GitHubie'],
   ['Main navigation', 'Nawigacja główna'],
+  ['Journey steps', 'Etapy podróży'],
+  ['Discord, Plompy on your server, and your connected tools', 'Discord, Plompy na Twoim serwerze i podłączone narzędzia'],
+  ['Say hello to Plompy', 'Przywitaj się z Plompy'],
   ['Language', 'Język'],
   ['Discord connects to plompy-engine on your Linux VPS, then to your chosen coding runner and tools.', 'Discord łączy się z plompy-engine na Twoim VPS z Linuksem, a następnie z wybranym agentem i narzędziami.'],
   ['Demonstration steps', 'Kroki demonstracji'],

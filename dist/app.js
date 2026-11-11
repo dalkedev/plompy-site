@@ -3,6 +3,32 @@ const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 const icon = (name) => `<svg class="icon" aria-hidden="true"><use href="#i-${name}"/></svg>`;
 const en = Object.fromEntries($$('[data-i18n]').map(el => [el.dataset.i18n, el.innerHTML]));
 const pl = {
+  "journeyYou":"Ty",
+  "journeyRequest":"<code>!work 30m</code> Dodaj walidację ilości w API. Pokryj przypadki brzegowe testami.",
+  "journeyAccepted":"Zadanie przyjęte. Sprawdzę projekt, przygotuję zmianę i uruchomię testy.",
+  "journeySavedQueue":"Zapisane w kolejce.",
+  "journeyChooseRunner":"Wybrany przez Ciebie agent",
+  "journeyLinuxHost":"Na Twojej maszynie z Linuksem",
+  "journeyRepository":"Twoje repozytorium",
+  "journeyInstructions":"Twoje instrukcje",
+  "journeyBrowser":"Przeglądarka",
+  "journeyConnections":"Twoje połączenia",
+  "journeyResult":"Dodana walidacja ilości i testy regresji. Wartości ujemne są odrzucane; zero pozostaje poprawne.",
+  "journeyResultSaved":"Wynik zapisany. Sesja zachowana.",
+  "journeyFollowup":"Super. Teraz zastosuj tę regułę w imporcie.",
+  "journeyContinue":"Poznaj narzędzia",
+  "oceanTitle":"Mała ryba.<br>Wielkie pomysły.",
+  "oceanIntro":"Twoi agenci AI, połączeni z Discordem. Wśród Twoich narzędzi, Twojego kontekstu, na Twojej maszynie.",
+  "oceanRelease":"v0.12.0 · Własny serwer. Otwarty kod.",
+  "oceanAnywhere":"Ty, z dowolnego miejsca.",
+  "oceanMessage":"zbudujmy coś",
+  "oceanSpeech":"",
+  "oceanFishHint":"przywitaj się",
+  "oceanHost":"Na Twojej maszynie z Linuksem",
+  "oceanToolNames":"GitHub / Przeglądarka / MCP",
+  "oceanReturn":"i z powrotem do Twojego wątku",
+  "oceanDive":"Płyń za rybą.<br>Zobacz, jak to działa.",
+  "oceanBottomNote":"Mały silnik. Cały ocean możliwości.",
   coffee:"Postaw mi kawę",
   faqHeading:"Warto wiedzieć przed startem.",
   catalogLabel:"Wybierz narzędzie",
@@ -35,8 +61,8 @@ const pl = {
   toolBody9:"Dodaj lokalny lub zdalny serwer MCP z jawną konfiguracją. Rozszerz narzędzia agenta o usługi, którym ufasz.",
   routeTools:'Narzędzia',toolNames:'GitHub / Przeglądarka / Research',contextNames:'Markdown / Pamięć / Git',
   skip:'Przejdź do treści',navHow:'Jak to działa',navTools:'Integracje',navCustom:'Po Twojemu',heroTitle:'Wielkie pomysły.<br>Jedna wiadomość.',heroBody:'Twoi agenci AI, połączeni z Discordem. Na Twojej maszynie. Z Twoimi narzędziami, kontekstem i zasadami.',getStarted:'Uruchom swój silnik',viewSource:'Zobacz kod',release:'v0.12.0 · Otwarty kod, Twoje zasady',fromAnywhere:'Ty, z dowolnego miejsca.',heroMessage:'zbudujmy coś',yourVps:'Twój VPS. Twój silnik.',codingAgents:'Agenci do kodu',yourTools:'Twoje narzędzia',yourContext:'Twój kontekst',selfHosted:'Na własnym Linuksie. Napisany w TypeScript.',scrollExplore:'Przewiń i podążaj za wątkiem',pauseMotion:'Zatrzymaj animacje',
-  storyTitle:'Zamknij laptopa.<br>Zachowaj wątek.',storyIntro:'Wiadomość to dopiero początek. Zobacz jej drogę z telefonu na Twoją maszynę i z powrotem.',step1Title:'Pomysł trafia<br>na Discorda.',step1Body:'Wyślij zadanie na prywatnym forum. Plompy sprawdza nadawcę, zapisuje je w trwałej kolejce i rozpoczyna pracę na Twoim Linuksie.',workExplanation:'Cel. Budżet czasu. Przestrzeń do działania.',step2Title:'Twój agent.<br>Cały zestaw narzędzi.',step2Body:'Zapisana sesja agenta korzysta z Twoich instrukcji i kontekstu. Repozytorium, przeglądarka, dokumentacja. Ty wybierasz połączenia.',goalExplanation:'Dodaj osobnego nadzorcę Codex do sprawdzenia zmian.',step3Title:'Wynik wraca.<br>Kontekst zostaje.',step3Body:'Odczytaj wynik w tym samym wątku. Kontynuuj rozmowę w zapisanej sesji. Po przerwaniu pracy sprawdź stan i świadomie wybierz sposób wznowienia.',resultExplanation:'Odczytaj zapisaną odpowiedź bez kolejnego wywołania modelu.',illustrative:'Przykładowy przebieg',scene1:'Wyślij',scene2:'Praca',scene3:'Wynik',demoDisclaimer:'Wizualizacja z przykładowymi wiadomościami. Bez połączenia z działającym agentem.',
-  toolsTitle:'Daj mu narzędzia.<br>Zobacz, co zbuduje.',toolsIntro:'Twoje repozytoria. Przeglądarka. Źródła wiedzy. Połącz używane usługi z wybranym agentem.',integrationGuide:'Zobacz konfigurację integracji',default:'domyślny',experimental:'eksperymentalny',integrationNote:'Jedno menu konfiguracji. Połączenia osobno dla każdego agenta. Własne konta i klucze API.',
+  storyTitle:'Zamknij laptopa.<br>Zachowaj wątek.',storyIntro:'Wiadomość to dopiero początek. Zobacz jej drogę z telefonu na Twoją maszynę i z powrotem.',step1Title:'Pomysł trafia<br>na Discorda.',step1Body:'Wyślij zadanie na prywatnym forum. Plompy sprawdza nadawcę, zapisuje je w trwałej kolejce i rozpoczyna pracę na Twoim Linuksie.',workExplanation:'Cel. Budżet czasu. Przestrzeń do działania.',step2Title:'Twój agent.<br>Cały zestaw narzędzi.',step2Body:'Zapisana sesja agenta korzysta z Twoich instrukcji i kontekstu. Repozytorium, przeglądarka, dokumentacja. Ty wybierasz połączenia.',goalExplanation:'Dodaj osobnego nadzorcę Codex do sprawdzenia zmian.',step3Title:'Wynik wraca.<br>Kontekst zostaje.',step3Body:'Odczytaj wynik w tym samym wątku. Kontynuuj rozmowę w zapisanej sesji. Po przerwaniu pracy sprawdź stan i świadomie wybierz sposób wznowienia.',resultExplanation:'Odczytaj zapisaną odpowiedź bez kolejnego wywołania modelu.',illustrative:'Przykładowy przebieg',scene1:'Wyślij',scene2:'Praca',scene3:'Wynik',
+  toolsTitle:'Cały ocean<br>narzędzi.',toolsIntro:'Twoje repozytoria. Przeglądarka. Źródła wiedzy. Połącz używane usługi z wybranym agentem.',integrationGuide:'Zobacz konfigurację integracji',default:'domyślny',experimental:'eksperymentalny',integrationNote:'Jedno menu konfiguracji. Połączenia osobno dla każdego agenta. Własne konta i klucze API.',
   customTitle:'Twój agent.<br>Twój sposób pracy.',customIntro:'Nadaj Plompy’emu osobowość, styl pracy i jasne granice. Jego kontekst to zwykłe pliki Markdown, które możesz czytać, edytować i wersjonować w Git.',browseTemplates:'Przejrzyj szablony workspace',exampleConfig:'Przykładowa konfiguracja',localFiles:'Lokalne pliki. Historia w Git.',
   startTitle:'Trochę konfiguracji.<br>Mnóstwo możliwości.',startIntro:'Zacznij od demonstracji offline. Potem dodaj własnego bota Discord, zalogowanego agenta i maszynę z Linuksem.',offlineDemo:'Wypróbuj demo offline',copy:'Kopiuj',offlineNote:'Przykładowe dane. Bez tokena Discorda i konta modelu. Wymaga Node.js 26.13.0+ (26.x LTS), Gita i Linuksa.',fullSetup:'Połącz swój pierwszy wątek',fullSetupBody:'Bot, agent, uprawnienia. Pełna konfiguracja.',dockerTitle:'Wolisz kontener?',dockerBody:'Ścieżka z Dockerem zawiera Codex.',firstGoal:'Daj mu prawdziwy cel',firstGoalBody:'Wykonawca, recenzent i zmiana do sprawdzenia.',
   faq1Title:'Czy to gotowa usługa AI w chmurze?',faq1Body:'Nie. plompy-engine to oprogramowanie na licencji MIT, które uruchamiasz samodzielnie na Linuksie. Zapewniasz maszynę, bota Discord i dostęp do modelu. VPS to jeden ze sposobów hostowania; zewnętrzne usługi mogą mieć własne opłaty. CLI działa na Twojej maszynie; zapytania do modelu mogą trafiać do zewnętrznego dostawcy.',faq2Title:'Czy mogę korzystać ze wszystkich trzech agentów?',faq2Body:'Codex jest domyślny. Adaptery Claude Code i OpenCode są eksperymentalne i mają inne granice wykonywania zadań. Nadzorowane cele i obrazy wymagają obecnie Codex. Opublikowany obraz Dockera zawiera tylko Codex.',faq3Title:'Co się stanie, jeśli praca zostanie przerwana?',faq3Body:'Przyjęte zadania i wyniki mają trwały zapis. Przerwana praca pozostaje widoczna do sprawdzenia i jawnego wznowienia; niepewne działania zewnętrzne nie są automatycznie powtarzane. Wiadomości wysłane podczas pełnej awarii mogły nie trafić do kolejki. Wersja publiczna korzysta z jednego wspólnego workera.',
@@ -64,7 +90,6 @@ let lang = location.pathname.startsWith('/pl') ? 'pl' : 'en';
 let activeTool = 'github';
 let activeRunner = 'codex';
 let toolCopyTimer;
-let scene = 0;
 let activeFile = 'soul';
 let copyTimer;
 const motionPreference = matchMedia('(prefers-reduced-motion: reduce)');
@@ -80,10 +105,8 @@ function applyLanguage(next) {
   $('.runner-options').setAttribute('aria-label', localized(['Coding runner','Agent do kodu']));
   $('nav').setAttribute('aria-label', localized(['Main navigation','Nawigacja główna']));
   $('.language').setAttribute('aria-label',localized(['Language','Język']));
-  $('.network').setAttribute('aria-label',localized(['Discord connects to plompy-engine on your Linux VPS, then to your chosen coding runner and tools.','Discord łączy się z plompy-engine na Twoim VPS z Linuksem, a następnie z wybranym agentem i narzędziami.']));
-  $('.demo-tabs').setAttribute('aria-label',localized(['Demonstration steps','Kroki demonstracji']));
   $('.file-tabs').setAttribute('aria-label',localized(['Agent context files','Pliki kontekstu agenta']));
-  renderIntegration(activeTool); renderFile(activeFile); renderScene(scene, false); updateMotion();
+  renderIntegration(activeTool); renderFile(activeFile); updateMotion();
 }
 function renderIntegration(id){
   activeTool=id;
@@ -102,34 +125,12 @@ function renderFile(key){
   $('#file-code').innerHTML=file[lang].split('\n').map(line=>`<span class="code-line ${line.startsWith('#')?'md-heading':line.startsWith('-')?'md-bullet':''}">${escapeHtml(line)||' '}</span>`).join('');
   $('#file-description').innerHTML=`<h3>${file.name}</h3><p>${localized(file.desc)}</p>`;
 }
-function chatRow(name,content,isEngine=false,meta=''){
- return `<div class="chat-row"><div class="chat-avatar ${isEngine?'engine':''}">${isEngine?'<img src="/assets/logo.png" alt="">':'A'}</div><div><strong class="chat-name">${name}<small>${meta}</small></strong><div class="chat-message">${content}</div></div></div>`;
-}
-function renderScene(index,animate=true){
- scene=index;
- $$('[data-scene]').forEach(button=>{const selected=Number(button.dataset.scene)===index;button.classList.toggle('active',selected);button.setAttribute('aria-pressed',String(selected))});
- $$('.story-step').forEach(step=>step.classList.toggle('active',Number(step.dataset.step)===index));
- const you=localized(['You','Ty']);
- const divider='<div class="chat-divider" aria-hidden="true"></div>';
- let html='';
- if(index===0){
-   html=chatRow(you,localized(['<code>!work 30m</code> Add quantity validation to the API. Cover the edge cases with tests.','<code>!work 30m</code> Dodaj walidację ilości w API. Pokryj przypadki brzegowe testami.']),false,'14:32')+divider+chatRow('Plompy',localized(['Task accepted. I’ll inspect the project, make a focused change, and run the tests.','Zadanie przyjęte. Sprawdzę projekt, przygotuję zmianę i uruchomię testy.']),true,'14:32')+`<div class="task-receipt"><span>${icon('check')}${localized(['Saved to SQLite','Zapisano w SQLite'])}</span><span>queued</span></div>`;
- }else if(index===1){
-   html=chatRow('Plompy',localized(['The worker uses your runner session, local instructions and connected tools.','Wykonawca korzysta z zapisanej sesji, lokalnych instrukcji i podłączonych narzędzi.']),true,localized(['on your Linux host','na Twoim Linuksie']))+`<ul class="tool-log"><li>${icon('check')}USER.md + POLICY.md + MEMORY.md</li><li>${icon('check')}GitHub CLI · ${localized(['inspect repository','sprawdź repozytorium'])}</li><li>${icon('check')}${localized(['Edit code and run tests','Zmień kod i uruchom testy'])}</li></ul><pre class="diff">+ if (quantity &lt; 0) {\n+   throw new InvalidQuantityError();\n+ }</pre><div class="task-receipt"><span>${localized(['Optional: !goal + Codex review','Opcjonalnie: !goal + kontrola Codex'])}</span></div>`;
- }else{
-   html=chatRow('Plompy',localized(['Added quantity validation and regression tests. Negative quantities are rejected; zero is still valid. The focused tests pass in this example.','Dodana walidacja ilości i testy regresji. Wartości ujemne są odrzucane; zero pozostaje poprawne. W tym przykładzie testy przechodzą.']),true,'14:39')+`<div class="task-receipt"><span>${icon('check')}${localized(['Result saved','Wynik zapisany'])}</span><span>completed</span></div>`+divider+chatRow(you,localized(['Nice. Now apply the same rule to the import.','Super. Teraz zastosuj tę regułę w imporcie.']),false,'14:41');
- }
- const content=$('#demo-content');content.innerHTML=html;content.classList.remove('scene-enter');
- if(animate&&!motionOff){void content.offsetWidth;content.classList.add('scene-enter')}
- $('#demo-status').textContent=localized([['Task accepted','Worker + connected tools','Same thread. Saved session.'][index],['Zadanie przyjęte','Agent + podłączone narzędzia','Ten sam wątek. Zapisana sesja.'][index]]);
- $('.demo-panel').dataset.scene=String(index);
- $('.demo-panel').style.setProperty('--route-progress',String([.15,.7,1][index]));
-}
 function updateMotion(){
  document.documentElement.dataset.motion=motionOff?'off':'on';
  const button=$('.motion-toggle');button.setAttribute('aria-pressed',String(motionOff));
  $('use',button).setAttribute('href',motionOff?'#i-play':'#i-pause');
  $('span',button).textContent=motionOff?localized(['Enable motion','Włącz animacje']):localized(['Pause motion','Zatrzymaj animacje']);
+ document.dispatchEvent(new CustomEvent('plompy:motion-change',{detail:{paused:motionOff}}));
 }
 $$('[data-tool]').forEach(button=>button.addEventListener('click',()=>renderIntegration(button.dataset.tool)));
 $$('[data-runner]').forEach(button=>button.addEventListener('click',()=>selectRunner(button.dataset.runner)));
@@ -155,11 +156,8 @@ $('.file-tabs').addEventListener('keydown',event=>{
  if(event.key==='ArrowRight')index=(index+1)%tabs.length;else if(event.key==='ArrowLeft')index=(index-1+tabs.length)%tabs.length;else if(event.key==='Home')index=0;else if(event.key==='End')index=tabs.length-1;else return;
  event.preventDefault();renderFile(tabs[index].dataset.file);tabs[index].focus();
 });
-$$('[data-scene]').forEach(button=>button.addEventListener('click',()=>{
- const index=Number(button.dataset.scene);renderScene(index);
- if(innerWidth>600)$(`.story-step[data-step="${index}"]`).scrollIntoView({behavior:motionOff?'instant':'smooth',block:'center'});
-}));
 $('.motion-toggle').addEventListener('click',()=>{motionOff=!motionOff;updateMotion()});
+document.addEventListener('plompy:motion-toggle',()=>{motionOff=!motionOff;updateMotion()});
 motionPreference.addEventListener('change',event=>{motionOff=event.matches;updateMotion()});
 $('#copy-command').addEventListener('click',async()=>{
  const button=$('#copy-command');const content=$('#install-code').textContent;let success=false;
@@ -168,26 +166,4 @@ $('#copy-command').addEventListener('click',async()=>{
  const message=localized(['Copied','Skopiowano']);$('span',button).textContent=message;$('use',button).setAttribute('href','#i-check');$('#copy-status').textContent=message;
  clearTimeout(copyTimer);copyTimer=setTimeout(()=>{$('span',button).textContent=localized(['Copy','Kopiuj']);$('use',button).setAttribute('href','#i-copy')},2200);
 });
-let scrollScheduled=false;
-function updateScroll(){
- scrollScheduled=false;
- if(innerWidth<=600)return;
- const steps=$$('.story-step');const center=innerHeight*.5;
- let nearest=scene,min=Infinity;steps.forEach((step,index)=>{const box=step.getBoundingClientRect();const distance=Math.abs(box.top+box.height/2-center);if(distance<min){min=distance;nearest=index}});
- const layout=$('.story-layout').getBoundingClientRect();
- if(layout.top<innerHeight*.65&&layout.bottom>innerHeight*.3&&nearest!==scene)renderScene(nearest);
- const progress=Math.max(0,Math.min(1,(center-layout.top)/layout.height));
- $('.demo-panel').style.setProperty('--story-progress',`${progress*100}%`);
- $('.demo-panel').style.setProperty('--route-progress',String(progress));
-}
-addEventListener('scroll',()=>{if(!scrollScheduled){scrollScheduled=true;requestAnimationFrame(updateScroll)}},{passive:true});
-addEventListener('resize',updateScroll);
-applyLanguage(lang);updateScroll();
-
-// Keep the continuous diagram idle outside the viewport and in background tabs.
-let networkVisible=true;
-const syncNetwork=()=>{$('.network').dataset.paused=String(!networkVisible||document.hidden)};
-const networkObserver=new IntersectionObserver(([entry])=>{networkVisible=entry.isIntersecting;syncNetwork()});
-networkObserver.observe($('.network'));
-document.addEventListener('visibilitychange',syncNetwork);
-syncNetwork();
+applyLanguage(lang);

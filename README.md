@@ -40,3 +40,9 @@ The selected project name is plompy-engine. The preferred domain candidate, `plo
 ## Preview access
 
 The initial Sites deployment is owner-private. A public release and custom-domain connection can be performed when the owner chooses the final domain.
+
+## Ocean walkthrough
+
+The hero uses the existing Plompy mascot and SVG connection paths. `ocean-hero.js` handles the greeting and visibility-based animation pause. `journey.js` maps native vertical scroll to a horizontal three-stage walkthrough on fine-pointer viewports at least 1000 × 650 px; mobile, touch and paused motion use normal vertical document flow. Stage controls are keyboard accessible. Both motion controls synchronize through `plompy:motion-toggle` and the document motion attribute. The global motion preference honors the operating system.
+
+Production origin: `https://plompy.dev`. Vercel serves the static `dist` output; the existing Sites deployment remains an owner-private preview. Rebuild metadata before publishing when the origin changes.

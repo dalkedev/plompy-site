@@ -8,28 +8,32 @@
   <link rel="preload" href="/assets/sora-semibold.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/catalog.css">
-  <link rel="stylesheet" href="/motion.css">
+  <link rel="stylesheet" href="/ocean-hero.css">
+  <link rel="stylesheet" href="/journey.css">
+  <link rel="stylesheet" href="/reef.css">
   <script src="/app.js" defer></script>
+  <script src="/ocean-hero.js" defer></script>
+  <script src="/journey.js" defer></script>
   <title>plompy-engine — Self-hosted Discord AI agent engine</title>
   <meta name="description" content="Run AI coding agents from Discord on your own Linux server. Persistent sessions, Markdown context and tools you choose. Open-source TypeScript engine.">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <link rel="canonical" href="https://plompy-engine.violet-quail-2164.chatgpt.site/">
-  <link rel="alternate" hreflang="en" href="https://plompy-engine.violet-quail-2164.chatgpt.site/">
-  <link rel="alternate" hreflang="pl" href="https://plompy-engine.violet-quail-2164.chatgpt.site/pl/">
-  <link rel="alternate" hreflang="x-default" href="https://plompy-engine.violet-quail-2164.chatgpt.site/">
+  <link rel="canonical" href="https://plompy.dev/">
+  <link rel="alternate" hreflang="en" href="https://plompy.dev/">
+  <link rel="alternate" hreflang="pl" href="https://plompy.dev/pl/">
+  <link rel="alternate" hreflang="x-default" href="https://plompy.dev/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="plompy-engine">
   <meta property="og:title" content="plompy-engine — Self-hosted Discord AI agent engine">
   <meta property="og:description" content="Run AI coding agents from Discord on your own Linux server. Persistent sessions, Markdown context and tools you choose. Open-source TypeScript engine.">
-  <meta property="og:url" content="https://plompy-engine.violet-quail-2164.chatgpt.site/">
+  <meta property="og:url" content="https://plompy.dev/">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="pl_PL">
-  <meta property="og:image" content="https://plompy-engine.violet-quail-2164.chatgpt.site/assets/social-preview.jpg">
+  <meta property="og:image" content="https://plompy.dev/assets/social-preview.jpg">
   <meta property="og:image:alt" content="plompy-engine — Your agents. Your machine. Your rules.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="plompy-engine — Self-hosted Discord AI agent engine">
   <meta name="twitter:description" content="Run AI coding agents from Discord on your own Linux server. Persistent sessions, Markdown context and tools you choose. Open-source TypeScript engine.">
-  <meta name="twitter:image" content="https://plompy-engine.violet-quail-2164.chatgpt.site/assets/social-preview.jpg">
+  <meta name="twitter:image" content="https://plompy.dev/assets/social-preview.jpg">
   <meta name="twitter:image:alt" content="plompy-engine — Your agents. Your machine. Your rules.">
   <script type="application/ld+json" id="site-structured-data">
 {
@@ -37,9 +41,9 @@
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://plompy-engine.violet-quail-2164.chatgpt.site/#website",
+      "@id": "https://plompy.dev/#website",
       "name": "plompy-engine",
-      "url": "https://plompy-engine.violet-quail-2164.chatgpt.site/",
+      "url": "https://plompy.dev/",
       "inLanguage": [
         "en",
         "pl"
@@ -47,10 +51,10 @@
     },
     {
       "@type": "SoftwareSourceCode",
-      "@id": "https://plompy-engine.violet-quail-2164.chatgpt.site/#software",
+      "@id": "https://plompy.dev/#software",
       "name": "plompy-engine",
       "description": "Run AI coding agents from Discord on your own Linux server. Persistent sessions, Markdown context and tools you choose. Open-source TypeScript engine.",
-      "url": "https://plompy-engine.violet-quail-2164.chatgpt.site/",
+      "url": "https://plompy.dev/",
       "codeRepository": "https://github.com/dalkedev/plompy-engine",
       "license": "https://github.com/dalkedev/plompy-engine/blob/main/LICENSE",
       "programmingLanguage": "TypeScript",
@@ -87,29 +91,120 @@
   <div class="header-actions"><div class="language" role="group" aria-label="Language"><a href="/" data-lang="en" hreflang="en" aria-current="page">EN</a><span>/</span><a href="/pl/" data-lang="pl" hreflang="pl">PL</a></div><a class="header-github" href="https://github.com/dalkedev/plompy-engine" aria-label="plompy-engine on GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg><span>GitHub</span></a></div>
 </header>
 <main id="main">
-  <section class="hero wrap">
-    <div class="hero-top"><h1 data-i18n="heroTitle">Big ideas.<br>One message.</h1><div class="hero-intro"><p data-i18n="heroBody">Your coding agents, connected to Discord. Running on your machine. Working with your tools, your context, your rules.</p><div class="hero-actions"><a href="#get-started" class="button button-primary"><span data-i18n="getStarted">Start your engine</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a href="https://github.com/dalkedev/plompy-engine" class="text-link" data-i18n="viewSource">Explore the source</a></div><a href="https://github.com/dalkedev/plompy-engine/releases/tag/v0.12.0" class="release"><span class="status-dot"></span><span data-i18n="release">v0.12.0 · Open source, under your control</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></div></div>
-    <div class="network" aria-label="Discord connects to plompy-engine on your Linux VPS, then to your chosen coding runner and tools.">
-      <div class="network-track" aria-hidden="true"><svg viewBox="0 0 1200 350" preserveAspectRatio="none"><path class="wire" d="M180 175H600M600 175H810Q840 175 840 145V80Q840 55 870 55H1040M600 175H1040M600 175H810Q840 175 840 205V270Q840 295 870 295H1040"/><path class="signal signal-inbound" pathLength="100" d="M180 175H600"/><path class="signal signal-runner" pathLength="100" d="M600 175H810Q840 175 840 145V80Q840 55 870 55H1040"/><path class="signal signal-tools" pathLength="100" d="M600 175H1040"/><path class="signal signal-context" pathLength="100" d="M600 175H810Q840 175 840 205V270Q840 295 870 295H1040"/><path class="signal signal-return" pathLength="100" d="M1040 175H180"/></svg></div>
-      <div class="discord-node"><div class="discord-symbol"><svg><use href="#i-discord"/></svg></div><h2>Discord</h2><p data-i18n="fromAnywhere">You, from anywhere.</p><div class="message-prompt"><span class="message-hash">#</span><span data-i18n="heroMessage">let’s build something</span><span class="prompt-cursor" aria-hidden="true"></span></div></div>
-      <div class="engine-node"><div class="engine-orbits" aria-hidden="true"><span></span><span></span><span></span></div><div class="engine-core"><img src="/assets/logo.png" alt="plompy-engine" width="144" height="144"><span>plompy-engine</span><div class="rack-slots" aria-hidden="true"><i></i><i></i><i></i><b></b></div></div><p class="host-label"><span class="status-dot"></span><span data-i18n="yourVps">Your VPS. Your engine.</span></p></div>
-      <div class="tool-nodes"><div class="tool-node"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg><div><strong data-i18n="codingAgents">Coding agents</strong><span>Codex / Claude Code / OpenCode</span></div></div><div class="tool-node"><svg class="icon" aria-hidden="true"><use href="#i-browser"/></svg><div><strong data-i18n="yourTools">Your tools</strong><span data-i18n="toolNames">GitHub / Browser / Research</span></div></div><div class="tool-node"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><div><strong data-i18n="yourContext">Your context</strong><span data-i18n="contextNames">Markdown / Memory / Git</span></div></div></div>
+<section class="ocean-hero wrap" aria-labelledby="ocean-title">
+  <div class="ocean-opening">
+    <div class="ocean-intro">
+      <h1 id="ocean-title" data-i18n="oceanTitle">Small fish.<br>Big ideas.</h1>
+      <p data-i18n="oceanIntro">Your coding agents, connected to Discord. Swimming through your tools, your context, your own machine.</p>
+      <div class="ocean-actions"><a href="#get-started" class="button button-primary"><span data-i18n="getStarted">Start your engine</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a href="https://github.com/dalkedev/plompy-engine" class="text-link" data-i18n="viewSource">Explore the source</a></div>
+      <a href="https://github.com/dalkedev/plompy-engine/releases/tag/v0.12.0" class="ocean-release"><span class="status-dot"></span><span data-i18n="oceanRelease">v0.12.0 · Self-hosted. Open source.</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
     </div>
-    <div class="hero-bottom"><span data-i18n="selfHosted">Self-hosted on Linux. Built with TypeScript.</span><a href="#how-it-works" class="scroll-link"><span data-i18n="scrollExplore">Scroll to follow the thread</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><button type="button" class="motion-toggle" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-pause"/></svg><span data-i18n="pauseMotion">Pause motion</span></button></div>
-  </section>
-  <section class="story-section" id="how-it-works">
-    <div class="wrap story-heading"><h2 data-i18n="storyTitle">Close the laptop.<br>Keep the thread.</h2><p data-i18n="storyIntro">A message is just the beginning. Follow it from your phone to your own machine, and back.</p></div>
-    <div class="wrap story-layout">
-      <div class="story-copy">
-        <article class="story-step" data-step="0"><span class="step-index">01 / 03</span><h3 data-i18n="step1Title">An idea lands<br>in Discord.</h3><p data-i18n="step1Body">Send a task to your private forum. Plompy checks who sent it, saves it to a durable queue, and starts the work on your Linux machine.</p><code>!work 30m</code><span class="command-explanation" data-i18n="workExplanation">A goal. A time budget. Room to work.</span></article>
-        <article class="story-step" data-step="1"><span class="step-index">02 / 03</span><h3 data-i18n="step2Title">Your agent.<br>A whole toolkit.</h3><p data-i18n="step2Body">The saved runner session picks up your instructions and context. Inspect a repository, use a browser, read documentation. You choose the connections.</p><code>!goal 30m --repo "/srv/project"</code><span class="command-explanation" data-i18n="goalExplanation">Add a fresh Codex supervisor to review the change.</span></article>
-        <article class="story-step" data-step="2"><span class="step-index">03 / 03</span><h3 data-i18n="step3Title">The result returns.<br>The context stays.</h3><p data-i18n="step3Body">Read the result in the same thread. Ask a follow-up in the saved session. If work is interrupted, inspect its state and explicitly choose how to recover.</p><code>!result</code><span class="command-explanation" data-i18n="resultExplanation">Retrieve a saved answer without running the model again.</span></article>
+    <div class="ocean-map" role="group" aria-label="Discord, Plompy on your server, and your connected tools">
+      <svg class="ocean-routes" viewBox="0 0 600 500" preserveAspectRatio="none" aria-hidden="true">
+        <path class="ocean-route" d="M72 244C153 244 166 314 270 263S384 108 514 107"/>
+        <path class="ocean-route" d="M329 248C409 211 458 260 523 260"/>
+        <path class="ocean-route" d="M329 258C421 278 398 414 506 414"/>
+        <path class="ocean-route ocean-return-route" d="M307 280C226 386 132 358 73 274"/>
+        <path class="ocean-packet ocean-packet-a" pathLength="100" d="M72 244C153 244 166 314 270 263S384 108 514 107"/>
+        <path class="ocean-packet ocean-packet-b" pathLength="100" d="M329 248C409 211 458 260 523 260"/>
+        <path class="ocean-packet ocean-packet-c" pathLength="100" d="M329 258C421 278 398 414 506 414"/>
+        <path class="ocean-packet ocean-packet-return" pathLength="100" d="M307 280C226 386 132 358 73 274"/>
+        <ellipse class="ocean-boundary" cx="320" cy="255" rx="129" ry="174" transform="rotate(-13 320 255)"/>
+        <path class="ocean-tide" d="M175 54C192 42 212 48 227 60S266 75 281 59M413 452C425 444 435 444 446 452S468 460 480 451"/>
+        <circle class="ocean-dot" cx="162" cy="204" r="3"/><circle class="ocean-dot" cx="455" cy="188" r="3"/>
+      </svg>
+      <a class="ocean-discord ocean-map-link" href="#how-it-works"><span class="ocean-discord-mark"><svg aria-hidden="true"><use href="#i-discord"/></svg></span><strong>Discord</strong><small data-i18n="oceanAnywhere">You, from anywhere.</small><span class="ocean-mini-message" data-i18n="oceanMessage">let’s build something</span></a>
+      <div class="ocean-swimmer">
+        <span class="ocean-speech" data-i18n="oceanSpeech" role="status" aria-live="polite"></span>
+        <button type="button" class="ocean-fish" aria-label="Say hello to Plompy"><img src="/assets/logo.png" alt="" width="256" height="256" fetchpriority="high"><span class="ocean-fish-hint" data-i18n="oceanFishHint">say hello</span></button>
       </div>
-      <div class="story-sticky"><div class="demo-panel"><div class="demo-header"><div><svg class="icon" aria-hidden="true"><use href="#i-discord"/></svg><span># ship-the-idea</span></div><span class="demo-label" data-i18n="illustrative">Illustrative demo</span></div><div class="demo-route" aria-hidden="true"><span>Discord</span><span>VPS</span><span data-i18n="routeTools">Tools</span></div><div class="demo-tabs" role="group" aria-label="Demonstration steps"><button type="button" data-scene="0" class="active" aria-pressed="true"><span>1</span><b data-i18n="scene1">Send</b></button><button type="button" data-scene="1" aria-pressed="false"><span>2</span><b data-i18n="scene2">Work</b></button><button type="button" data-scene="2" aria-pressed="false"><span>3</span><b data-i18n="scene3">Return</b></button></div><div class="demo-content" id="demo-content"></div><div class="demo-foot"><span class="status-dot"></span><span id="demo-status"></span><span class="demo-session">session_7f2a</span></div></div><p class="demo-disclaimer" data-i18n="demoDisclaimer">A visual walkthrough with synthetic messages. No live agent is connected.</p></div>
+      <div class="ocean-host"><strong>plompy-engine</strong><span data-i18n="oceanHost">On your own Linux machine</span></div>
+      <a class="ocean-destination ocean-coding ocean-map-link" href="#integrations"><span class="ocean-node-icon"><svg aria-hidden="true"><use href="#i-code"/></svg></span><strong data-i18n="codingAgents">Coding agents</strong><small>Codex / Claude / OpenCode</small></a>
+      <a class="ocean-destination ocean-tools ocean-map-link" href="#integrations"><span class="ocean-node-icon"><svg aria-hidden="true"><use href="#i-browser"/></svg></span><strong data-i18n="yourTools">Your tools</strong><small data-i18n="oceanToolNames">GitHub / Browser / MCP</small></a>
+      <a class="ocean-destination ocean-memory ocean-map-link" href="#make-it-yours"><span class="ocean-node-icon"><svg aria-hidden="true"><use href="#i-book"/></svg></span><strong data-i18n="yourContext">Your context</strong><small>Markdown / Memory / Git</small></a>
+      <div class="ocean-bubbles" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+      <span class="ocean-return-label" data-i18n="oceanReturn">and back to your thread</span>
     </div>
-  </section>
+  </div>
+  <div class="ocean-bottom"><a class="ocean-dive" href="#how-it-works"><span class="ocean-dive-icon" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span><span data-i18n="oceanDive">Follow the fish.<br>See how it works.</span></a><span class="ocean-bottom-note" data-i18n="oceanBottomNote">A small engine. A whole ocean of possibility.</span><button type="button" class="motion-toggle" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-pause"/></svg><span data-i18n="pauseMotion">Pause motion</span></button></div>
+</section>
+<section class="journey" id="how-it-works" aria-labelledby="journey-heading">
+  <div class="wrap journey-heading">
+    <h2 id="journey-heading" data-i18n="storyTitle">Close the laptop.<br>Keep the thread.</h2>
+    <p data-i18n="storyIntro">A message is just the beginning. Follow it from your phone to your own machine, and back.</p>
+  </div>
+  <div class="journey-scroll">
+    <div class="journey-window">
+      <div class="journey-navigation wrap">
+        <div class="journey-stops" role="group" aria-label="Journey steps">
+          <button type="button" data-journey-step="0" aria-pressed="true" aria-controls="journey-send"><span>01</span><b data-i18n="scene1">Send</b></button>
+          <span class="journey-stop-line" aria-hidden="true"></span>
+          <button type="button" data-journey-step="1" aria-pressed="false" aria-controls="journey-work"><span>02</span><b data-i18n="scene2">Work</b></button>
+          <span class="journey-stop-line" aria-hidden="true"></span>
+          <button type="button" data-journey-step="2" aria-pressed="false" aria-controls="journey-return"><span>03</span><b data-i18n="scene3">Return</b></button>
+        </div>
+        <button type="button" class="journey-motion" data-journey-motion aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-pause"/></svg><span data-i18n="pauseMotion">Pause motion</span></button>
+      </div>
+      <div class="journey-canvas">
+        <div class="journey-track">
+          <article class="journey-stage" id="journey-send" aria-labelledby="journey-send-title">
+            <div class="journey-stage-inner wrap">
+              <div class="journey-copy">
+                <h3 id="journey-send-title" data-i18n="step1Title">An idea lands<br>in Discord.</h3>
+                <p data-i18n="step1Body">Send a task to your private forum. Plompy checks who sent it, saves it to a durable queue, and starts the work on your Linux machine.</p>
+                <div class="journey-command"><code>!work 30m</code><span data-i18n="workExplanation">A goal. A time budget. Room to work.</span></div>
+              </div>
+              <div class="journey-visual journey-discord">
+                <span class="journey-bubble j-bubble-a" aria-hidden="true"></span><span class="journey-bubble j-bubble-b" aria-hidden="true"></span>
+                <div class="journey-thread-header"><svg class="icon" aria-hidden="true"><use href="#i-discord"/></svg><span># ship-the-idea</span><small data-i18n="illustrative">Illustrative demo</small></div>
+                <div class="journey-message journey-message-user"><span class="journey-person" data-i18n="journeyYou">You</span><p data-i18n="journeyRequest"><code>!work 30m</code> Add quantity validation to the API. Cover the edge cases with tests.</p></div>
+                <div class="journey-reply"><img src="/assets/logo.png" alt="" width="56" height="56"><div><span class="journey-person">Plompy</span><p data-i18n="journeyAccepted">Task accepted. I’ll inspect the project, make a focused change, and run the tests.</p></div></div>
+                <div class="journey-queue"><span class="journey-queue-mark" aria-hidden="true"><svg class="icon"><use href="#i-check"/></svg></span><div><strong data-i18n="journeySavedQueue">Saved to the queue.</strong><span>SQLite <span aria-hidden="true">/</span> queued</span></div><svg class="journey-down" aria-hidden="true" viewBox="0 0 80 60"><path d="M5 5C5 40 30 47 67 47m-11-9 12 9-12 9"/></svg></div>
+              </div>
+            </div>
+          </article>
+          <article class="journey-stage" id="journey-work" aria-labelledby="journey-work-title">
+            <div class="journey-stage-inner wrap">
+              <div class="journey-copy">
+                <h3 id="journey-work-title" data-i18n="step2Title">Your agent.<br>A whole toolkit.</h3>
+                <p data-i18n="step2Body">The saved runner session picks up your instructions and context. Inspect a repository, use a browser, read documentation. You choose the connections.</p>
+                <div class="journey-command"><code>!goal 30m --repo "/srv/project"</code><span data-i18n="goalExplanation">Add a fresh Codex supervisor to review the change.</span></div>
+              </div>
+              <div class="journey-visual journey-machine">
+                <svg class="journey-machine-wires" viewBox="0 0 600 440" preserveAspectRatio="none" aria-hidden="true"><path d="M300 110V180M300 260C300 330 70 295 70 360M300 260V360M300 260C300 330 530 295 530 360"/><path class="journey-machine-packet" pathLength="100" d="M300 100V260C300 330 530 295 530 360"/></svg>
+                <div class="journey-runners"><strong data-i18n="journeyChooseRunner">Your chosen runner</strong><span>Codex <small data-i18n="default">default</small></span><span>Claude Code / OpenCode <small data-i18n="experimental">experimental</small></span></div>
+                <div class="journey-host"><img src="/assets/logo.png" alt="" width="96" height="96"><div><strong>plompy-engine</strong><span data-i18n="journeyLinuxHost">On your Linux machine</span></div><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></div>
+                <div class="journey-connected"><div><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg><strong>GitHub</strong><span data-i18n="journeyRepository">Your repository</span></div><div><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><strong>Markdown</strong><span data-i18n="journeyInstructions">Your instructions</span></div><div><svg class="icon" aria-hidden="true"><use href="#i-browser"/></svg><strong data-i18n="journeyBrowser">Browser</strong><span data-i18n="journeyConnections">Your connections</span></div></div>
+              </div>
+            </div>
+          </article>
+          <article class="journey-stage" id="journey-return" aria-labelledby="journey-return-title">
+            <div class="journey-stage-inner wrap">
+              <div class="journey-copy">
+                <h3 id="journey-return-title" data-i18n="step3Title">The result returns.<br>The context stays.</h3>
+                <p data-i18n="step3Body">Read the result in the same thread. Ask a follow-up in the saved session. If work is interrupted, inspect its state and explicitly choose how to recover.</p>
+                <div class="journey-command"><code>!result</code><span data-i18n="resultExplanation">Retrieve a saved answer without running the model again.</span></div>
+              </div>
+              <div class="journey-visual journey-result">
+                <span class="journey-bubble j-bubble-c" aria-hidden="true"></span>
+                <div class="journey-result-sheet"><div class="journey-result-head"><img src="/assets/logo.png" alt="" width="48" height="48"><strong>Plompy</strong><span data-i18n="illustrative">Illustrative demo</span></div><p data-i18n="journeyResult">Added quantity validation and regression tests. Negative quantities are rejected; zero is still valid.</p><pre><code>+ if (quantity &lt; 0) {
++   throw new InvalidQuantityError();
++ }</code></pre><div class="journey-result-saved"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="journeyResultSaved">Result saved. Session retained.</span></div></div>
+                <div class="journey-followup"><span data-i18n="journeyYou">You</span><p data-i18n="journeyFollowup">Nice. Now apply the same rule to the import.</p><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="journey-bottom wrap">
+        <div class="journey-current" aria-hidden="true"><svg viewBox="0 0 1200 80" preserveAspectRatio="none"><path d="M0 54C180 8 250 78 420 42S650 19 790 46 1030 76 1200 25"/><path class="journey-current-active" pathLength="100" d="M0 54C180 8 250 78 420 42S650 19 790 46 1030 76 1200 25"/></svg><div class="journey-swimmer"><img src="/assets/logo.png" alt="" width="68" height="68"></div><span class="journey-current-bubble"></span></div>
+        <div class="journey-caption"><a href="#integrations"><span data-i18n="journeyContinue">Meet the tools</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      </div>
+    </div>
+  </div>
+</section>
   <section id="integrations" class="integrations-section wrap section-space">
-    <div class="section-heading"><h2 data-i18n="toolsTitle">Give it the tools.<br>See where it goes.</h2><div><p data-i18n="toolsIntro">Your repositories. Your browser. Your sources. Connect the services you use to the runner you choose.</p><a class="text-link" href="https://github.com/dalkedev/plompy-engine/blob/main/docs/integrations.md"><span data-i18n="integrationGuide">Explore integration setup</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></div></div>
+    <div class="section-heading"><h2 data-i18n="toolsTitle">A whole ocean<br>of tools.</h2><div><p data-i18n="toolsIntro">Your repositories. Your browser. Your sources. Connect the services you use to the runner you choose.</p><a class="text-link" href="https://github.com/dalkedev/plompy-engine/blob/main/docs/integrations.md"><span data-i18n="integrationGuide">Explore integration setup</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></div></div>
     <div class="runner-bar"><div><span data-i18n="chooseRunner">Preview setup for your runner</span><small data-i18n="setupPreview">Configuration preview</small></div><div class="runner-options" role="group" aria-label="Coding runner"><button type="button" data-runner="codex" aria-pressed="true">Codex <small data-i18n="default">default</small></button><button type="button" data-runner="claude" aria-pressed="false">Claude Code <small data-i18n="experimental">experimental</small></button><button type="button" data-runner="opencode" aria-pressed="false">OpenCode <small data-i18n="experimental">experimental</small></button></div></div>
 <div class="tool-catalog"><div class="tool-choices" role="tablist" aria-label="Choose an integration"><button type="button" class="tool-choice" role="tab" id="tool-github" data-tool="github" aria-selected="true" aria-controls="panel-github" tabindex="0"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg><span><strong>GitHub</strong><small data-i18n="toolTag0">Repositories & pull requests</small></span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
 <button type="button" class="tool-choice" role="tab" id="tool-playwright" data-tool="playwright" aria-selected="false" aria-controls="panel-playwright" tabindex="-1"><svg class="icon" aria-hidden="true"><use href="#i-browser"/></svg><span><strong>Playwright</strong><small data-i18n="toolTag1">Browser automation</small></span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
@@ -192,7 +287,7 @@
 </article></div></div><span id="tool-copy-status" role="status" class="sr-only"></span>
 <div class="integration-command"><code><span class="shell-dollar">$</span> npm run integrations</code><p data-i18n="integrationNote">One setup menu. Connections per runner. Your own accounts and API keys.</p></div>
   </section>
-  <section id="make-it-yours" class="custom-section section-space">
+  <section id="make-it-yours" class="custom-section section-space"><svg class="shoreline" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 48C220 12 360 76 600 42S1060 16 1440 44V80H0Z"/></svg>
     <div class="wrap custom-layout"><div class="custom-copy"><h2 data-i18n="customTitle">Make it<br>your kind of agent.</h2><p data-i18n="customIntro">Give Plompy a voice, a working style and clear boundaries. Its context lives in plain Markdown files you can read, edit and keep in Git.</p><div class="custom-file-description" id="file-description"></div><a class="text-link" href="https://github.com/dalkedev/plompy-engine/tree/main/examples/workspace"><span data-i18n="browseTemplates">Browse the workspace templates</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></div><div class="editor"><div class="editor-top"><span>workspace/agent/</span><span data-i18n="exampleConfig">Example configuration</span></div><div class="file-tabs" role="tablist" aria-label="Agent context files"><button id="tab-soul" type="button" role="tab" data-file="soul" aria-selected="true" aria-controls="file-panel">SOUL.md</button><button id="tab-user" type="button" role="tab" data-file="user" aria-selected="false" aria-controls="file-panel" tabindex="-1">USER.md</button><button id="tab-policy" type="button" role="tab" data-file="policy" aria-selected="false" aria-controls="file-panel" tabindex="-1">POLICY.md</button><button id="tab-memory" type="button" role="tab" data-file="memory" aria-selected="false" aria-controls="file-panel" tabindex="-1">MEMORY.md</button></div><div id="file-panel" role="tabpanel" aria-labelledby="tab-soul" tabindex="0"><pre id="file-code"></pre></div><div class="editor-bottom"><span>Markdown</span><span data-i18n="localFiles">Local files. Local Git history.</span></div></div></div>
   </section>
   <section id="get-started" class="start-section wrap section-space"><div class="section-heading"><h2 data-i18n="startTitle">A little setup.<br>A lot of possibility.</h2><p data-i18n="startIntro">Start with the offline demo. Then bring your own Discord bot, authenticated runner and a Linux machine.</p></div><div class="start-layout"><div class="install-block"><div class="install-header"><span data-i18n="offlineDemo">Try the offline demo</span><button type="button" id="copy-command"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg><span data-i18n="copy">Copy</span></button></div><pre><code id="install-code">git clone --branch v0.12.0 --depth 1 \
@@ -203,7 +298,7 @@ npm run build
 npm run demo -- session</code></pre><p data-i18n="offlineNote">Synthetic data. No Discord token or model account needed. Requires Node.js 26.13.0+ (26.x LTS), Git and Linux.</p><span id="copy-status" class="sr-only" role="status"></span></div><div class="setup-links"><a href="https://github.com/dalkedev/plompy-engine#quick-start"><div><h3 data-i18n="fullSetup">Connect your first thread</h3><p data-i18n="fullSetupBody">Bot, runner, permissions. The complete setup.</p></div><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a><a href="https://github.com/dalkedev/plompy-engine/blob/main/docs/docker.md"><div><h3 data-i18n="dockerTitle">Prefer a container?</h3><p data-i18n="dockerBody">The Docker path comes with Codex.</p></div><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a><a href="https://github.com/dalkedev/plompy-engine/blob/main/docs/first-goal.md"><div><h3 data-i18n="firstGoal">Give it a real goal</h3><p data-i18n="firstGoalBody">A worker, a reviewer, and a change to inspect.</p></div><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></div></div>
     <section class="faq" aria-labelledby="faq-heading"><h2 id="faq-heading" data-i18n="faqHeading">Good to know before you go.</h2><article class="faq-answer"><div><span class="faq-index">01</span><h3 data-i18n="faq1Title">Is this a hosted AI service?</h3></div><p data-i18n="faq1Body">No. plompy-engine is MIT-licensed software you run yourself on Linux. You provide the machine, Discord bot and model access. A VPS is one way to host it; third-party services may have their own costs. Coding CLIs run on your host; model requests may go to an external provider.</p></article><article class="faq-answer"><div><span class="faq-index">02</span><h3 data-i18n="faq2Title">Can I use any of the three coding agents?</h3></div><p data-i18n="faq2Body">Codex is the default. Claude Code and OpenCode adapters are experimental and have different execution boundaries. Supervised goals and still-image input currently require Codex. The published Docker image includes Codex only.</p></article><article class="faq-answer"><div><span class="faq-index">03</span><h3 data-i18n="faq3Title">What happens if something stops?</h3></div><p data-i18n="faq3Body">Accepted work and results have durable state. Interrupted work remains visible for inspection and explicit recovery; uncertain external actions are not automatically replayed. Messages sent during a full outage may not have entered the queue. The public edition uses one shared worker.</p></article></section>
   </section>
-  <section class="github-section"><div class="wrap"><div class="github-top"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="openInvitation">Open source. Open invitation.</span><a href="https://github.com/dalkedev/plompy-engine/blob/main/LICENSE">MIT</a></div><h2 data-i18n="githubTitle">Got an idea?<br>Make a splash.</h2><div class="github-bottom"><p data-i18n="githubBody">Read the code. Try an integration. Open an issue. Build the agent you actually want to work with.</p><a href="https://github.com/dalkedev/plompy-engine" class="button button-dark"><span data-i18n="joinGithub">Find us on GitHub</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></div></div></section>
+  <section class="github-section"><svg class="shoreline" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 48C220 12 360 76 600 42S1060 16 1440 44V80H0Z"/></svg><div class="wrap"><div class="github-top"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="openInvitation">Open source. Open invitation.</span><a href="https://github.com/dalkedev/plompy-engine/blob/main/LICENSE">MIT</a></div><h2 data-i18n="githubTitle">Got an idea?<br>Make a splash.</h2><div class="splash-fish" aria-hidden="true"><img src="/assets/logo.png" alt="" width="240" height="240" loading="lazy"></div><div class="github-bottom"><p data-i18n="githubBody">Read the code. Try an integration. Open an issue. Build the agent you actually want to work with.</p><a href="https://github.com/dalkedev/plompy-engine" class="button button-dark"><span data-i18n="joinGithub">Find us on GitHub</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></div></div></section>
 </main>
 <footer class="wrap"><a class="footer-brand" href="#">plompy-engine.</a><span data-i18n="footerTagline">Your agents. Your machine. Your rules.</span><a href="https://github.com/dalkedev/plompy-engine/blob/main/docs/index.md" data-i18n="docs">Documentation</a><a href="https://github.com/dalkedev/plompy-engine/blob/main/ROADMAP.md">Roadmap</a><a class="coffee-link" href="https://buymeacoffee.com/dalkedev"><svg class="icon" aria-hidden="true"><use href="#i-coffee"/></svg><span data-i18n="coffee">Buy me a coffee</span></a><a href="https://github.com/dalkedev">by dalkedev</a></footer>
 </body>
