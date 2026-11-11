@@ -35,11 +35,11 @@ Both language routes include a native footer link to [Buy Me a Coffee](https://b
 
 ## Domain
 
-The selected project name is plompy-engine. The preferred domain candidate, `plompy.dev`, has not been purchased or connected. The Sites preview uses https://plompy-engine.violet-quail-2164.chatgpt.site. Once a domain is connected, set `SITE_URL` and rebuild before deployment.
+The selected project name is plompy-engine. The user purchased `plompy.dev`; the public website is live at https://plompy.dev on Vercel. DNS is managed at OVH, HTTPS is active, and `www` redirects to the apex domain. Google Search Console ownership is verified and https://plompy.dev/sitemap.xml successfully processed both language pages on 2026-11-12. `SITE_URL` defaults to the production origin.
 
 ## Preview access
 
-The initial Sites deployment is owner-private. A public release and custom-domain connection can be performed when the owner chooses the final domain.
+The Sites deployment remains an owner-private preview at https://plompy-engine.violet-quail-2164.chatgpt.site. The Vercel custom domain is public.
 
 ## Ocean walkthrough
 

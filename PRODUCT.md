@@ -27,7 +27,7 @@ The user selected lowercase hyphenated plompy-engine, with Plompy as the short m
 https://github.com/dalkedev/plompy-engine ; product behavior comes from README.md, docs/runners.md and v0.12.0, checked 2026-11-11. The rename changes the product identity, not its supported runners or execution guarantees.
 
 ## Open Decisions
-The name plompy-engine is selected. The user has purchased plompy.dev; the domain is active and Vercel hosting plus Google Search Console are being connected. The owner-private Sites preview is served at https://plompy-engine.violet-quail-2164.chatgpt.site.
+The name plompy-engine is selected. The user purchased plompy.dev; the public EN/PL website is live on Vercel at https://plompy.dev. DNS remains at OVH, HTTPS is active, and www redirects to the apex domain. Google Search Console ownership is verified and its sitemap successfully processed both language pages on 2026-11-12. The owner-private Sites preview is served at https://plompy-engine.violet-quail-2164.chatgpt.site.
 
 ## Product Principles
 - Make the actual Discord-to-runner mechanism tangible.
