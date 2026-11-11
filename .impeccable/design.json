@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-11T21:29:40.286837+00:00",
+  "generatedAt": "2026-11-11T21:53:15.606847+00:00",
   "title": "Design System: szpont-engine",
   "extensions": {
     "colorMeta": {
@@ -151,7 +151,7 @@
       },
       "title": {
         "displayName": "Integration title",
-        "purpose": "Compact semibold disclosure titles."
+        "purpose": "Compact semibold integration selector titles."
       },
       "body": {
         "displayName": "Reading copy",
@@ -188,19 +188,24 @@
         "purpose": "Brief entrance for a new illustrative scene."
       },
       {
-        "name": "route-travel",
-        "value": "travel 4s ease-in-out 2",
-        "purpose": "Finite introductory route animation."
+        "name": "message-cycle",
+        "value": "signal-packet 10s linear infinite",
+        "purpose": "Orange request, sequential tools and paper reply; mobile connector and rack feedback. Paused outside the viewport, in hidden documents, or by the motion control."
       },
       {
-        "name": "disclosure-open",
-        "value": "transform .25s",
-        "purpose": "Rotate the disclosure plus by 45 degrees."
+        "name": "catalog-feedback",
+        "value": "180ms background, border, transform and opacity",
+        "purpose": "Immediate hover, selection and press feedback for ten integration tabs; the preview area keeps a stable footprint."
       },
       {
         "name": "reduced-motion",
         "value": "animation: none; transition: none; scroll-behavior: auto",
         "purpose": "System preference initializes motion state; the explicit page toggle can enable or pause it."
+      },
+      {
+        "name": "navigation-feedback",
+        "value": "160ms color; 220ms transform; 260ms underline; 70ms press",
+        "purpose": "Selected language uses an orange inset tile. Header and footer links expose hover, focus and momentary press feedback without changing their layout footprint."
       }
     ],
     "breakpoints": [
@@ -224,7 +229,24 @@
         "name": "wide-desktop",
         "value": "1600px"
       }
-    ]
+    ],
+    "languageRoutes": {
+      "en": "/",
+      "pl": "/pl/",
+      "currentState": "aria-current=\"page\"",
+      "rendering": "Generated static HTML with native language links."
+    },
+    "catalog": {
+      "tools": 10,
+      "presentation": "Two-column tab grid and stable preview area; stacked on phones.",
+      "runnerPreview": [
+        "codex",
+        "claude",
+        "opencode"
+      ],
+      "commands": "Runner-specific setup commands with copy feedback; Custom MCP opens the configuration menu.",
+      "faq": "Always-visible question and answer rows."
+    }
   },
   "components": [
     {
@@ -268,11 +290,11 @@
       "css": ".ds-demo{max-width:480px;background:var(--panel,#191c1e);color:var(--paper,#f3f0e8);border:1px solid var(--line,#373b3c);border-radius:14px;overflow:hidden;font-family:Sora,sans-serif}.ds-demo header{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding:22px;border-bottom:1px solid var(--line,#373b3c);font-size:12px}.ds-demo header span{font-size:11px;color:var(--muted,#a7aaa6)}.ds-demo-body{padding:28px 24px;min-height:120px;font-size:12px;line-height:1.8}.ds-demo-body strong{font-size:11px;font-weight:400}.ds-demo-body p{margin:7px 0}.ds-demo code{font:11px Plex,monospace;color:var(--orange,#ff6b35)}.ds-demo footer{display:flex;gap:7px;align-items:center;padding:15px 22px;border-top:1px solid var(--line,#373b3c);font-size:11px;color:var(--muted,#a7aaa6)}.ds-demo i{width:6px;height:6px;background:var(--orange,#ff6b35);border-radius:50%}"
     },
     {
-      "name": "Integration disclosure",
+      "name": "Integration selector",
       "kind": "custom",
-      "description": "Ruled disclosure for an integration with compact setup details.",
-      "html": "<details class=\"ds-disclosure\"><summary><span><strong>Browser</strong><small>Inspect and interact with pages</small></span><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg></summary><p>Connect the browser tools supported by your chosen runner.</p></details>",
-      "css": ".ds-disclosure{max-width:520px;background:var(--bg,#111315);color:var(--paper,#f3f0e8);border-bottom:1px solid var(--line,#373b3c);font-family:Sora,sans-serif}.ds-disclosure summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:94px;cursor:pointer}.ds-disclosure summary::-webkit-details-marker{display:none}.ds-disclosure strong{display:block;font-size:16px;font-weight:600;letter-spacing:-.025em}.ds-disclosure small{display:block;color:var(--muted,#a7aaa6);font-size:11px;margin-top:6px}.ds-disclosure svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;transition:transform .25s}.ds-disclosure[open] strong,.ds-disclosure[open] svg{color:var(--orange,#ff6b35)}.ds-disclosure[open] svg{transform:rotate(45deg)}.ds-disclosure p{margin:0;padding:0 0 24px;font-size:13px;line-height:1.8;color:var(--muted,#a7aaa6)}.ds-disclosure summary:focus-visible{outline:2px solid var(--orange,#ff6b35);outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-disclosure svg{transition:none}}"
+      "description": "Static preview of an active tool tab. The implemented ten-tab catalog controls a stable preview panel with description, setup guide and copyable runner command.",
+      "html": "<button class=\"ds-tool\" role=\"tab\" aria-selected=\"true\"><span><strong>GitHub</strong><small>Repositories &amp; pull requests</small></span><span aria-hidden=\"true\">→</span></button>",
+      "css": ".ds-tool{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:95px;padding:17px 14px;border:1px solid var(--orange,#ff6b35);border-radius:8px;background:#232522;color:var(--paper,#f3f0e8);text-align:left;font-family:Sora,sans-serif;cursor:pointer}.ds-tool strong{display:block;font-size:13px;font-weight:600}.ds-tool small{display:block;margin-top:6px;font-size:10px;color:var(--muted,#a7aaa6);line-height:1.7}.ds-tool>span:last-child{color:var(--orange,#ff6b35)}.ds-tool:focus-visible{outline:2px solid var(--orange,#ff6b35);outline-offset:3px}"
     },
     {
       "name": "Markdown file tabs",
@@ -303,7 +325,7 @@
       "Do retain the original logo and the graphite, paper and orange identity.",
       "Do use dark text on orange and dark body copy on paper.",
       "Do keep commands and filenames in Plex and explanatory prose in Sora.",
-      "Do keep disclosures, file tabs and scene controls usable with a keyboard.",
+      "Do keep integration tabs, runner choices, file tabs and scene controls usable with a keyboard.",
       "Do preserve the illustrative-demo label and explicit motion control."
     ],
     "donts": [

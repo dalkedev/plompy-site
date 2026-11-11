@@ -3,10 +3,39 @@ const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 const icon = (name) => `<svg class="icon" aria-hidden="true"><use href="#i-${name}"/></svg>`;
 const en = Object.fromEntries($$('[data-i18n]').map(el => [el.dataset.i18n, el.innerHTML]));
 const pl = {
+  faqHeading:"Warto wiedzieć przed startem.",
+  catalogLabel:"Wybierz narzędzie",
+  setupPreview:"Podgląd konfiguracji",
+  configurationCommand:"Polecenie konfiguracji",
+  copySetup:"Kopiuj",
+  setupRequirements:"Dodaj integrację, a następnie skonfiguruj wymagane konto, klucz lub lokalne zależności zgodnie z instrukcją.",
+  customSetupNote:"Własny serwer? Otwórz menu integracji i podaj jego konfigurację. Może działać lokalnie lub zdalnie.",
+  selectedToolGuide:"Instrukcja konfiguracji",
+  chooseRunner:"Sprawdź konfigurację dla agenta",
+  toolTag0:"Repozytoria i pull requesty",
+  toolBody0:"Przeglądaj repozytoria, pracuj ze zgłoszeniami i przygotowuj pull requesty przez osobno skonfigurowane GitHub CLI. Logujesz się własnym kontem.",
+  toolTag1:"Automatyzacja przeglądarki",
+  toolBody1:"Otwieraj strony, sprawdzaj interfejsy i testuj przepływy w przeglądarce przez MCP. Wymaga opcjonalnych zależności i używa świeżego kontekstu headless.",
+  toolTag2:"Przeglądarka na Twojej maszynie",
+  toolBody2:"Udostępnij agentowi przeglądarkę przez lokalny serwer MCP. Camoufox wymaga osobno przygotowanej przeglądarki na Linuksie i prywatnego wyświetlacza.",
+  toolTag3:"Wyszukiwanie i research",
+  toolBody3:"Połącz wyszukiwanie i research z wybranym agentem przez MCP. Wymaga własnego dostępu do API Perplexity.",
+  toolTag4:"Treści stron i ekstrakcja",
+  toolBody4:"Dodaj zbieranie i ekstrakcję treści stron do narzędzi agenta przez MCP, z własnymi danymi dostępu do usługi.",
+  toolTag5:"Automatyzacja stron",
+  toolBody5:"Podłącz narzędzia TinyFish MCP do automatyzacji stron. Dostęp do usługi i dane uwierzytelniające zapewniasz samodzielnie.",
+  toolTag6:"Oficjalna dokumentacja",
+  toolBody6:"Pozwól agentowi korzystać z oficjalnego serwera MCP dokumentacji OpenAI podczas pracy nad projektem.",
+  toolTag7:"Dokumentacja bibliotek",
+  toolBody7:"Dodaj narzędzia dokumentacji bibliotek Context7 do konfiguracji MCP wybranego agenta.",
+  toolTag8:"Analityka produktu: tylko odczyt",
+  toolBody8:"Sprawdzaj istniejący projekt PostHog w trybie tylko do odczytu. Ta integracja nie dodaje śledzenia do szpont-engine.",
+  toolTag9:"Twoje własne połączenie",
+  toolBody9:"Dodaj lokalny lub zdalny serwer MCP z jawną konfiguracją. Rozszerz narzędzia agenta o usługi, którym ufasz.",
   routeTools:'Narzędzia',toolNames:'GitHub / Przeglądarka / Research',contextNames:'Markdown / Pamięć / Git',
   skip:'Przejdź do treści',navHow:'Jak to działa',navTools:'Integracje',navCustom:'Po Twojemu',heroTitle:'Wielkie pomysły.<br>Jedna wiadomość.',heroBody:'Twoi agenci AI, połączeni z Discordem. Na Twojej maszynie. Z Twoimi narzędziami, kontekstem i zasadami.',getStarted:'Uruchom swój silnik',viewSource:'Zobacz kod',release:'v0.11.1 · Otwarty kod, Twoje zasady',fromAnywhere:'Ty, z dowolnego miejsca.',heroMessage:'zbudujmy coś',yourVps:'Twój VPS. Twój silnik.',codingAgents:'Agenci do kodu',yourTools:'Twoje narzędzia',yourContext:'Twój kontekst',selfHosted:'Na własnym Linuksie. Napisany w TypeScript.',scrollExplore:'Przewiń i podążaj za wątkiem',pauseMotion:'Zatrzymaj animacje',
   storyTitle:'Zamknij laptopa.<br>Zachowaj wątek.',storyIntro:'Wiadomość to dopiero początek. Zobacz jej drogę z telefonu na Twoją maszynę i z powrotem.',step1Title:'Pomysł trafia<br>na Discorda.',step1Body:'Wyślij zadanie na prywatnym forum. Szpont sprawdza nadawcę, zapisuje je w trwałej kolejce i rozpoczyna pracę na Twoim Linuksie.',workExplanation:'Cel. Budżet czasu. Przestrzeń do działania.',step2Title:'Twój agent.<br>Cały zestaw narzędzi.',step2Body:'Zapisana sesja agenta korzysta z Twoich instrukcji i kontekstu. Repozytorium, przeglądarka, dokumentacja. Ty wybierasz połączenia.',goalExplanation:'Dodaj osobnego nadzorcę Codex do sprawdzenia zmian.',step3Title:'Wynik wraca.<br>Kontekst zostaje.',step3Body:'Odczytaj wynik w tym samym wątku. Kontynuuj rozmowę w zapisanej sesji. Po przerwaniu pracy sprawdź stan i świadomie wybierz sposób wznowienia.',resultExplanation:'Odczytaj zapisaną odpowiedź bez kolejnego wywołania modelu.',illustrative:'Przykładowy przebieg',scene1:'Wyślij',scene2:'Praca',scene3:'Wynik',demoDisclaimer:'Wizualizacja z przykładowymi wiadomościami. Bez połączenia z działającym agentem.',
-  toolsTitle:'Daj mu narzędzia.<br>Zobacz, co zbuduje.',toolsIntro:'Twoje repozytoria. Przeglądarka. Źródła wiedzy. Połącz używane usługi z wybranym agentem.',integrationGuide:'Zobacz konfigurację integracji',chooseRunner:'Wybierz swojego agenta',default:'domyślny',experimental:'eksperymentalny',integrationNote:'Jedno menu konfiguracji. Połączenia osobno dla każdego agenta. Własne konta i klucze API.',
+  toolsTitle:'Daj mu narzędzia.<br>Zobacz, co zbuduje.',toolsIntro:'Twoje repozytoria. Przeglądarka. Źródła wiedzy. Połącz używane usługi z wybranym agentem.',integrationGuide:'Zobacz konfigurację integracji',default:'domyślny',experimental:'eksperymentalny',integrationNote:'Jedno menu konfiguracji. Połączenia osobno dla każdego agenta. Własne konta i klucze API.',
   customTitle:'Twój agent.<br>Twój sposób pracy.',customIntro:'Nadaj Szpontowi osobowość, styl pracy i jasne granice. Jego kontekst to zwykłe pliki Markdown, które możesz czytać, edytować i wersjonować w Git.',browseTemplates:'Przejrzyj szablony workspace',exampleConfig:'Przykładowa konfiguracja',localFiles:'Lokalne pliki. Historia w Git.',
   startTitle:'Trochę konfiguracji.<br>Mnóstwo możliwości.',startIntro:'Zacznij od demonstracji offline. Potem dodaj własnego bota Discord, zalogowanego agenta i maszynę z Linuksem.',offlineDemo:'Wypróbuj demo offline',copy:'Kopiuj',offlineNote:'Przykładowe dane. Bez tokena Discorda i konta modelu. Wymaga Node.js 26.13.0+ (26.x LTS), Gita i Linuksa.',fullSetup:'Połącz swój pierwszy wątek',fullSetupBody:'Bot, agent, uprawnienia. Pełna konfiguracja.',dockerTitle:'Wolisz kontener?',dockerBody:'Ścieżka z Dockerem zawiera Codex.',firstGoal:'Daj mu prawdziwy cel',firstGoalBody:'Wykonawca, recenzent i zmiana do sprawdzenia.',
   faq1Title:'Czy to gotowa usługa AI w chmurze?',faq1Body:'Nie. szpont-engine to oprogramowanie na licencji MIT, które uruchamiasz samodzielnie na Linuksie. Zapewniasz maszynę, bota Discord i dostęp do modelu. VPS to jeden ze sposobów hostowania; zewnętrzne usługi mogą mieć własne opłaty. CLI działa na Twojej maszynie; zapytania do modelu mogą trafiać do zewnętrznego dostawcy.',faq2Title:'Czy mogę korzystać ze wszystkich trzech agentów?',faq2Body:'Codex jest domyślny. Adaptery Claude Code i OpenCode są eksperymentalne i mają inne granice wykonywania zadań. Nadzorowane cele i obrazy wymagają obecnie Codex. Opublikowany obraz Dockera zawiera tylko Codex.',faq3Title:'Co się stanie, jeśli praca zostanie przerwana?',faq3Body:'Przyjęte zadania i wyniki mają trwały zapis. Przerwana praca pozostaje widoczna do sprawdzenia i jawnego wznowienia; niepewne działania zewnętrzne nie są automatycznie powtarzane. Wiadomości wysłane podczas pełnej awarii mogły nie trafić do kolejki. Wersja publiczna korzysta z jednego wspólnego workera.',
@@ -30,35 +59,40 @@ const files = {
   policy:{name:'POLICY.md',desc:['Make the boundaries explicit. Define which actions are authorized and which need your approval. Instructions complement the runner’s execution controls.','Określ granice. Zdefiniuj dozwolone działania i te, które wymagają Twojej zgody. Instrukcje uzupełniają mechanizmy kontroli agenta.'],en:'# Working boundaries\n\n## Allowed\n- Read the project and run its tests.\n- Prepare changes for review.\n\n## Ask first\n- Publish or deploy.\n- Delete data or spend money.\n- Send messages to other people.',pl:'# Granice działania\n\n## Dozwolone\n- Czytaj projekt i uruchamiaj testy.\n- Przygotowuj zmiany do przeglądu.\n\n## Najpierw zapytaj\n- Publikacja lub wdrożenie.\n- Usuwanie danych i wydatki.\n- Wysyłanie wiadomości do innych.'},
   memory:{name:'MEMORY.md',desc:['Keep a short durable index. Link longer notes, decisions and working context from your private workspace.','Zachowaj krótki, trwały indeks. Linkuj dłuższe notatki, decyzje i kontekst z prywatnego workspace.'],en:'# Memory index\n\n## Project notes\n- API decisions: memory/api.md\n- Setup notes: memory/setup.md\n\n## Preferences\n- Small pull requests\n- Tests before completion\n- Keep important decisions in Markdown',pl:'# Indeks pamięci\n\n## Notatki projektu\n- Decyzje API: memory/api.md\n- Konfiguracja: memory/setup.md\n\n## Preferencje\n- Małe pull requesty\n- Testy przed zakończeniem\n- Ważne decyzje zapisuj w Markdown'}
 };
-let lang = 'en';
+let lang = location.pathname.startsWith('/pl') ? 'pl' : 'en';
+let activeTool = 'github';
+let activeRunner = 'codex';
+let toolCopyTimer;
 let scene = 0;
 let activeFile = 'soul';
 let copyTimer;
 const motionPreference = matchMedia('(prefers-reduced-motion: reduce)');
 let motionOff = motionPreference.matches;
-try { lang = new URLSearchParams(location.search).get('lang') || localStorage.getItem('szpont-language') || 'en'; } catch {}
-if (!['en','pl'].includes(lang)) lang = 'en';
 const localized = pair => pair[lang === 'pl' ? 1 : 0];
 const escapeHtml = str => str.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
-function applyLanguage(next, save = false) {
+function applyLanguage(next) {
   lang = next;
   document.documentElement.lang = lang;
   const dict = lang === 'pl' ? pl : en;
   $$('[data-i18n]').forEach(el => { if (dict[el.dataset.i18n] !== undefined) el.innerHTML = dict[el.dataset.i18n]; });
-  $$('[data-lang]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.lang === lang)));
-  document.title = localized(['szpont-engine — Your agents. Your machine. Your rules.','szpont-engine — Twoi agenci. Twoja maszyna. Twoje zasady.']);
-  $('meta[name="description"]').content = localized(['Connect Discord to coding agents on your Linux machine. Persistent sessions, private Markdown memory, supervised work and tools you choose. Open source.','Połącz Discorda z agentami AI na własnym Linuksie. Trwałe sesje, prywatna pamięć Markdown, nadzorowane zadania i Twoje narzędzia. Otwarty kod.']);
+  $$('.tool-choices').forEach(el=>el.setAttribute('aria-label', localized(['Choose an integration','Wybierz integrację'])));
+  $('.runner-options').setAttribute('aria-label', localized(['Coding runner','Agent do kodu']));
   $('nav').setAttribute('aria-label', localized(['Main navigation','Nawigacja główna']));
   $('.language').setAttribute('aria-label',localized(['Language','Język']));
   $('.network').setAttribute('aria-label',localized(['Discord connects to szpont-engine on your Linux VPS, then to your chosen coding runner and tools.','Discord łączy się z szpont-engine na Twoim VPS z Linuksem, a następnie z wybranym agentem i narzędziami.']));
   $('.demo-tabs').setAttribute('aria-label',localized(['Demonstration steps','Kroki demonstracji']));
   $('.file-tabs').setAttribute('aria-label',localized(['Agent context files','Pliki kontekstu agenta']));
-  renderIntegrations(); renderFile(activeFile); renderScene(scene, false); updateMotion();
-  if(save){try{localStorage.setItem('szpont-language',lang)}catch{} const url = new URL(location.href);url.searchParams.set('lang',lang);history.replaceState(null,'',url);}
+  renderIntegration(activeTool); renderFile(activeFile); renderScene(scene, false); updateMotion();
 }
-function renderIntegrations(){
-  const expanded = new Set($$('.integration-item[open]').map(el => el.dataset.integration));
-  $('#integration-grid').innerHTML = integrations.map(item => `<details class="integration-item" data-integration="${item.id}" ${expanded.has(item.id)?'open':''}><summary>${icon(item.icon)}<div><h3>${item.name}</h3><p>${localized(item.tag)}</p></div><svg class="icon expand" aria-hidden="true"><use href="#i-plus"/></svg></summary><div class="integration-detail">${localized(item.body)}<code>npm run integrations${item.id==='custom'?'':` -- add ${item.id} --yes`}</code></div></details>`).join('');
+function renderIntegration(id){
+  activeTool=id;
+  $$('[data-tool]').forEach(button=>{const selected=button.dataset.tool===id;button.setAttribute('aria-selected',String(selected));button.tabIndex=selected?0:-1});
+  $$('[data-panel]').forEach(panel=>{panel.hidden=panel.dataset.panel!==id});
+}
+function selectRunner(id){
+  activeRunner=id;
+  $$('[data-runner]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.runner===id)));
+  $$('[data-tool-command]').forEach(code=>{const tool=code.dataset.toolCommand;code.textContent='npm run integrations'+(tool==='custom'?'':' -- add '+tool+' --runner '+id+' --yes')});
 }
 function renderFile(key){
   activeFile=key;const file=files[key];
@@ -96,7 +130,24 @@ function updateMotion(){
  $('use',button).setAttribute('href',motionOff?'#i-play':'#i-pause');
  $('span',button).textContent=motionOff?localized(['Enable motion','Włącz animacje']):localized(['Pause motion','Zatrzymaj animacje']);
 }
-$$('[data-lang]').forEach(button=>button.addEventListener('click',()=>applyLanguage(button.dataset.lang,true)));
+$$('[data-tool]').forEach(button=>button.addEventListener('click',()=>renderIntegration(button.dataset.tool)));
+$$('[data-runner]').forEach(button=>button.addEventListener('click',()=>selectRunner(button.dataset.runner)));
+$('.tool-choices').addEventListener('keydown',event=>{
+ const tabs=$$('[data-tool]');let index=tabs.indexOf(document.activeElement);if(index<0)return;
+ const step=event.key==='ArrowDown'?2:event.key==='ArrowUp'?-2:event.key==='ArrowRight'?1:event.key==='ArrowLeft'?-1:0;
+ if(step)index=(index+step+tabs.length)%tabs.length;else if(event.key==='Home')index=0;else if(event.key==='End')index=tabs.length-1;else return;
+ event.preventDefault();renderIntegration(tabs[index].dataset.tool);tabs[index].focus();
+});
+$$('[data-copy-tool]').forEach(button=>button.addEventListener('click',async()=>{
+ const code=$('[data-tool-command="'+button.dataset.copyTool+'"]');
+ try{await navigator.clipboard.writeText(code.textContent)}catch{
+ const range=document.createRange();range.selectNodeContents(code);const selection=getSelection();selection.removeAllRanges();selection.addRange(range);
+ $('#tool-copy-status').textContent=localized(['Select and copy the highlighted command.','Skopiuj zaznaczone polecenie.']);return;
+ }
+ $$('[data-copy-tool] span').forEach(span=>span.textContent=localized(['Copy','Kopiuj']));
+ $('span',button).textContent=localized(['Copied','Skopiowano']);$('#tool-copy-status').textContent=localized(['Configuration command copied.','Skopiowano polecenie konfiguracji.']);
+ clearTimeout(toolCopyTimer);toolCopyTimer=setTimeout(()=>{$('span',button).textContent=localized(['Copy','Kopiuj'])},2200);
+}));
 $$('[data-file]').forEach(button=>button.addEventListener('click',()=>renderFile(button.dataset.file)));
 $('.file-tabs').addEventListener('keydown',event=>{
  const tabs=$$('[data-file]');let index=tabs.indexOf(document.activeElement);if(index<0)return;
@@ -131,3 +182,11 @@ function updateScroll(){
 addEventListener('scroll',()=>{if(!scrollScheduled){scrollScheduled=true;requestAnimationFrame(updateScroll)}},{passive:true});
 addEventListener('resize',updateScroll);
 applyLanguage(lang);updateScroll();
+
+// Keep the continuous diagram idle outside the viewport and in background tabs.
+let networkVisible=true;
+const syncNetwork=()=>{$('.network').dataset.paused=String(!networkVisible||document.hidden)};
+const networkObserver=new IntersectionObserver(([entry])=>{networkVisible=entry.isIntersecting;syncNetwork()});
+networkObserver.observe($('.network'));
+document.addEventListener('visibilitychange',syncNetwork);
+syncNetwork();

@@ -1,0 +1,58 @@
+/* A stable tool workbench: the selection changes, the page stays put. */
+.runner-bar{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:0 0 27px;margin-bottom:24px;border-bottom:1px solid var(--line)}
+.runner-bar>div:first-child{display:flex;flex-direction:column;align-items:start;gap:7px}
+.runner-bar>div:first-child>span{font-size:13px;color:var(--paper)}
+.runner-bar>div:first-child>small{font-family:Plex,monospace;font-size:10px;color:var(--muted)}
+.runner-options{display:flex;gap:8px;flex-wrap:wrap}
+.runner-options button{display:flex;align-items:center;gap:9px;min-height:48px;padding:10px 14px;border:1px solid var(--line);border-radius:7px;background:transparent;font-size:12px;transition:background-color 160ms,border-color 160ms,color 160ms,transform 160ms}
+.runner-options button small{font-size:10px;color:var(--muted)}
+.runner-options button[aria-pressed=true]{background:var(--orange);border-color:var(--orange);color:var(--bg)}
+.runner-options button[aria-pressed=true] small{color:#442014}
+.runner-options button:active{transform:scale(.97)}
+.tool-catalog{display:grid;grid-template-columns:1.05fr 1fr;gap:32px;align-items:stretch}
+.tool-choices{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-content:start}
+.tool-choice{position:relative;min-width:0;min-height:95px;text-align:left;display:flex;align-items:center;gap:13px;padding:17px 14px;border:1px solid var(--line);border-radius:8px;background:transparent;transition:background-color 180ms,border-color 180ms,transform 180ms}
+.tool-choice>span{min-width:0}.tool-choice strong{display:block;font-size:13px;font-weight:600;letter-spacing:-.03em}.tool-choice small{display:block;font-size:10px;color:var(--muted);line-height:1.7;margin-top:6px}
+.tool-choice>.icon:first-child{width:22px;height:22px;color:var(--muted)}
+.tool-choice>.icon:last-child{position:absolute;right:11px;top:11px;width:12px;height:12px;color:var(--orange);opacity:0;transform:translateX(-4px);transition:transform 180ms,opacity 180ms}
+.tool-choice[aria-selected=true]{background:#232522;border-color:var(--orange)}
+.tool-choice[aria-selected=true]>.icon:first-child{color:var(--orange)}
+.tool-choice[aria-selected=true]>.icon:last-child{opacity:1;transform:none}
+.tool-choice:active{transform:scale(.98)}
+.tool-choice:focus-visible{outline-offset:3px}
+.tool-stage{min-width:0;display:flex;border:1px solid var(--line);border-radius:12px;background:var(--panel);overflow:hidden}
+.tool-preview{width:100%;min-height:515px;padding:28px;display:flex;flex-direction:column;align-items:start}
+.tool-preview[hidden]{display:none}
+.tool-preview:focus-visible{outline-offset:-5px}
+.tool-preview-top{width:100%;display:flex;align-items:center;gap:14px;margin-bottom:23px}
+.tool-mark{display:flex;align-items:center;justify-content:center;width:52px;height:52px;border:1px solid #575249;border-radius:12px;color:var(--orange);background:#252623}
+.tool-mark .icon{width:28px;height:28px}.tool-protocol{font-family:Plex,monospace;color:var(--muted);font-size:11px}.tool-count{margin-left:auto;font:10px Plex,monospace;color:var(--muted)}
+.tool-preview h3{font-size:34px;letter-spacing:-.045em}
+.tool-preview .tool-description{font-size:14px;color:#b8bab6;line-height:1.85;margin-top:18px;max-width:49ch;min-height:104px}
+.tool-guide{font-size:11px;margin:17px 0 27px}.tool-guide .icon{width:13px;height:13px}
+.tool-command{width:100%;margin-top:auto;background:var(--bg);border:1px solid var(--line);border-radius:7px}
+.tool-command-top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 12px;border-bottom:1px solid var(--line);font-size:10px;color:var(--muted)}
+.tool-command-top button{display:flex;align-items:center;justify-content:center;gap:7px;min-height:36px;padding:6px;border:0;background:transparent;border-radius:4px;font-size:11px;color:var(--paper)}
+.tool-command-top button .icon{width:14px;height:14px}.tool-command-top button:active{background:var(--orange);color:var(--bg)}
+.tool-command code{display:block;padding:16px;font-size:11px;line-height:1.9;overflow-wrap:anywhere;white-space:pre-wrap;min-height:75px}
+.tool-preview .tool-requirements{font-size:10px;color:var(--muted);line-height:1.8;margin-top:14px;min-height:54px}
+.integration-command{gap:25px;margin-top:26px}.integration-command p{max-width:440px;line-height:1.8}
+.faq{max-width:none;margin-top:95px}.faq>h2{font-size:30px;margin-bottom:35px}.faq-answer{display:grid;grid-template-columns:.8fr 1.4fr;gap:65px;padding:30px 0;border-top:1px solid var(--line)}
+.faq-answer>div{display:flex;gap:19px;align-items:baseline}.faq-index{color:var(--orange);font:11px Plex,monospace;flex-shrink:0}
+.faq-answer h3{font-size:19px;line-height:1.5;letter-spacing:-.03em;text-wrap:pretty}.faq-answer p{max-width:72ch;padding:0;font-size:13px;line-height:1.9}
+@media(hover:hover) and (pointer:fine){
+.tool-choice:hover{border-color:#797e77;background:#1d2122;transform:translateY(-2px)}
+.tool-choice:hover>.icon:last-child{opacity:1;transform:none}.tool-choice[aria-selected=true]:hover{border-color:var(--orange);background:#2d2b23}
+.runner-options button:hover{border-color:var(--orange);background:#272622}.runner-options button[aria-pressed=true]:hover{background:#ff875b}
+.tool-command-top button:hover{background:var(--raised);color:var(--orange)}
+}
+html[data-motion=off] :is(.tool-choice,.runner-options button){transform:none!important}
+@media(max-width:1100px){.tool-catalog{gap:20px}.tool-choice{padding:15px 11px;gap:10px}.tool-choice strong{font-size:12px}.tool-choice>.icon:first-child{width:18px;height:18px}.runner-options button{flex-direction:column;gap:4px;font-size:11px}.tool-preview{padding:24px}.tool-preview .tool-description{min-height:130px}}
+@media(max-width:850px){.runner-bar{align-items:start}.tool-catalog{grid-template-columns:1fr 1fr}.tool-choices{gap:8px}.tool-choice{min-height:102px;flex-direction:column;align-items:start;justify-content:center;gap:10px}.tool-choice small{font-size:10px}.tool-preview{padding:21px}.tool-preview h3{font-size:29px}.tool-preview .tool-description{font-size:13px;min-height:155px}.tool-protocol{font-size:10px}.tool-count{display:none}.tool-command-top{flex-wrap:wrap}.faq-answer{gap:35px;grid-template-columns:1fr 1.4fr}.faq-answer h3{font-size:17px}}
+@media(max-width:600px){
+.runner-bar{display:block;margin-bottom:20px;padding-bottom:22px}.runner-bar>div:first-child>span{font-size:13px}.runner-bar>div:first-child>small{font-size:10px}.runner-options{margin-top:18px;display:grid!important;grid-template-columns:repeat(3,1fr);gap:7px!important}.runner-options button{padding:9px 5px;font-size:11px;min-height:57px;align-items:center}.runner-options button small{font-size:8px}
+.tool-catalog{display:flex;flex-direction:column;gap:18px}.tool-choices{grid-template-columns:1fr 1fr;gap:8px}.tool-choice{min-height:81px;flex-direction:row;align-items:center;justify-content:start;padding:14px 11px;gap:10px}.tool-choice strong{font-size:12px}.tool-choice small{font-size:9px;line-height:1.65;max-width:130px}.tool-choice>.icon:first-child{width:18px;height:18px}.tool-choice>.icon:last-child{width:9px;right:7px;top:7px}
+.tool-preview{padding:23px;min-height:490px}.tool-preview-top{margin-bottom:21px}.tool-mark{width:47px;height:47px}.tool-count{display:block}.tool-preview h3{font-size:30px}.tool-preview .tool-description{font-size:14px;min-height:130px}.tool-guide{font-size:11px;margin:16px 0 25px}.tool-command-top{flex-wrap:nowrap}.tool-command code{font-size:11px}.tool-preview .tool-requirements{font-size:11px;min-height:59px}.tool-protocol{font-size:11px}.tool-command-top>span{font-size:10px}.integration-command{display:block}.integration-command code{font-size:12px}.integration-command p{font-size:12px;margin-top:15px}
+.faq{margin-top:65px}.faq>h2{font-size:27px;line-height:1.3;margin-bottom:27px}.faq-answer{display:block;padding:25px 0}.faq-answer>div{gap:13px}.faq-answer h3{font-size:17px}.faq-answer p{font-size:13px;margin-top:18px;line-height:1.9}.faq-index{font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){html:not([data-motion]) :is(.tool-choice,.runner-options button){transform:none!important}}

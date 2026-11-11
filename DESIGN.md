@@ -151,7 +151,7 @@ Below 600px, the English hero uses `clamp(2.1rem, 9.9vw, 3.8rem)` and Polish use
 
 The outer container is 1408px including desktop gutters, leaving a maximum 1280px content width. Gutters are 64px, then 40px at 1150px, 24px at 600px and 18px at 360px. Main section spacing steps from 130px to 90px at 850px and 70px at 600px.
 
-Desktop layouts pair a large heading or narrative with an explanatory column or panel. The hero splits at a 1.2:1 ratio; the story and editor use 1:1.2. Integrations form two columns of ruled disclosure rows. At 850px the main navigation hides, the hero stacks, and customization and setup become single-column layouts. At 600px integrations become one column and the network places Discord and the server above a row of three tool categories.
+Desktop layouts pair a large heading or narrative with an explanatory column or panel. The hero splits at a 1.2:1 ratio; the story and editor use 1:1.2. Integrations pair a two-column grid of ten tool selectors with one stable preview area. The preview contains the selected tool’s description, setup guide and copyable command; selecting another tool does not expand the page. At 850px the main navigation hides, the hero stacks, and customization and setup become single-column layouts. At 600px the tool grid sits above the preview while retaining two selector columns, and the network places Discord and the server above a row of three tool categories. FAQ answers are always visible: question and answer share a desktop row and stack on phones.
 
 The desktop story scene is sticky beside three successive narrative steps. On phones it becomes a normal in-flow demonstration; its buttons select the matching narrative step. Preformatted installation commands scroll within their own block. Decorative orbits must remain inside the viewport.
 
@@ -161,7 +161,7 @@ The interface uses no box shadows. Tonal panels, one-pixel rules, nested server 
 
 ## Shapes
 
-Controls use compact rounded corners; larger functional panels have restrained 12–14px radii. The server uses 16px corners on desktop. Status marks and the server’s orbit rings are circular. Navigation, disclosure rows and tab strips remain predominantly linear, with thin dividers instead of pill containers.
+Controls use compact rounded corners; larger functional panels have restrained 12–14px radii. The server uses 16px corners on desktop. Status marks and the server’s orbit rings are circular. Navigation, question-and-answer rows and tab strips remain predominantly linear, with thin dividers instead of pill containers.
 
 ## Components
 
@@ -173,11 +173,17 @@ Focus is a visible 2px orange outline with 6px offset; the orange section uses a
 
 ### Navigation and language
 
-The header combines the original logo, text navigation, EN/PL controls and a GitHub link. Links use muted text, turning paper on hover. Language controls expose their pressed state and preserve the selection in local storage and the URL. The GitHub text label hides on phones while its accessible icon link remains.
+The header combines the original logo, text navigation, EN/PL controls and a GitHub link. The selected language has an orange inset tile with graphite text, driven by `aria-current="page"`. EN and PL are native links to `/` and `/pl/`, each served as generated static HTML. Unselected language links and GitHub reveal a charcoal surface with an orange border on hover or keyboard focus. The GitHub icon tips slightly on pointer hover. The GitHub text label hides on phones while its accessible icon link remains.
 
-### Runner badges and disclosures
+Header navigation and every footer link, including the wordmark, turn orange and reveal an underline from left to right on hover or keyboard focus. Pointer hover raises them by 2px; pressing moves them down 1px and scales to 0.96. GitHub and language presses fill orange with graphite text. Transitions use 160–260ms ease-out, shortened to 70ms on press. Feedback preserves the existing layout footprint; footer links have 44px hit areas. Hover motion is limited to fine pointers and respects the global motion control. Focus retains the visible orange outline. A link's pressed state is momentary; only the language selector represents a persistent selection.
 
-Small outlined badges distinguish default and experimental runners. Integrations use native disclosures with a leading line icon, title, supporting label and plus icon. An open row turns its title orange and rotates the plus by 45 degrees. FAQ disclosures use the same ruled-row language.
+### Tool catalog and runner preview
+
+Ten integration tabs remain visible in a compact two-column selector grid. The active tool has an orange border, icon and directional mark. Hover strengthens the border and fill; press gives a small immediate response. Keyboard arrows, Home and End move through the tool tabs, with one active tab in the tab order and its associated panel exposed beside the grid.
+
+The stable preview panel shows the tool’s name, connection type, explanation, upstream setup guide, command and setup requirements. A separate runner selector previews commands for Codex, Claude Code or OpenCode; default and experimental labels remain visible. The selector changes a command preview only and does not configure an agent. Commands include the selected runner and have a copy action with accessible completion feedback. Custom MCP opens the integration menu because its own configuration is required.
+
+FAQ content uses always-visible editorial rows with a small orange index, a question heading and its answer. No disclosure interaction is required to read it.
 
 ### Thread demonstration
 
@@ -189,7 +195,7 @@ The editor uses a dark panel against warm paper. Its four filename tabs have a s
 
 ### Motion
 
-Route travel runs twice for four seconds per pass; cursor blinking is finite. Scene changes use a 0.42-second entrance and the server uses a 0.7-second eased perspective transition. The global motion toggle disables animations, transitions and smooth scrolling, and removes decorative transforms. The initial setting honors `prefers-reduced-motion`; the explicit toggle can enable or pause motion. Demo navigation and content remain available with motion disabled.
+The hero repeats a complete ten-second route: orange request into the engine, sequential tool branches and a paper-colored reply back to Discord. Rack lights acknowledge tool activity. On phones a packet crosses the compact connector and tool icons acknowledge the sequence. The network’s loop pauses outside the viewport or while the document is hidden; cursor blinking remains finite. Scene changes use a 0.42-second entrance and the server uses a 0.7-second eased perspective transition. The global motion toggle disables animations, transitions and smooth scrolling, and removes decorative transforms. The initial setting honors `prefers-reduced-motion`; the explicit toggle can enable or pause motion. Demo navigation and content remain available with motion disabled.
 
 ## Do's and Don'ts
 
@@ -197,7 +203,7 @@ Route travel runs twice for four seconds per pass; cursor blinking is finite. Sc
 - Do retain the original logo and the graphite, paper and orange identity.
 - Do use dark text on orange and dark body copy on paper.
 - Do keep commands and filenames in Plex and explanatory prose in Sora.
-- Do keep disclosures, file tabs and scene controls usable with a keyboard.
+- Do keep integration tabs, runner choices, file tabs and scene controls usable with a keyboard.
 - Do preserve the illustrative-demo label and explicit motion control.
 
 ### Don't:

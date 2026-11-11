@@ -1,0 +1,109 @@
+/* A complete message cycle: Discord → engine → tools → reply.
+   All paths use pathLength="100". Pause the network when it leaves the viewport. */
+.network {
+  --signal-cycle: 10s;
+}
+
+.network .signal {
+  fill: none;
+  stroke: var(--orange);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-dasharray: 14 200;
+  stroke-dashoffset: 14;
+  opacity: 0;
+  animation: signal-packet var(--signal-cycle) linear infinite;
+}
+
+.network .signal-runner { animation-delay: 2s; }
+.network .signal-tools { animation-delay: 3.5s; }
+.network .signal-context { animation-delay: 5s; }
+.network .signal-return {
+  stroke: var(--paper, #f3f0e8);
+  animation-delay: 7s;
+}
+
+.network .rack-slots i {
+  animation: signal-rack var(--signal-cycle) ease-in-out infinite;
+  animation-delay: 2s;
+}
+.network .rack-slots i:nth-child(2) { animation-delay: 3.5s; }
+.network .rack-slots i:nth-child(3) { animation-delay: 5s; }
+
+@keyframes signal-packet {
+  0% { stroke-dashoffset: 14; opacity: 0; }
+  2% { opacity: 1; }
+  17% { opacity: 1; }
+  20%, 100% { stroke-dashoffset: -100; opacity: 0; }
+}
+
+@keyframes signal-rack {
+  0%, 20%, 100% { background-color: #454c4d; }
+  5%, 12% { background-color: var(--orange); }
+}
+
+@media (max-width: 600px) {
+  .network {
+    --mobile-signal-distance: calc((100vw - 48px) * .7 - 14px);
+  }
+  .network::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 114px;
+    left: 0;
+    width: 14px;
+    height: 2px;
+    border-radius: 2px;
+    pointer-events: none;
+    background: var(--orange);
+    opacity: 0;
+    animation: signal-mobile var(--signal-cycle) linear infinite;
+  }
+  .network .tool-node > .icon {
+    animation: signal-tool var(--signal-cycle) ease-in-out infinite;
+    animation-delay: 2s;
+  }
+  .network .tool-node:nth-child(2) > .icon { animation-delay: 3.5s; }
+  .network .tool-node:nth-child(3) > .icon { animation-delay: 5s; }
+}
+
+@media (max-width: 360px) {
+  .network { --mobile-signal-distance: calc((100vw - 36px) * .7 - 14px); }
+}
+
+@keyframes signal-mobile {
+  0% { transform: translateX(0); opacity: 0; background: var(--orange); }
+  2% { opacity: 1; }
+  18% { opacity: 1; }
+  20% { transform: translateX(var(--mobile-signal-distance)); opacity: 0; background: var(--orange); }
+  69% { transform: translateX(var(--mobile-signal-distance)); opacity: 0; background: var(--paper, #f3f0e8); }
+  72% { opacity: 1; }
+  88% { opacity: 1; }
+  90%, 100% { transform: translateX(0); opacity: 0; background: var(--paper, #f3f0e8); }
+}
+
+@keyframes signal-tool {
+  0%, 20%, 100% { opacity: .6; }
+  6%, 12% { opacity: 1; }
+}
+
+/* Animation state is controlled by visibility only, without resetting the cycle. */
+.network[data-paused=true] .signal,
+.network[data-paused=true] .rack-slots i,
+.network[data-paused=true] .tool-node > .icon,
+.network[data-paused=true] .prompt-cursor,
+.network[data-paused=true]::after {
+  animation-play-state: paused;
+}
+
+/* Motion controls preserve every label and connection in the diagram. */
+html[data-motion=off] .network .signal,
+html[data-motion=off] .network::after { display: none; }
+html[data-motion=off] .network .tool-node > .icon { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  html:not([data-motion]) .network .signal,
+  html:not([data-motion]) .network::after { display: none; }
+  html:not([data-motion]) .network .tool-node > .icon { opacity: 1; }
+}
