@@ -1,0 +1,316 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-11T21:29:40.286837+00:00",
+  "title": "Design System: szpont-engine",
+  "extensions": {
+    "colorMeta": {
+      "graphite": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "#111315",
+        "tonalRamp": [
+          "oklch(15% 0.0052 248.11)",
+          "oklch(26% 0.0052 248.11)",
+          "oklch(38% 0.0052 248.11)",
+          "oklch(49% 0.0052 248.11)",
+          "oklch(61% 0.0052 248.11)",
+          "oklch(72% 0.0052 248.11)",
+          "oklch(84% 0.0052 248.11)",
+          "oklch(95% 0.0052 248.11)"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Panel",
+        "canonical": "#191c1e",
+        "tonalRamp": [
+          "oklch(15% 0.0060 236.83)",
+          "oklch(26% 0.0060 236.83)",
+          "oklch(38% 0.0060 236.83)",
+          "oklch(49% 0.0060 236.83)",
+          "oklch(61% 0.0060 236.83)",
+          "oklch(72% 0.0060 236.83)",
+          "oklch(84% 0.0060 236.83)",
+          "oklch(95% 0.0060 236.83)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm paper",
+        "canonical": "#f3f0e8",
+        "tonalRamp": [
+          "oklch(15% 0.0111 89.72)",
+          "oklch(26% 0.0111 89.72)",
+          "oklch(38% 0.0111 89.72)",
+          "oklch(49% 0.0111 89.72)",
+          "oklch(61% 0.0111 89.72)",
+          "oklch(72% 0.0111 89.72)",
+          "oklch(84% 0.0111 89.72)",
+          "oklch(95% 0.0111 89.72)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted gray",
+        "canonical": "#a7aaa6",
+        "tonalRamp": [
+          "oklch(15% 0.0066 137.78)",
+          "oklch(26% 0.0066 137.78)",
+          "oklch(38% 0.0066 137.78)",
+          "oklch(49% 0.0066 137.78)",
+          "oklch(61% 0.0066 137.78)",
+          "oklch(72% 0.0066 137.78)",
+          "oklch(84% 0.0066 137.78)",
+          "oklch(95% 0.0066 137.78)"
+        ]
+      },
+      "orange": {
+        "role": "primary",
+        "displayName": "Signal orange",
+        "canonical": "#ff6b35",
+        "tonalRamp": [
+          "oklch(15% 0.1926 39.23)",
+          "oklch(26% 0.1926 39.23)",
+          "oklch(38% 0.1926 39.23)",
+          "oklch(49% 0.1926 39.23)",
+          "oklch(61% 0.1926 39.23)",
+          "oklch(72% 0.1926 39.23)",
+          "oklch(84% 0.1926 39.23)",
+          "oklch(95% 0.1926 39.23)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line gray",
+        "canonical": "#373b3c",
+        "tonalRamp": [
+          "oklch(15% 0.0057 214.37)",
+          "oklch(26% 0.0057 214.37)",
+          "oklch(38% 0.0057 214.37)",
+          "oklch(49% 0.0057 214.37)",
+          "oklch(61% 0.0057 214.37)",
+          "oklch(72% 0.0057 214.37)",
+          "oklch(84% 0.0057 214.37)",
+          "oklch(95% 0.0057 214.37)"
+        ]
+      },
+      "orange-hover": {
+        "role": "primary",
+        "displayName": "Orange hover",
+        "canonical": "#ff875b",
+        "tonalRamp": [
+          "oklch(15% 0.1574 40.45)",
+          "oklch(26% 0.1574 40.45)",
+          "oklch(38% 0.1574 40.45)",
+          "oklch(49% 0.1574 40.45)",
+          "oklch(61% 0.1574 40.45)",
+          "oklch(72% 0.1574 40.45)",
+          "oklch(84% 0.1574 40.45)",
+          "oklch(95% 0.1574 40.45)"
+        ]
+      },
+      "dark-hover": {
+        "role": "neutral",
+        "displayName": "Dark hover",
+        "canonical": "#292c2e",
+        "tonalRamp": [
+          "oklch(15% 0.0056 236.72)",
+          "oklch(26% 0.0056 236.72)",
+          "oklch(38% 0.0056 236.72)",
+          "oklch(49% 0.0056 236.72)",
+          "oklch(61% 0.0056 236.72)",
+          "oklch(72% 0.0056 236.72)",
+          "oklch(84% 0.0056 236.72)",
+          "oklch(95% 0.0056 236.72)"
+        ]
+      },
+      "paper-muted": {
+        "role": "neutral",
+        "displayName": "Paper muted",
+        "canonical": "#565c59",
+        "tonalRamp": [
+          "oklch(15% 0.0089 164.63)",
+          "oklch(26% 0.0089 164.63)",
+          "oklch(38% 0.0089 164.63)",
+          "oklch(49% 0.0089 164.63)",
+          "oklch(61% 0.0089 164.63)",
+          "oklch(72% 0.0089 164.63)",
+          "oklch(84% 0.0089 164.63)",
+          "oklch(95% 0.0089 164.63)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero heading; responsive locale-specific adjustments on phones."
+      },
+      "headline": {
+        "displayName": "Section heading",
+        "purpose": "Primary section headings."
+      },
+      "title": {
+        "displayName": "Integration title",
+        "purpose": "Compact semibold disclosure titles."
+      },
+      "body": {
+        "displayName": "Reading copy",
+        "purpose": "Explanatory prose; 13–15px generally, adjusted per breakpoint."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Compact UI metadata; mobile exceptions may be 9–10px."
+      },
+      "button": {
+        "displayName": "Button label",
+        "purpose": "Semibold action text."
+      },
+      "code": {
+        "displayName": "Plex code",
+        "purpose": "Commands, Markdown, filenames and route details."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "button-state",
+        "value": "background .2s, transform .2s",
+        "purpose": "Button fill and 2px upward hover response."
+      },
+      {
+        "name": "server-perspective",
+        "value": "transform .7s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Straighten the server on network hover."
+      },
+      {
+        "name": "scene-enter",
+        "value": "scene-in .42s cubic-bezier(.16,1,.3,1) both",
+        "purpose": "Brief entrance for a new illustrative scene."
+      },
+      {
+        "name": "route-travel",
+        "value": "travel 4s ease-in-out 2",
+        "purpose": "Finite introductory route animation."
+      },
+      {
+        "name": "disclosure-open",
+        "value": "transform .25s",
+        "purpose": "Rotate the disclosure plus by 45 degrees."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation: none; transition: none; scroll-behavior: auto",
+        "purpose": "System preference initializes motion state; the explicit page toggle can enable or pause it."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-phone",
+        "value": "360px"
+      },
+      {
+        "name": "phone",
+        "value": "600px"
+      },
+      {
+        "name": "tablet",
+        "value": "850px"
+      },
+      {
+        "name": "compact-desktop",
+        "value": "1150px"
+      },
+      {
+        "name": "wide-desktop",
+        "value": "1600px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary action on graphite surfaces.",
+      "html": "<button class=\"ds-button ds-primary\">Start your engine<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5l7 7-7 7\"/></svg></button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:52px;padding:0 22px;border:0;border-radius:6px;font:600 13px Sora,sans-serif;text-decoration:none;cursor:pointer;transition:background .2s,transform .2s}.ds-button svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.ds-button:hover{transform:translateY(-2px)}.ds-button:focus-visible{outline:2px solid var(--orange,#ff6b35);outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}.ds-button:hover{transform:none}}.ds-primary{background:var(--orange,#ff6b35);color:var(--bg,#111315)}.ds-primary:hover{background:#ff875b}"
+    },
+    {
+      "name": "Dark button",
+      "kind": "button",
+      "refersTo": "button-dark",
+      "description": "Closing action on the orange invitation.",
+      "html": "<div class=\"ds-orange\"><button class=\"ds-button ds-dark\">Find us on GitHub<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5l7 7-7 7\"/></svg></button></div>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:52px;padding:0 22px;border:0;border-radius:6px;font:600 13px Sora,sans-serif;text-decoration:none;cursor:pointer;transition:background .2s,transform .2s}.ds-button svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.ds-button:hover{transform:translateY(-2px)}.ds-button:focus-visible{outline:2px solid var(--orange,#ff6b35);outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}.ds-button:hover{transform:none}}.ds-orange{padding:18px;background:var(--orange,#ff6b35)}.ds-dark{background:var(--bg,#111315);color:var(--paper,#f3f0e8)}.ds-dark:hover{background:#292c2e}.ds-dark:focus-visible{outline-color:var(--bg,#111315)}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Restrained text links for main page sections.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"#how-it-works\">How it works</a><a href=\"#integrations\">Integrations</a><a href=\"#make-it-yours\">Make it yours</a></nav>",
+      "css": ".ds-nav{display:flex;flex-wrap:wrap;gap:28px;background:var(--bg,#111315);padding:12px}.ds-nav a{color:var(--muted,#a7aaa6);font:400 12px Sora,sans-serif;padding:14px 0;text-decoration:none}.ds-nav a:hover{color:var(--paper,#f3f0e8)}.ds-nav a:focus-visible{outline:2px solid var(--orange,#ff6b35);outline-offset:6px}"
+    },
+    {
+      "name": "Runner badge",
+      "kind": "chip",
+      "refersTo": "runner-badge",
+      "description": "Noninteractive availability metadata beside runner names.",
+      "html": "<span class=\"ds-runner\">Claude Code <small>experimental</small></span>",
+      "css": ".ds-runner{display:inline-flex;align-items:center;gap:7px;padding:14px;background:var(--bg,#111315);color:var(--paper,#f3f0e8);font:400 13px Sora,sans-serif}.ds-runner small{font-size:11px;color:var(--muted,#a7aaa6);border:1px solid #555b5b;padding:4px 5px;border-radius:3px}"
+    },
+    {
+      "name": "Demonstration panel",
+      "kind": "card",
+      "refersTo": "demo-panel",
+      "description": "Illustrative technical content with header and status footer.",
+      "html": "<article class=\"ds-demo\"><header># ship-the-idea <span>Illustrative demo</span></header><div class=\"ds-demo-body\"><strong>You</strong><p>Build a small release page.</p><code>!work 30m</code></div><footer><i></i> Task received</footer></article>",
+      "css": ".ds-demo{max-width:480px;background:var(--panel,#191c1e);color:var(--paper,#f3f0e8);border:1px solid var(--line,#373b3c);border-radius:14px;overflow:hidden;font-family:Sora,sans-serif}.ds-demo header{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding:22px;border-bottom:1px solid var(--line,#373b3c);font-size:12px}.ds-demo header span{font-size:11px;color:var(--muted,#a7aaa6)}.ds-demo-body{padding:28px 24px;min-height:120px;font-size:12px;line-height:1.8}.ds-demo-body strong{font-size:11px;font-weight:400}.ds-demo-body p{margin:7px 0}.ds-demo code{font:11px Plex,monospace;color:var(--orange,#ff6b35)}.ds-demo footer{display:flex;gap:7px;align-items:center;padding:15px 22px;border-top:1px solid var(--line,#373b3c);font-size:11px;color:var(--muted,#a7aaa6)}.ds-demo i{width:6px;height:6px;background:var(--orange,#ff6b35);border-radius:50%}"
+    },
+    {
+      "name": "Integration disclosure",
+      "kind": "custom",
+      "description": "Ruled disclosure for an integration with compact setup details.",
+      "html": "<details class=\"ds-disclosure\"><summary><span><strong>Browser</strong><small>Inspect and interact with pages</small></span><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg></summary><p>Connect the browser tools supported by your chosen runner.</p></details>",
+      "css": ".ds-disclosure{max-width:520px;background:var(--bg,#111315);color:var(--paper,#f3f0e8);border-bottom:1px solid var(--line,#373b3c);font-family:Sora,sans-serif}.ds-disclosure summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:94px;cursor:pointer}.ds-disclosure summary::-webkit-details-marker{display:none}.ds-disclosure strong{display:block;font-size:16px;font-weight:600;letter-spacing:-.025em}.ds-disclosure small{display:block;color:var(--muted,#a7aaa6);font-size:11px;margin-top:6px}.ds-disclosure svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;transition:transform .25s}.ds-disclosure[open] strong,.ds-disclosure[open] svg{color:var(--orange,#ff6b35)}.ds-disclosure[open] svg{transform:rotate(45deg)}.ds-disclosure p{margin:0;padding:0 0 24px;font-size:13px;line-height:1.8;color:var(--muted,#a7aaa6)}.ds-disclosure summary:focus-visible{outline:2px solid var(--orange,#ff6b35);outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-disclosure svg{transition:none}}"
+    },
+    {
+      "name": "Markdown file tabs",
+      "kind": "custom",
+      "refersTo": "file-tab",
+      "description": "Selected file treatment inside the dark Markdown editor. Static preview of the implemented tab system.",
+      "html": "<div class=\"ds-editor\"><div class=\"ds-files\" role=\"tablist\" aria-label=\"Agent context files\"><button role=\"tab\" aria-selected=\"true\">SOUL.md</button><button role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">USER.md</button><button role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">POLICY.md</button></div><pre><span># Working style</span>\n\nBe clear. Keep useful context.</pre></div>",
+      "css": ".ds-editor{max-width:520px;background:var(--panel,#191c1e);color:var(--paper,#f3f0e8);border-radius:12px;overflow:hidden}.ds-files{display:flex;border-top:1px solid var(--line,#373b3c);border-bottom:1px solid var(--line,#373b3c);overflow-x:auto}.ds-files button{flex:1;background:none;border:0;border-bottom:2px solid transparent;color:var(--muted,#a7aaa6);font:11px Plex,monospace;padding:17px 12px;min-height:48px;cursor:pointer}.ds-files button[aria-selected=true]{background:#24292a;color:var(--paper,#f3f0e8);border-color:var(--orange,#ff6b35)}.ds-files button:focus-visible{outline:2px solid var(--orange,#ff6b35);outline-offset:-5px}.ds-editor pre{margin:0;padding:24px 20px;font:11px/2.2 Plex,monospace;white-space:pre-wrap}.ds-editor pre span{color:var(--orange,#ff6b35)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "An animated connection",
+    "overview": "An animated connection grounded in the existing continuous-thread identity: graphite, warm paper and a precise orange signal. Large Sora headings give the page its voice; compact Plex commands, filenames and route labels make the technical detail legible. The original logo remains the visual anchor.\n\nDepth comes from tonal surfaces, hairline borders and the server illustration’s restrained perspective. Motion explains the path between Discord, the user’s machine and tools. English and Polish share the same system, with responsive type and direct controls preserving the experience on small screens.",
+    "keyCharacteristics": [
+      "Graphite surfaces, warm paper and one orange accent.",
+      "Large balanced headlines beside compact technical detail.",
+      "Visible routes, thin rules and restrained rounded panels.",
+      "Scroll-driven illustration with direct controls and reduced-motion support."
+    ],
+    "rules": [
+      {
+        "name": "The Contrast Rule",
+        "body": "Orange fields carry graphite text. The paper section uses graphite and paper-muted text; dark-surface muted text is not reused there.",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "Do retain the original logo and the graphite, paper and orange identity.",
+      "Do use dark text on orange and dark body copy on paper.",
+      "Do keep commands and filenames in Plex and explanatory prose in Sora.",
+      "Do keep disclosures, file tabs and scene controls usable with a keyboard.",
+      "Do preserve the illustrative-demo label and explicit motion control."
+    ],
+    "donts": [
+      "Don't turn every content group into an elevated card; use the existing ruled rows and open layouts.",
+      "Don't rely on scrolling or animation as the only way to reach a demonstration state.",
+      "Don't let decorative orbits or preformatted commands widen the page on small screens.",
+      "Don't shrink general reading copy to the diagram’s compact metadata scale."
+    ]
+  }
+}
