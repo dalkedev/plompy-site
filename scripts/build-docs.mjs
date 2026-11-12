@@ -2,6 +2,7 @@ import { readFile, writeFile, mkdir, rm, stat } from 'node:fs/promises';
 import { resolve, dirname, relative, sep } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { createHash } from 'node:crypto';
+import { createReleaseHistory, releaseMarkdown, releaseIndexHtml, releaseMetadataHtml } from './release-history.mjs';
 
 const projectDir = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -73,18 +74,19 @@ export function renderMarkdown(markdown, source, sources) {
 }
 
 function pageHtml(page, manifest, rendered, origin) {
-  const groups = [...new Set(manifest.pages.map(item=>item.group))];
-  const nav = groups.map(group=>`<section class="doc-nav-group"><h2>${escape(group)}</h2><ul>${manifest.pages.filter(item=>item.group===group).map(item=>`<li><a href="${route(item.slug)}"${item.slug===page.slug?' aria-current="page"':''}>${escape(item.title)}</a></li>`).join('')}</ul></section>`).join('');
-  const index=manifest.pages.indexOf(page), previous=manifest.pages[index-1], next=manifest.pages[index+1];
+  const visible = manifest.pages.filter(item=>!item.hiddenFromNav);
+  const groups = [...new Set(visible.map(item=>item.group))];
+  const nav = groups.map(group=>`<section class="doc-nav-group"><h2>${escape(group)}</h2><ul>${visible.filter(item=>item.group===group).map(item=>`<li><a href="${route(item.slug)}"${item.slug===page.slug?' aria-current="page"':page.release&&item.kind==='release-index'?' aria-current="location"':''}>${escape(item.title)}</a></li>`).join('')}</ul></section>`).join('');
+  const index=visible.indexOf(page), previous=page.release ? page.newerRelease : visible[index-1], next=page.release ? page.olderRelease : visible[index+1];
   const toc=rendered.toc.filter(item=>item.level===2).map(item=>`<li><a href="#${item.id}">${escape(item.label)}</a></li>`).join('');
   const canonical=origin+route(page.slug);
-  const structured={'@context':'https://schema.org','@type':'TechArticle',headline:page.title,description:page.description,url:canonical,inLanguage:'en',isPartOf:{'@type':'WebSite',name:'Plompy documentation',url:origin+'/docs/'},about:{'@type':'SoftwareApplication',name:'Plompy Local',applicationCategory:'DeveloperApplication',operatingSystem:'Linux containers'}};
+  const structured={'@context':'https://schema.org','@type':'TechArticle',headline:page.title,description:page.description,url:canonical,inLanguage:'en',isPartOf:{'@type':'WebSite',name:'Plompy documentation',url:origin+'/docs/'},about:{'@type':'SoftwareApplication',name:page.release||page.kind==='release-index'?'Plompy Engine':'Plompy Local',applicationCategory:'DeveloperApplication',operatingSystem:'Linux containers',...(page.release?{softwareVersion:page.release.version}:{})},...(page.release?{datePublished:page.release.publishedAt}:{})};
   return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101515"><title>${escape(page.title)} | Plompy Docs</title><meta name="description" content="${escape(page.description)}"><meta name="robots" content="index,follow"><link rel="canonical" href="${escape(canonical)}"><meta property="og:type" content="article"><meta property="og:title" content="${escape(page.title)} | Plompy Docs"><meta property="og:description" content="${escape(page.description)}"><meta property="og:url" content="${escape(canonical)}"><meta property="og:image" content="${origin}/assets/social-preview.jpg"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/assets/favicon.png"><link rel="stylesheet" href="/docs/docs.css"><script src="/docs/docs.js" defer></script><script type="application/ld+json">${JSON.stringify(structured).replaceAll('<','\\u003c')}</script></head>
 <body><a class="skip" href="#doc-main">Skip to content</a>
-<header class="docs-header"><a class="docs-brand" href="/" aria-label="Plompy home"><img src="/assets/logo.png" alt="" width="48" height="48"><span>plompy-engine<span class="brand-dot">.</span></span></a><a class="docs-home" href="/docs/">Docs</a><button class="search-open" type="button"><span>Search the guide</span><kbd aria-hidden="true">⌘ K</kbd></button><nav aria-label="Project links"><a href="/">Website</a><a href="https://github.com/dalkedev/plompy-engine">GitHub<span aria-hidden="true"> ↗</span></a></nav></header>
+<header class="docs-header"><a class="docs-brand" href="/" aria-label="Plompy home"><img src="/assets/logo.png" alt="" width="48" height="48"><span>plompy-engine<span class="brand-dot">.</span></span></a><a class="docs-home" href="/docs/">Docs</a><button class="search-open" type="button"><span>Search the guide</span><kbd aria-hidden="true">⌘ K</kbd></button><nav aria-label="Project links">${manifest.releaseHistory?'<a href="/docs/releases/">Releases</a>':''}<a href="/">Website</a><a href="https://github.com/dalkedev/plompy-engine">GitHub<span aria-hidden="true"> ↗</span></a></nav></header>
 <div class="docs-shell"><aside class="docs-sidebar"><details class="mobile-nav"><summary>Browse documentation</summary><nav aria-label="Documentation">${nav}</nav></details><nav class="desktop-nav" aria-label="Documentation">${nav}</nav><p class="docs-version">${escape(manifest.version)}<span>Source guide · ${escape(manifest.updated)}</span></p></aside>
-<main id="doc-main" tabindex="-1"><div class="doc-breadcrumb"><a href="/docs/">Documentation</a><span aria-hidden="true">/</span><span>${escape(page.title)}</span></div><article class="doc-article">${rendered.html}</article><nav class="doc-pager" aria-label="Adjacent documentation">${previous?`<a href="${route(previous.slug)}"><small>Previous</small><strong>${escape(previous.title)}</strong></a>`:'<span></span>'}${next?`<a href="${route(next.slug)}"><small>Next</small><strong>${escape(next.title)}</strong></a>`:''}</nav><footer class="doc-footer"><span>Keep the thread. Follow the sources.</span><a href="https://buymeacoffee.com/dalkedev">Buy me a coffee ↗</a></footer></main>
+<main id="doc-main" tabindex="-1"><div class="doc-breadcrumb"><a href="/docs/">Documentation</a><span aria-hidden="true">/</span>${page.release?'<a href="/docs/releases/">Release history</a><span aria-hidden="true">/</span>':''}<span>${escape(page.title)}</span></div><article class="doc-article">${rendered.html}</article><nav class="doc-pager" aria-label="${page.release?'Adjacent releases':'Adjacent documentation'}">${previous?`<a href="${route(previous.slug)}"><small>${page.release?'Newer release':'Previous'}</small><strong>${escape(previous.title)}</strong></a>`:'<span></span>'}${next?`<a href="${route(next.slug)}"><small>${page.release?'Earlier release':'Next'}</small><strong>${escape(next.title)}</strong></a>`:''}</nav><footer class="doc-footer"><span>Keep the thread. Follow the sources.</span><a href="https://buymeacoffee.com/dalkedev">Buy me a coffee ↗</a></footer></main>
 <aside class="docs-toc"><div><p>On this page</p><nav aria-label="On this page"><ul>${toc}</ul></nav><a class="doc-top" href="#doc-main">Back to top ↑</a><img src="/assets/logo.png" alt="" width="104" height="104" loading="lazy"></div></aside></div>
 <dialog class="search-dialog" aria-labelledby="search-title"><div class="search-top"><h2 id="search-title">Find your next step</h2><button class="search-close" type="button" aria-label="Close search">Close <kbd>Esc</kbd></button></div><label for="docs-search">Search documentation</label><input id="docs-search" type="search" placeholder="Try Codex, Ollama, API key…" autocomplete="off"><p id="search-status" role="status" aria-live="polite">Search titles and guide content.</p><ul id="search-results"></ul></dialog><p id="copy-status" class="sr-only" role="status" aria-live="polite"></p></body></html>\n`;
 }
@@ -95,18 +97,37 @@ export async function buildDocs({sourceDir,distDir=resolve(projectDir,'dist'),si
   const origin=new URL(siteUrl).origin;
   const manifest=JSON.parse(await readFile(resolve(sourceDir,'navigation.json'),'utf8'));
   if(!Array.isArray(manifest.pages)||!manifest.pages.length)throw new Error('No documentation pages.');
+  let history, releaseSources;
+  const generated = new Map();
+  if(manifest.releaseHistory) {
+    const [changelog,catalogText] = await Promise.all([readFile(resolve(sourceDir,'../../CHANGELOG.md'),'utf8'),readFile(resolve(sourceDir,'../releases/catalog.json'),'utf8')]);
+    history=createReleaseHistory(changelog,JSON.parse(catalogText));
+    if(manifest.pages.filter(page=>page.kind==='release-index').length!==1)throw new Error('Release history needs exactly one index.');
+    releaseSources={changelog:{source:'CHANGELOG.md',hash:hash(changelog)},catalog:{source:'docs/releases/catalog.json',hash:hash(catalogText)}};
+    const releasePages=history.releases.map(release=>({slug:`releases/${release.version}`,source:`releases/version-${release.version.replaceAll('.','-')}.md`,title:`Plompy ${release.version}`,description:`${release.title}. Published ${release.publishedAt.slice(0,10)}. Changes, downloads and version boundaries.`,group:'Releases',hiddenFromNav:true,release}));
+    releasePages.forEach((page,index)=>{
+      page.newerRelease=releasePages[index-1];page.olderRelease=releasePages[index+1];
+      generated.set(page.source,releaseMarkdown(page.release,history));
+    });
+    manifest.pages.push(...releasePages);
+  }
   const sources=new Map();
   for(const page of manifest.pages) {
-    if(!/^(?:[a-z0-9-]+(?:\/[a-z0-9-]+)*)?$/.test(page.slug)||!/^[a-z0-9/-]+\.md$/.test(page.source))throw new Error('Unsafe documentation route/source.');
+    if(!/^(?:[a-z0-9]+(?:[-.][a-z0-9]+)*(?:\/[a-z0-9]+(?:[-.][a-z0-9]+)*)*)?$/.test(page.slug)||!/^[a-z0-9/-]+\.md$/.test(page.source))throw new Error('Unsafe documentation route/source.');
     const source=resolve(sourceDir,page.source);if(!inside(sourceDir,source))throw new Error('Source escapes docs root.');
     sources.set(source,page);
   }
   if(new Set(manifest.pages.map(page=>page.slug)).size!==manifest.pages.length)throw new Error('Duplicate route.');
   const prepared=[];
   for(const page of manifest.pages) {
-    const source=resolve(sourceDir,page.source), markdown=await readFile(source,'utf8');
+    const source=resolve(sourceDir,page.source), markdown=generated.get(page.source)??await readFile(source,'utf8');
     if(markdown.includes('\u2014'))throw new Error(`Em dash in ${page.source}`);
     const rendered=renderMarkdown(markdown,source,sources);
+    if(page.kind==='release-index'&&history) {
+      rendered.html+=releaseIndexHtml(history);
+      rendered.toc.push({level:2,id:'latest-release',label:`Latest: ${history.current.version}`},{level:2,id:'published-versions',label:'Published versions'},{level:2,id:'history-sources',label:'History sources'});
+    }
+    if(page.release)rendered.html=releaseMetadataHtml(page.release,history)+rendered.html;
     prepared.push({page,markdown,rendered,html:pageHtml(page,manifest,rendered,origin)});
   }
   // Validate inter-page fragments against the rendered headings before writing.
@@ -120,14 +141,14 @@ export async function buildDocs({sourceDir,distDir=resolve(projectDir,'dist'),si
   const docsDir=resolve(distDir,'docs');
   await mkdir(docsDir,{recursive:true});
   let previous;try{previous=JSON.parse(await readFile(resolve(docsDir,'manifest.json'),'utf8'));}catch{}
-  for(const old of previous?.pages??[]) if(!manifest.pages.some(p=>p.slug===old.slug)&&/^[a-z0-9/-]+$/.test(old.slug))await rm(resolve(docsDir,old.slug,'index.html'),{force:true});
+  for(const old of previous?.pages??[]) if(!manifest.pages.some(p=>p.slug===old.slug)&&/^[a-z0-9]+(?:[-.][a-z0-9]+)*(?:\/[a-z0-9]+(?:[-.][a-z0-9]+)*)*$/.test(old.slug))await rm(resolve(docsDir,old.slug,'index.html'),{force:true});
   const files=[];
   for(const {page,html,markdown}of prepared) {
     const file=resolve(docsDir,page.slug,'index.html');await mkdir(dirname(file),{recursive:true});await writeFile(file,html);
-    files.push({slug:page.slug,source:page.source,sourceHash:hash(markdown),htmlHash:hash(html)});
+    files.push({slug:page.slug,source:page.release?'CHANGELOG.md':page.source,...(page.release?{version:page.release.version,publicationSource:'docs/releases/catalog.json'}:{}),sourceHash:hash(markdown),htmlHash:hash(html)});
   }
   await writeFile(resolve(docsDir,'search-index.json'),JSON.stringify(prepared.map(({page,markdown})=>({title:page.title,description:page.description,url:route(page.slug),text:markdown.replace(/```[\s\S]*?```/g,' ').replace(/[#|`*\[\]]/g,' ').slice(0,24000)}))));
-  const result={version:manifest.version,updated:manifest.updated,origin,source:'dalkedev/plompy-engine/docs/local',pages:files};
+  const result={version:manifest.version,updated:manifest.updated,origin,source:'dalkedev/plompy-engine/docs/local',...(releaseSources?{releaseSources}:{}),pages:files};
   await writeFile(resolve(docsDir,'manifest.json'),JSON.stringify(result,null,2)+'\n');
   return result;
 }

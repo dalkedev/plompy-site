@@ -97,6 +97,23 @@ documentation. Website publication alone does not publish those artifacts.
 Update the compatibility page from actual acceptance evidence; do not infer
 provider or local-model support from offline fixtures.
 
+## Release history
+
+`/docs/releases/` lists published versions and links to a permanent page such as
+`/docs/releases/0.13.0/`. The engine's `CHANGELOG.md` supplies change text;
+`docs/releases/catalog.json` supplies publication dates, assets and GitHub's latest
+stable designation. The builder generates version pages from these sources, so
+there is no second set of release notes to maintain. Development-only changelog
+entries are excluded, and older notes link to their matching Git tag.
+
+After the engine release and assets are public, run `node docs/releases/sync.mjs`
+in the engine checkout, review its catalog update, then run the canonical docs
+build and checks above. `scripts/release-history.mjs` handles the history rendering;
+its tests cover publication boundaries, pinned source links, metadata, search and
+generated-page integrity. The docs manifest records the changelog and catalog
+hashes. A standalone site build uses the committed output without contacting
+GitHub. Keep historical filenames intact, including assets from earlier branding.
+
 ## Production deployment
 
 The Vercel project is `plompy-engine` in `sculpttechprojects-projects` and owns

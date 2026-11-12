@@ -4,6 +4,7 @@
   <url><loc>https://plompy.dev/pl/</loc></url>
   <url><loc>https://plompy.dev/docs/</loc></url>
   <url><loc>https://plompy.dev/docs/quickstart/</loc></url>
+  <url><loc>https://plompy.dev/docs/releases/</loc></url>
   <url><loc>https://plompy.dev/docs/architecture/</loc></url>
   <url><loc>https://plompy.dev/docs/requirements/</loc></url>
   <url><loc>https://plompy.dev/docs/other-clients/</loc></url>
@@ -33,4 +34,20 @@
   <url><loc>https://plompy.dev/docs/integrations/custom/</loc></url>
   <url><loc>https://plompy.dev/docs/integrations/camoufox/</loc></url>
   <url><loc>https://plompy.dev/docs/integrations/tinyfish/</loc></url>
+  <url><loc>https://plompy.dev/docs/releases/0.13.0/</loc></url>
+  <url><loc>https://plompy.dev/docs/releases/0.12.0/</loc></url>
+  <url><loc>https://plompy.dev/docs/releases/0.11.1/</loc></url>
+  <url><loc>https://plompy.dev/docs/releases/0.11.0/</loc></url>
+  <url><loc>https://plompy.dev/docs/releases/0.10.0/</loc></url>
+  <url><loc>https://plompy.dev/docs/releases/0.9.0/</loc></url>
+  <url><loc>https://plompy.dev/docs/releases/0.8.1/</loc></url>
+  <url><loc>https://plompy.dev/docs/releases/0.8.0/</loc></url>
+  <url><loc>https://plompy.dev/docs/releases/0.7.0/</loc></url>
+  <url><loc>https://plompy.dev/docs/releases/0.6.1/</loc></url>
+  <url><loc>https://plompy.dev/docs/releases/0.6.0/</loc></url>
+  <url><loc>https://plompy.dev/docs/releases/0.5.0/</loc></url>
+  <url><loc>https://plompy.dev/docs/releases/0.4.0/</loc></url>
+  <url><loc>https://plompy.dev/docs/releases/0.3.1/</loc></url>
+  <url><loc>https://plompy.dev/docs/releases/0.3.0/</loc></url>
+  <url><loc>https://plompy.dev/docs/releases/0.2.0/</loc></url>
 </urlset>

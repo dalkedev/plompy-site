@@ -4,6 +4,7 @@ const icon = (name) => `<svg class="icon" aria-hidden="true"><use href="#i-${nam
 const en = Object.fromEntries($$('[data-i18n]').map(el => [el.dataset.i18n, el.innerHTML]));
 const pl = {
   localTitle:"Twój agent. Twój model.",
+  releaseHistory:"Historia wydań",
   localBody:"Plompy Local 0.13.0: gotowe obrazy Dockera dla Codex, Claude Code lub OpenCode. Wybierz model w chmurze lub lokalne Ollama.",
   runLocally:"Uruchom lokalnie",
   connectAgent:"Podłącz swojego agenta",
