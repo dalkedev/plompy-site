@@ -18,21 +18,21 @@ The parser preserves the original HTML and replaces complete element contents us
 
 The build is idempotent: it replaces existing SEO metadata rather than appending duplicates. No npm dependencies are needed. `buildPages({ distDir, siteUrl, write: false })` can also be imported for checks without changing files.
 
-The current production origin defaults to `https://plompy-engine.violet-quail-2164.chatgpt.site`. The Site's slug has been updated alongside its title, product copy, source links and structured-data names. A future domain can be supplied at build time:
+The production origin defaults to `https://plompy.dev`, matching the public Vercel deployment. The owner-private Sites preview remains at `https://plompy-engine.violet-quail-2164.chatgpt.site`. A different deployment origin can be supplied at build time:
 
 ```sh
 SITE_URL=https://example.com node scripts/build-pages.mjs
 ```
 
-`SITE_URL` must be an origin, with no subdirectory, query, fragment or credentials. The generator uses it consistently for canonical links, language alternatives, social images, structured data, the sitemap and the robots sitemap location. The preferred candidate `plompy.dev` has not been purchased or connected. When changing domains, configure the domain and redirects at the hosting layer, rebuild, and verify the live responses; setting `SITE_URL` alone does not connect a domain.
+`SITE_URL` must be an origin, with no subdirectory, query, fragment or credentials. The generator uses it consistently for canonical links, language alternatives, social images, structured data, the sitemap and the robots sitemap location. The purchased `plompy.dev` domain is connected, HTTPS is active, and `www` redirects to the apex domain. When changing domains, configure the domain and redirects at the hosting layer, rebuild, and verify the live responses; setting `SITE_URL` alone does not connect a domain.
 
 ## Publication and verification
 
-At the time of this update the deployment is private. Search engines cannot crawl login-protected pages. The generated `index, follow` directive and `Allow: /` file do not override private hosting access. This work does not change the deployment's visibility or access settings. Public access must be enabled separately before organic search discovery is possible.
+The Vercel deployment at `https://plompy.dev` is public. The separate Sites preview is private and is not the canonical destination. Search engines cannot crawl login-protected previews; `index, follow` and `Allow: /` do not override hosting access controls.
 
-After publication, verify that `/`, `/pl/`, `/sitemap.xml`, `/robots.txt` and `/assets/social-preview.jpg` return the intended content to an unauthenticated request. Confirm that the host sends no `X-Robots-Tag: noindex` header. Language links must be ordinary links to `/` and `/pl/`; page language must follow the URL, without redirecting visitors based on browser settings or local storage. Inspect both pages with JavaScript disabled to confirm the core content remains present.
+After each deployment, verify that `/`, `/pl/`, `/sitemap.xml`, `/robots.txt` and `/assets/social-preview.jpg` return the intended content to an unauthenticated request. Confirm that the host sends no `X-Robots-Tag: noindex` header. Language links must be ordinary links to `/` and `/pl/`; page language must follow the URL, without redirecting visitors based on browser settings or local storage. Inspect both pages with JavaScript disabled to confirm the core content remains present.
 
-Then verify the chosen domain in Google Search Console, submit `/sitemap.xml`, and inspect both language URLs. Check the rendered content, selected canonical and crawl access. Indexing can take time and is not guaranteed. Keep release requirements and integration support aligned with the project documentation when updating the page.
+Google Search Console ownership was verified and `/sitemap.xml` processed both language pages on 2026-11-12. After domain changes, verify the new property, submit its sitemap, and inspect both language URLs. Check the rendered content, selected canonical and crawl access. Indexing can take time and is not guaranteed. Keep release requirements and integration support aligned with the project documentation when updating the page.
 
 ## References
 
