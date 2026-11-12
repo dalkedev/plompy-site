@@ -36,7 +36,7 @@ Google Search Console ownership was verified and `/sitemap.xml` processed both l
 
 ## References
 
-- [Google: managing multilingual sites](https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites) — separate language URLs, consistent visible language and user-selected language links.
-- [Google: localized page versions](https://developers.google.com/search/docs/specialty/international/localized-versions) — reciprocal, absolute `hreflang` links and `x-default`.
-- [Google: technical requirements](https://developers.google.com/search/docs/essentials/technical) — public crawler access, successful HTTP responses and indexable content.
-- [Google: crawling and indexing FAQ](https://developers.google.com/search/help/crawling-index-faq) — a sitemap does not guarantee indexing or improve rankings by itself.
+- [Google: managing multilingual sites](https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites): separate language URLs, consistent visible language and user-selected language links.
+- [Google: localized page versions](https://developers.google.com/search/docs/specialty/international/localized-versions): reciprocal, absolute `hreflang` links and `x-default`.
+- [Google: technical requirements](https://developers.google.com/search/docs/essentials/technical): public crawler access, successful HTTP responses and indexable content.
+- [Google: crawling and indexing FAQ](https://developers.google.com/search/help/crawling-index-faq): a sitemap does not guarantee indexing or improve rankings by itself.

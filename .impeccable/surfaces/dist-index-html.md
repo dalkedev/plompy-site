@@ -5,7 +5,7 @@ primary_target: "dist/index.html"
 related_targets: ["dist/reef.css","dist/ocean-hero.css","dist/ocean-hero.js","dist/journey.css","dist/journey.js"]
 ---
 
-# Plompy landing — swimming through the engine
+# Plompy landing: swimming through the engine
 
 Mode: Persuade with an interactive product walkthrough. English and Polish; developers evaluating their own Discord-connected coding runner. Preserve real integration descriptions, setup instructions, navigation, footer and coffee support.
 

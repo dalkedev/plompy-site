@@ -88,7 +88,7 @@ function setAttribute(opening, name, value) {
 }
 
 const polishLabels = new Map([
-  ['plompy-engine home', 'plompy-engine — strona główna'],
+  ['plompy-engine home', 'plompy-engine: strona główna'],
   ['plompy-engine on GitHub', 'plompy-engine na GitHubie'],
   ['Main navigation', 'Nawigacja główna'],
   ['Journey steps', 'Etapy podróży'],
@@ -151,16 +151,16 @@ function translatePage(html, dictionary) {
 
 const metadata = {
   en: {
-    title: 'plompy-engine — Self-hosted Discord AI agent engine',
+    title: 'plompy-engine: Self-hosted Discord AI agent engine',
     description: 'Run AI coding agents from Discord on your own Linux server. Persistent sessions, Markdown context and tools you choose. Open-source TypeScript engine.',
     locale: 'en_US', alternateLocale: 'pl_PL',
-    imageAlt: 'plompy-engine — Your agents. Your machine. Your rules.',
+    imageAlt: 'plompy-engine: Your agents. Your machine. Your rules.',
   },
   pl: {
-    title: 'plompy-engine — Agenci AI na Discordzie, na Twoim serwerze',
+    title: 'plompy-engine: Agenci AI na Discordzie, na Twoim serwerze',
     description: 'Uruchamiaj agentów AI z Discorda na własnym serwerze Linux. Trwałe sesje, kontekst w Markdown i wybrane narzędzia. Otwarty kod w TypeScript na licencji MIT.',
     locale: 'pl_PL', alternateLocale: 'en_US',
-    imageAlt: 'plompy-engine — Twoi agenci. Twoja maszyna. Twoje zasady.',
+    imageAlt: 'plompy-engine: Twoi agenci. Twoja maszyna. Twoje zasady.',
   },
 };
 
