@@ -1,6 +1,6 @@
 # plompy-engine website
 
-A portable, bilingual English/Polish presentation of [plompy-engine](https://github.com/dalkedev/plompy-engine). Static HTML, CSS and JavaScript, with a dependency-free Node build for localized pages and SEO metadata.
+A portable, bilingual English/Polish presentation of [plompy-engine](https://github.com/dalkedev/plompy-engine). Static HTML, CSS and JavaScript, with a dependency-free Node build for localized pages and SEO metadata. Website source: [dalkedev/plompy-site](https://github.com/dalkedev/plompy-site).
 
 ## Run
 
@@ -48,3 +48,58 @@ The hero uses the existing Plompy mascot and SVG connection paths. `ocean-hero.j
 The hero's `plompy-eyes-base.png` is an image-generated derivative of the original mascot with only its pupils removed. Two SVG pupils preserve the original neutral expression and look toward a hovered, keyboard-focused or touched diagram control. Gaze is bounded inside each eye and returns to neutral after interaction; paused or reduced motion uses an immediate pose change. The original `logo.png` remains the shared static brand asset.
 
 Production origin: `https://plompy.dev`. Vercel serves the static `dist` output; the existing Sites deployment remains an owner-private preview. Rebuild metadata before publishing when the origin changes.
+
+## Local MCP documentation preview
+
+The new `/docs/` field guide is generated from the engine repository's canonical
+`docs/local/` Markdown. Edit that source, then rebuild this site with an explicit
+source path:
+
+```sh
+npm run build -- --docs-source ../plompy-engine/docs/local
+npm run check
+npm run test:docs
+npm run dev
+```
+
+`PLOMPY_DOCS_SOURCE` is an alternative to the flag. The generated HTML and search
+index are portable static output in `dist/docs/`. There is no second manually
+maintained Markdown copy in the website. `dist/docs/manifest.json` records the
+source path within the engine, per-page source hashes and generated-page hashes.
+It contains no local absolute paths or credentials.
+
+A normal `npm run build` preserves and verifies the generated documentation so a
+standalone site checkout can be deployed without checking out the engine beside
+it. Direct edits to generated HTML fail the hash check. Content updates require
+rebuilding from canonical Markdown. Changing `SITE_URL` also requires the source
+path so existing documentation canonical URLs cannot silently remain on the old origin. `npm run check` verifies page metadata,
+headings, internal routes and fragments, assets, search-index coverage and sitemap
+coverage. The build's small Markdown renderer escapes raw HTML and rejects unknown
+relative document links. An exact `<br>` inside the H1 supports intentional heading
+line breaks; other raw HTML and embeds remain escaped.
+
+Documentation source is English, following the engine contribution instructions.
+The landing remains bilingual and links both languages to the English guide.
+Documentation search runs entirely in the browser against a local static JSON
+index. It performs no analytics, vendor calls or localhost MCP connections and
+never requests API keys.
+
+The guide includes client-neutral Docker setup, Codex, Claude Code, explicit
+OpenCode V1/V2 configuration and Ollama as an optional model provider. Its
+compatibility page records actual clients separately from deterministic model
+fixtures and paid provider access.
+
+The local gateway is a source-build preview on the engine's `main` branch.
+Publishing this website does not publish a container image or a new engine
+release. The guide separates existing released Discord mode, local source builds
+and verification levels. Update its compatibility page from actual acceptance
+evidence before a release; do not infer provider support from offline fixtures.
+
+## Production deployment
+
+The Vercel project is `plompy-engine` in `sculpttechprojects-projects` and owns
+`plompy.dev`. Build and verify the site, commit both source changes and generated
+documentation, then deploy this repository with `npm run build` and output
+directory `dist`. Preserve the existing domain configuration. Verify `/docs/`,
+client guides, search assets, `/pl/` and `sitemap.xml` on the production domain
+after deployment. GitHub source and a Vercel READY deployment are separate checks.

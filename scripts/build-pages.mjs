@@ -2,6 +2,7 @@ import { readFile, mkdir, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { runInNewContext } from 'node:vm';
+import { buildDocs, verifyGeneratedDocs } from './build-docs.mjs';
 
 const projectDir = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const defaultOrigin = 'https://plompy.dev';
@@ -202,7 +203,7 @@ function replaceMetadata(html, language, origin) {
   return html.slice(0, head.openEnd) + '\n' + retained + '\n' + block + '\n' + html.slice(head.closeStart);
 }
 
-export async function buildPages({ distDir = resolve(projectDir, 'dist'), siteUrl = process.env.SITE_URL || defaultOrigin, write = true } = {}) {
+export async function buildPages({ distDir = resolve(projectDir, 'dist'), siteUrl = process.env.SITE_URL || defaultOrigin, write = true, docsSource } = {}) {
   const url = new URL(siteUrl);
   if (!['http:', 'https:'].includes(url.protocol) || url.username || url.password || url.search || url.hash || url.pathname !== '/') {
     throw new Error('SITE_URL must be an http(s) origin without credentials, path, query or fragment');
@@ -211,20 +212,27 @@ export async function buildPages({ distDir = resolve(projectDir, 'dist'), siteUr
   const [source, appSource] = await Promise.all([readFile(resolve(distDir, 'index.html'), 'utf8'), readFile(resolve(distDir, 'app.js'), 'utf8')]);
   const dictionary = readPolishDictionary(appSource);
   const translated = translatePage(source, dictionary);
+  const docs = docsSource && write
+    ? await buildDocs({ sourceDir: docsSource, distDir, siteUrl: origin })
+    : await verifyGeneratedDocs(distDir, origin);
+  const docsURLs = (docs?.pages ?? []).map(page => `${origin}/docs/${page.slug ? page.slug + '/' : ''}`);
   const pages = {
     'index.html': replaceMetadata(setPageLanguage(source, 'en'), 'en', origin),
     'pl/index.html': replaceMetadata(setPageLanguage(translated.html, 'pl'), 'pl', origin),
-    'sitemap.xml': `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${escapeHTML(`${origin}/`)}</loc></url>\n  <url><loc>${escapeHTML(`${origin}/pl/`)}</loc></url>\n</urlset>\n`,
+    'sitemap.xml': `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[`${origin}/`, `${origin}/pl/`, ...docsURLs].map(url => `  <url><loc>${escapeHTML(url)}</loc></url>`).join('\n')}\n</urlset>\n`,
     'robots.txt': `User-agent: *\nAllow: /\n\nSitemap: ${origin}/sitemap.xml\n`,
   };
   if (write) {
     await mkdir(resolve(distDir, 'pl'), { recursive: true });
     for (const [path, content] of Object.entries(pages)) await writeFile(resolve(distDir, path), content);
   }
-  return { pages, translatedElements: translated.count, origin };
+  return { pages, translatedElements: translated.count, origin, docsPages: docs?.pages.length ?? 0 };
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
-  const result = await buildPages();
-  console.log(`Built English / and Polish /pl/ (${result.translatedElements} translated elements), sitemap.xml and robots.txt for ${result.origin}`);
+  const sourceIndex = process.argv.indexOf('--docs-source');
+  const docsSource = sourceIndex >= 0 ? process.argv[sourceIndex + 1] : process.env.PLOMPY_DOCS_SOURCE;
+  if (sourceIndex >= 0 && !docsSource) throw new Error('--docs-source requires the canonical engine docs/local directory');
+  const result = await buildPages({ docsSource });
+  console.log(`Built English / and Polish /pl/ (${result.translatedElements} translated elements), ${result.docsPages} documentation routes, sitemap.xml and robots.txt for ${result.origin}`);
 }

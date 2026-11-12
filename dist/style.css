@@ -137,3 +137,6 @@ html[data-motion=off] :is(.language [data-lang], .header-github, .header-github 
 @media(max-width:360px){.header-github{padding:0 6px;margin:0 -6px}}
 
 .language [data-lang]{display:inline-flex;align-items:center;justify-content:center}
+
+/* Local tools entry uses the existing landing palette and controls. */
+.local-entry{display:flex;justify-content:space-between;align-items:center;gap:36px;padding:28px 0 34px;margin-bottom:42px;border-bottom:1px solid var(--line)}.local-entry h3{font-size:24px;margin-bottom:10px}.local-entry p{max-width:610px;font-size:13px;color:var(--muted)}.local-actions{display:flex;align-items:center;gap:22px;flex-shrink:0}.local-actions .text-link{white-space:nowrap}@media(max-width:900px){.local-entry{align-items:flex-start;flex-direction:column;gap:22px}.local-actions{flex-wrap:wrap;gap:20px}}

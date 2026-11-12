@@ -3,6 +3,11 @@ const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 const icon = (name) => `<svg class="icon" aria-hidden="true"><use href="#i-${name}"/></svg>`;
 const en = Object.fromEntries($$('[data-i18n]').map(el => [el.dataset.i18n, el.innerHTML]));
 const pl = {
+  localTitle:"Twój agent. Twój model.",
+  localBody:"Local MCP w wersji preview: podłącz Codex, Claude Code lub OpenCode do wybranych narzędzi w Dockerze. Wybierz model w chmurze lub lokalne Ollama.",
+  runLocally:"Uruchom lokalnie",
+  connectAgent:"Podłącz swojego agenta",
+  localModel:"Użyj lokalnego modelu",
   "journeyYou":"Ty",
   "journeyRequest":"<code>!work 30m</code> Dodaj walidację ilości w API. Pokryj przypadki brzegowe testami.",
   "journeyAccepted":"Zadanie przyjęte. Sprawdzę projekt, przygotuję zmianę i uruchomię testy.",

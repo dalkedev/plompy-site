@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "node server.mjs",
-    "check": "node --check dist/app.js && node --check dist/ocean-hero.js && node --check dist/journey.js",
-    "build": "node scripts/build-pages.mjs"
+    "check": "node --check dist/app.js && node --check dist/ocean-hero.js && node --check dist/journey.js && node --check dist/docs/docs.js && node scripts/check-docs.mjs",
+    "build": "node scripts/build-pages.mjs",
+    "test:docs": "node --test scripts/build-docs.test.mjs",
+    "build:docs": "node scripts/build-docs.mjs"
   }
 }

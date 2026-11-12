@@ -224,3 +224,23 @@ The hero and journey each pause their ambient animations when outside the viewpo
 - Don't let decorative bubbles, circles or preformatted commands widen the page on small screens.
 - Don't shrink new diagram labels below 11px to fit a narrow viewport; give them room to wrap.
 - Don't shrink general reading copy to the diagram’s compact metadata scale.
+
+## Local MCP field guide
+
+The documentation extends the established ocean identity without changing the
+approved landing structure. Color tokens are deep water `#101515`, raised surface
+`#182020`, paper `#f3f0e8`, quiet copy `#aab8b2`, current `#b4d8cb`, and Plompy orange
+`#ff6b35`. Existing Sora carries headings and reading text; IBM Plex Mono identifies
+commands and data. Body copy is left aligned with a bounded reading column.
+
+On wide screens the guide has three clear regions: persistent topic navigation,
+the current article, and a compact heading index. On narrow screens the article
+gets the full width and the topic navigation becomes a native details disclosure.
+Code and tables scroll inside their own region rather than pushing the page wide.
+The fish is the one playful accent, in the brand and beside the heading index.
+There is no continuous animation in reading content. Search uses a keyboard-aware
+native dialog, and code copy controls announce their result.
+
+The guide is a practical reference, not a second promotional landing. Use concrete
+commands and limits. Keep configuration, discovery and real tool-call evidence
+distinct. Links lead to instructions that exist in the same source build.

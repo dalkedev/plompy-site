@@ -2,4 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://plompy.dev/</loc></url>
   <url><loc>https://plompy.dev/pl/</loc></url>
+  <url><loc>https://plompy.dev/docs/</loc></url>
+  <url><loc>https://plompy.dev/docs/quickstart/</loc></url>
+  <url><loc>https://plompy.dev/docs/architecture/</loc></url>
+  <url><loc>https://plompy.dev/docs/requirements/</loc></url>
+  <url><loc>https://plompy.dev/docs/other-clients/</loc></url>
+  <url><loc>https://plompy.dev/docs/codex/</loc></url>
+  <url><loc>https://plompy.dev/docs/claude-code/</loc></url>
+  <url><loc>https://plompy.dev/docs/opencode/</loc></url>
+  <url><loc>https://plompy.dev/docs/ollama/</loc></url>
+  <url><loc>https://plompy.dev/docs/integrations/</loc></url>
+  <url><loc>https://plompy.dev/docs/credentials/</loc></url>
+  <url><loc>https://plompy.dev/docs/browser/</loc></url>
+  <url><loc>https://plompy.dev/docs/security/</loc></url>
+  <url><loc>https://plompy.dev/docs/artifacts/</loc></url>
+  <url><loc>https://plompy.dev/docs/research/</loc></url>
+  <url><loc>https://plompy.dev/docs/maintenance/</loc></url>
+  <url><loc>https://plompy.dev/docs/discord/</loc></url>
+  <url><loc>https://plompy.dev/docs/compatibility/</loc></url>
+  <url><loc>https://plompy.dev/docs/troubleshooting/</loc></url>
+  <url><loc>https://plompy.dev/docs/integrations/web/</loc></url>
+  <url><loc>https://plompy.dev/docs/integrations/playwright/</loc></url>
+  <url><loc>https://plompy.dev/docs/integrations/github/</loc></url>
+  <url><loc>https://plompy.dev/docs/integrations/firecrawl/</loc></url>
+  <url><loc>https://plompy.dev/docs/integrations/perplexity/</loc></url>
+  <url><loc>https://plompy.dev/docs/integrations/openai-docs/</loc></url>
+  <url><loc>https://plompy.dev/docs/integrations/context7/</loc></url>
+  <url><loc>https://plompy.dev/docs/integrations/posthog/</loc></url>
+  <url><loc>https://plompy.dev/docs/integrations/custom/</loc></url>
+  <url><loc>https://plompy.dev/docs/integrations/camoufox/</loc></url>
+  <url><loc>https://plompy.dev/docs/integrations/tinyfish/</loc></url>
 </urlset>
