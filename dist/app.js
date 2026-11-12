@@ -4,7 +4,7 @@ const icon = (name) => `<svg class="icon" aria-hidden="true"><use href="#i-${nam
 const en = Object.fromEntries($$('[data-i18n]').map(el => [el.dataset.i18n, el.innerHTML]));
 const pl = {
   localTitle:"Twój agent. Twój model.",
-  localBody:"Local MCP w wersji preview: podłącz Codex, Claude Code lub OpenCode do wybranych narzędzi w Dockerze. Wybierz model w chmurze lub lokalne Ollama.",
+  localBody:"Plompy Local 0.13.0: gotowe obrazy Dockera dla Codex, Claude Code lub OpenCode. Wybierz model w chmurze lub lokalne Ollama.",
   runLocally:"Uruchom lokalnie",
   connectAgent:"Podłącz swojego agenta",
   localModel:"Użyj lokalnego modelu",
@@ -24,7 +24,7 @@ const pl = {
   "journeyContinue":"Poznaj narzędzia",
   "oceanTitle":"Mała ryba.<br>Wielkie pomysły.",
   "oceanIntro":"Twoi agenci AI, połączeni z Discordem. Wśród Twoich narzędzi, Twojego kontekstu, na Twojej maszynie.",
-  "oceanRelease":"v0.12.0 · Własny serwer. Otwarty kod.",
+  "oceanRelease":"v0.13.0 · Własny serwer. Otwarty kod.",
   "oceanAnywhere":"Ty, z dowolnego miejsca.",
   "oceanMessage":"zbudujmy coś",
   "oceanSpeech":"",
@@ -65,7 +65,7 @@ const pl = {
   toolTag9:"Twoje własne połączenie",
   toolBody9:"Dodaj lokalny lub zdalny serwer MCP z jawną konfiguracją. Rozszerz narzędzia agenta o usługi, którym ufasz.",
   routeTools:'Narzędzia',toolNames:'GitHub / Przeglądarka / Research',contextNames:'Markdown / Pamięć / Git',
-  skip:'Przejdź do treści',navHow:'Jak to działa',navTools:'Integracje',navCustom:'Po Twojemu',heroTitle:'Wielkie pomysły.<br>Jedna wiadomość.',heroBody:'Twoi agenci AI, połączeni z Discordem. Na Twojej maszynie. Z Twoimi narzędziami, kontekstem i zasadami.',getStarted:'Uruchom swój silnik',viewSource:'Zobacz kod',release:'v0.12.0 · Otwarty kod, Twoje zasady',fromAnywhere:'Ty, z dowolnego miejsca.',heroMessage:'zbudujmy coś',yourVps:'Twój VPS. Twój silnik.',codingAgents:'Agenci do kodu',yourTools:'Twoje narzędzia',yourContext:'Twój kontekst',selfHosted:'Na własnym Linuksie. Napisany w TypeScript.',scrollExplore:'Przewiń i podążaj za wątkiem',pauseMotion:'Zatrzymaj animacje',
+  skip:'Przejdź do treści',navHow:'Jak to działa',navTools:'Integracje',navCustom:'Po Twojemu',heroTitle:'Wielkie pomysły.<br>Jedna wiadomość.',heroBody:'Twoi agenci AI, połączeni z Discordem. Na Twojej maszynie. Z Twoimi narzędziami, kontekstem i zasadami.',getStarted:'Uruchom swój silnik',viewSource:'Zobacz kod',release:'v0.13.0 · Otwarty kod, Twoje zasady',fromAnywhere:'Ty, z dowolnego miejsca.',heroMessage:'zbudujmy coś',yourVps:'Twój VPS. Twój silnik.',codingAgents:'Agenci do kodu',yourTools:'Twoje narzędzia',yourContext:'Twój kontekst',selfHosted:'Na własnym Linuksie. Napisany w TypeScript.',scrollExplore:'Przewiń i podążaj za wątkiem',pauseMotion:'Zatrzymaj animacje',
   storyTitle:'Zamknij laptopa.<br>Zachowaj wątek.',storyIntro:'Wiadomość to dopiero początek. Zobacz jej drogę z telefonu na Twoją maszynę i z powrotem.',step1Title:'Pomysł trafia<br>na Discorda.',step1Body:'Wyślij zadanie na prywatnym forum. Plompy sprawdza nadawcę, zapisuje je w trwałej kolejce i rozpoczyna pracę na Twoim Linuksie.',workExplanation:'Cel. Budżet czasu. Przestrzeń do działania.',step2Title:'Twój agent.<br>Cały zestaw narzędzi.',step2Body:'Zapisana sesja agenta korzysta z Twoich instrukcji i kontekstu. Repozytorium, przeglądarka, dokumentacja. Ty wybierasz połączenia.',goalExplanation:'Dodaj osobnego nadzorcę Codex do sprawdzenia zmian.',step3Title:'Wynik wraca.<br>Kontekst zostaje.',step3Body:'Odczytaj wynik w tym samym wątku. Kontynuuj rozmowę w zapisanej sesji. Po przerwaniu pracy sprawdź stan i świadomie wybierz sposób wznowienia.',resultExplanation:'Odczytaj zapisaną odpowiedź bez kolejnego wywołania modelu.',illustrative:'Przykładowy przebieg',scene1:'Wyślij',scene2:'Praca',scene3:'Wynik',
   toolsTitle:'Cały ocean<br>narzędzi.',toolsIntro:'Twoje repozytoria. Przeglądarka. Źródła wiedzy. Połącz używane usługi z wybranym agentem.',integrationGuide:'Zobacz konfigurację integracji',default:'domyślny',experimental:'eksperymentalny',integrationNote:'Jedno menu konfiguracji. Połączenia osobno dla każdego agenta. Własne konta i klucze API.',
   customTitle:'Twój agent.<br>Twój sposób pracy.',customIntro:'Nadaj Plompy’emu osobowość, styl pracy i jasne granice. Jego kontekst to zwykłe pliki Markdown, które możesz czytać, edytować i wersjonować w Git.',browseTemplates:'Przejrzyj szablony workspace',exampleConfig:'Przykładowa konfiguracja',localFiles:'Lokalne pliki. Historia w Git.',

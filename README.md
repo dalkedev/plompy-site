@@ -27,7 +27,7 @@ Open [the English preview](http://127.0.0.1:4173/) or [the Polish preview](http:
 
 `dist/index.html`: English copy, page structure and links. `dist/app.js`: Polish copy, interactive scenes, integration descriptions and file examples. `dist/style.css`: core layout, approved navbar/footer interactions and responsive styles. `dist/catalog.css`: tool catalog and visible FAQ layout. `dist/motion.css`: repeating signal animation. `dist/assets/`: local fonts, artwork and licenses. `scripts/build-pages.mjs`: static language pages and SEO output. Edit the English source and Polish dictionary, then rebuild; do not hand-edit generated `dist/pl/index.html`.
 
-Product claims were checked against upstream v0.12.0 and documentation on 2026-11-11. Update the release link and installation command together when the supported version changes. Examples are synthetic and no real model, Discord account or VPS is connected to the page.
+Product claims reflect the 0.13.0 engine and Local MCP documentation, reviewed on 2026-11-12. Update the release link and installation command together when the supported version changes. Examples are synthetic and no real model, Discord account or VPS is connected to the page.
 
 Plompy's mascot logo and social preview live in `dist/assets/`; the corresponding engine brand assets live in `dalkedev/plompy-engine/assets/brand/`. Keep these synchronized when the identity changes. Sora and IBM Plex Mono are distributed with their OFL licenses in `dist/assets/`.
 
@@ -49,7 +49,7 @@ The hero's `plompy-eyes-base.png` is an image-generated derivative of the origin
 
 Production origin: `https://plompy.dev`. Vercel serves the static `dist` output; the existing Sites deployment remains an owner-private preview. Rebuild metadata before publishing when the origin changes.
 
-## Local MCP documentation preview
+## Local MCP documentation
 
 The new `/docs/` field guide is generated from the engine repository's canonical
 `docs/local/` Markdown. Edit that source, then rebuild this site with an explicit
@@ -89,11 +89,13 @@ OpenCode V1/V2 configuration and Ollama as an optional model provider. Its
 compatibility page records actual clients separately from deterministic model
 fixtures and paid provider access.
 
-The local gateway is a source-build preview on the engine's `main` branch.
-Publishing this website does not publish a container image or a new engine
-release. The guide separates existing released Discord mode, local source builds
-and verification levels. Update its compatibility page from actual acceptance
-evidence before a release; do not infer provider support from offline fixtures.
+The guide targets Plompy Local 0.13.0 and its versioned starter kit, core image and
+optional browser image. Its primary path needs no source checkout or host Node
+installation; development builds have a separate guide. Publish the matching
+engine release, images and downloadable kit before deploying release-specific
+documentation. Website publication alone does not publish those artifacts.
+Update the compatibility page from actual acceptance evidence; do not infer
+provider or local-model support from offline fixtures.
 
 ## Production deployment
 
