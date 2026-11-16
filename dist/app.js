@@ -24,7 +24,7 @@ const pl = {
   "journeyFollowup":"Super. Teraz zastosuj tę regułę w imporcie.",
   "journeyContinue":"Poznaj narzędzia",
   "oceanTitle":"Mała ryba.<br>Wielkie pomysły.",
-  "oceanIntro":"Twoi agenci AI, połączeni z Discordem. Wśród Twoich narzędzi, Twojego kontekstu, na Twojej maszynie.",
+  "oceanIntro":"Plompy łączy Discorda z agentami do kodu na Twoim serwerze z Linuksem. Każdy wątek zachowuje swoją sesję i kontekst.",
   "oceanRelease":"v0.13.0 · Własny serwer. Otwarty kod.",
   "oceanAnywhere":"Ty, z dowolnego miejsca.",
   "oceanMessage":"zbudujmy coś",

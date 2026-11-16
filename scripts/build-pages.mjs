@@ -7,6 +7,7 @@ import { buildDocs, verifyGeneratedDocs } from './build-docs.mjs';
 const projectDir = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const defaultOrigin = 'https://plompy.dev';
 const repository = 'https://github.com/dalkedev/plompy-engine';
+const siteName = 'Plompy';
 const voidTags = new Set('area base br col embed hr img input link meta param source track wbr'.split(' '));
 const rawTextTags = new Set(['script', 'style', 'textarea', 'title']);
 const escapeHTML = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
@@ -152,14 +153,14 @@ function translatePage(html, dictionary) {
 
 const metadata = {
   en: {
-    title: 'plompy-engine: Self-hosted Discord AI agent engine',
-    description: 'Run AI coding agents from Discord on your own Linux server. Persistent sessions, Markdown context and tools you choose. Open-source TypeScript engine.',
+    title: 'Plompy: Self-hosted coding agents from Discord',
+    description: 'Plompy runs coding agents from Discord on your own Linux server. Keep sessions and Markdown context across messages, or connect local tools through MCP.',
     locale: 'en_US', alternateLocale: 'pl_PL',
     imageAlt: 'plompy-engine: Your agents. Your machine. Your rules.',
   },
   pl: {
-    title: 'plompy-engine: Agenci AI na Discordzie, na Twoim serwerze',
-    description: 'Uruchamiaj agentów AI z Discorda na własnym serwerze Linux. Trwałe sesje, kontekst w Markdown i wybrane narzędzia. Otwarty kod w TypeScript na licencji MIT.',
+    title: 'Plompy: Agenci AI na Twoim serwerze, sterowani z Discorda',
+    description: 'Plompy uruchamia agentów AI z Discorda na Twoim serwerze z Linuksem. Zachowuje sesje i kontekst w Markdown oraz udostępnia narzędzia przez MCP.',
     locale: 'pl_PL', alternateLocale: 'en_US',
     imageAlt: 'plompy-engine: Twoi agenci. Twoja maszyna. Twoje zasady.',
   },
@@ -182,8 +183,8 @@ function replaceMetadata(html, language, origin) {
   const structured = {
     '@context': 'https://schema.org',
     '@graph': [
-      { '@type': 'WebSite', '@id': `${rootURL}#website`, name: 'plompy-engine', url: rootURL, inLanguage: ['en', 'pl'] },
-      { '@type': 'SoftwareSourceCode', '@id': `${rootURL}#software`, name: 'plompy-engine', description: meta.description, url: pageURL,
+      { '@type': 'WebSite', '@id': `${rootURL}#website`, name: siteName, alternateName: ['plompy-engine', 'plompy.dev'], url: rootURL, inLanguage: ['en', 'pl'] },
+      { '@type': 'SoftwareSourceCode', '@id': `${rootURL}#software`, name: 'plompy-engine', alternateName: siteName, description: meta.description, url: pageURL,
         codeRepository: repository, license: `${repository}/blob/main/LICENSE`, programmingLanguage: 'TypeScript', runtimePlatform: 'Node.js on Linux' },
     ],
   };
@@ -196,7 +197,7 @@ function replaceMetadata(html, language, origin) {
     `  <link rel="alternate" hreflang="en" href="${escapeHTML(rootURL)}">`,
     `  <link rel="alternate" hreflang="pl" href="${escapeHTML(`${origin}/pl/`)}">`,
     `  <link rel="alternate" hreflang="x-default" href="${escapeHTML(rootURL)}">`,
-    ...Object.entries({ type: 'website', site_name: 'plompy-engine', title: meta.title, description: meta.description, url: pageURL, locale: meta.locale, 'locale:alternate': meta.alternateLocale, image: imageURL, 'image:alt': meta.imageAlt }).map(([key, value]) => `  <meta property="og:${key}" content="${escapeHTML(value)}">`),
+    ...Object.entries({ type: 'website', site_name: siteName, title: meta.title, description: meta.description, url: pageURL, locale: meta.locale, 'locale:alternate': meta.alternateLocale, image: imageURL, 'image:alt': meta.imageAlt }).map(([key, value]) => `  <meta property="og:${key}" content="${escapeHTML(value)}">`),
     ...Object.entries({ card: 'summary_large_image', title: meta.title, description: meta.description, image: imageURL, 'image:alt': meta.imageAlt }).map(([key, value]) => `  <meta name="twitter:${key}" content="${escapeHTML(value)}">`),
     `  <script type="application/ld+json" id="site-structured-data">\n${json}\n  </script>`,
   ].join('\n');
