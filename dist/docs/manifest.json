@@ -6,11 +6,11 @@
   "releaseSources": {
     "changelog": {
       "source": "CHANGELOG.md",
-      "hash": "f7d17ecc2f3651b8b96aa0c2d4036d535791ee7e97a05244f2fb8fadfcf54fe1"
+      "hash": "83e31338f4857805e8c2aa9b72064eacd8ee9089abcc211e2caa6f30e8be1eed"
     },
     "catalog": {
       "source": "docs/releases/catalog.json",
-      "hash": "0b9aaf1d980b5bbd547485e81c5c24b5f92d58b8c25a28af86bf39ea0734a6dd"
+      "hash": "bed5ac5d37fbd9fcb19d00ebec1b0ff893f6f2b3cda5644e74d0e2d90d79a2d4"
     }
   },
   "pages": [
@@ -30,7 +30,7 @@
       "slug": "releases",
       "source": "releases.md",
       "sourceHash": "3459b020ca4125d685ce89c9997e657995a92e547e73a5af3f02c0fe6d283cf4",
-      "htmlHash": "ddca03d424971d0c7bf2a6e054284546c26849e6ac33080cda4ce5c3cdae840e"
+      "htmlHash": "3cc4c7d23b329f1f36fa9cbbc33ae7161cb0e51557a5261312ee5086ccb00027"
     },
     {
       "slug": "architecture",
@@ -207,12 +207,20 @@
       "htmlHash": "cbaf154570097eb6118033935c7bf9bc01883643320b499849c1f13cee211e42"
     },
     {
+      "slug": "releases/1.0.0-alpha.1",
+      "source": "CHANGELOG.md",
+      "version": "1.0.0-alpha.1",
+      "publicationSource": "docs/releases/catalog.json",
+      "sourceHash": "832708681df5f32b1e06a60add62731e54636292243d7247914814ac9e99f528",
+      "htmlHash": "513cd784f0a32ec63fe5413e0132e93e884ddb1a868d1965cb6467233bd74b21"
+    },
+    {
       "slug": "releases/0.13.0",
       "source": "CHANGELOG.md",
       "version": "0.13.0",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "3584254d3a40c32e8966c2c7b58d41f0f41d0ca49974cdbbb029d358f49898b9",
-      "htmlHash": "ebee00df6766f1ae7559bc52dfd527793f9403809822abd88d98e8fd04eaa970"
+      "htmlHash": "2e7357778653d74dd271a0857827b3f3dae9c5d26a1321701f4b81cb7a7f427e"
     },
     {
       "slug": "releases/0.12.0",
@@ -220,7 +228,7 @@
       "version": "0.12.0",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "efa0679d3bf15fe503c2224ba1c9ab4c56bd341f6953da8d1208a837f4d05708",
-      "htmlHash": "8b1a3b78ef1de71b5ea69677cb7afc2dff3e7b94881ea08ba3b9debb53b1ad2a"
+      "htmlHash": "82bebcf8adab9728e2657fbdbc79a5fa4aed524b64d919354c6f45423f2b4fe6"
     },
     {
       "slug": "releases/0.11.1",
@@ -228,7 +236,7 @@
       "version": "0.11.1",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "ce531ba5430002ef44564ae3720b3e0a58cb0dbaa27997ff5f1dd7cd76e50b01",
-      "htmlHash": "b7e4d4be2e6cdf5cdbcd6998604dc3acbbd23d0b649280819a6fb293b55f8503"
+      "htmlHash": "1908f6e72b118543969b100bd78591e73e64fe7a27b5b08439e8180adaff3ae8"
     },
     {
       "slug": "releases/0.11.0",
@@ -236,7 +244,7 @@
       "version": "0.11.0",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "5f39539bc52d6a593bcf430858b3c4b2ff10bfc5ef042fe807126464e2785bda",
-      "htmlHash": "8f8581f58f7112b1c27c4f182313937631315848f056678406249c6cf79172e4"
+      "htmlHash": "c962853fa62243e67bad4e5c7186bf67f818ee69cabbdf65ebf19ebccb803b0b"
     },
     {
       "slug": "releases/0.10.0",
@@ -244,7 +252,7 @@
       "version": "0.10.0",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "f713038ff141df4939b785cf1f9531dc90409eb9f305caebba7a754710b64a2e",
-      "htmlHash": "101270a398027ae6462bcf6112a33b2f06719141872704ee45d3de481185e0de"
+      "htmlHash": "bc05feee5cdbca294139a0c727e1d711e9ab4310c4abfad471b66b3f21a5df87"
     },
     {
       "slug": "releases/0.9.0",
@@ -252,7 +260,7 @@
       "version": "0.9.0",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "50ff605b865507a8229973a37450b2010d4e76807bf776cb045aa949fd60fd99",
-      "htmlHash": "effa465a443afb95f3cefbe9f417f75f9d9c6b26c6a1656cc8a80846ceb05bab"
+      "htmlHash": "c40edfb24d60eef74ab6799a71b3d50c8a18501639dab1d5779c8237a6c7a126"
     },
     {
       "slug": "releases/0.8.1",
@@ -260,7 +268,7 @@
       "version": "0.8.1",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "6829d89d280b0f5a259b5ff40f4975d11043344abdcfba25e0883ae22a9c7aa8",
-      "htmlHash": "09f3ca4843110c7778d141c70d1bee6b46ad9f1a37f1a97658736339e7ff2ca0"
+      "htmlHash": "4fb3bcc15f1cbc61cfe37ba2c0243361b3c2631efc98e01451b6b69759954dbb"
     },
     {
       "slug": "releases/0.8.0",
@@ -268,7 +276,7 @@
       "version": "0.8.0",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "d7aeb106b93e81ae6d663b20abb8700fb1a1d794a3e17b8a7f0554baa0e8454b",
-      "htmlHash": "f6cdf79cc36e8bcdc4d775d080d2e259228d1a4e3e0ac442f13e08e293ac3b89"
+      "htmlHash": "49c0a761f1537431c86648422ff51783b9b5649cfc48ce0a61d8dc72af5e2c06"
     },
     {
       "slug": "releases/0.7.0",
@@ -276,7 +284,7 @@
       "version": "0.7.0",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "8b893c07b6df93bf0fc9c40c494c35ef905af034247f7b10f97c173b3a7e54ec",
-      "htmlHash": "b2bf2b256b875b85614b4c3e3fd2adda3c448666682f17f9b60f23f9f8b314c8"
+      "htmlHash": "eb8719b0f69ca5d16636213c035fe347ca3172f4d637ffb6be0e4ea7a46116c8"
     },
     {
       "slug": "releases/0.6.1",
@@ -284,7 +292,7 @@
       "version": "0.6.1",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "fdabe9ffe8d00e3a786af13def6556fe34c4fc995e383cfe5212431bacdedbaa",
-      "htmlHash": "402d83761de9062b549c01c0ea60401211ba2606ad8d86785621b273ef77d206"
+      "htmlHash": "62892e1025d77ab8c6d865f62146e10e43e853f6b24e4afe7a9089a74de01dae"
     },
     {
       "slug": "releases/0.6.0",
@@ -292,7 +300,7 @@
       "version": "0.6.0",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "55a822c0de9add930113355dd426b937530a0e4ab4833ff26bad5aab5e4215e2",
-      "htmlHash": "203b90b473d2eaf4218d7b1f631de63a7cb10e2df49b102226abdd0b6fb5f57e"
+      "htmlHash": "bb77d2cf08364fd502fdd069879fadd44dffac57e572ccd24c7b46f1f846051d"
     },
     {
       "slug": "releases/0.5.0",
@@ -300,7 +308,7 @@
       "version": "0.5.0",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "9beea392aa7b88a7d3bcced6d399419d04053fd9aa7264c5c9a0c8f6853dc6ef",
-      "htmlHash": "1f99746b147d92e2b69b6aaf9a3df2ec6f8a5692f53cded7622936a56eaf37ad"
+      "htmlHash": "65819fde4d8ef947605fba4804fc30c6638986927586ae983fd915c5d400083b"
     },
     {
       "slug": "releases/0.4.0",
@@ -308,7 +316,7 @@
       "version": "0.4.0",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "23fef9165ed175be89782c018742e85567bd0602f87a8ccfb0a83cc6d07f67d6",
-      "htmlHash": "9e10365d92fe1a423fc860d34da49e474b20b461188e870c82ed7f576ba9b237"
+      "htmlHash": "6c7b7555926f7b7f3ca9d3d246348dfeb15d896fea00f7d6c8bba20b39bae5aa"
     },
     {
       "slug": "releases/0.3.1",
@@ -316,7 +324,7 @@
       "version": "0.3.1",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "94351aa5e86c8124a67b11f0b369b43c16a23a114e45531458682c831880b3ec",
-      "htmlHash": "3fee372ee9e1d0b1eb0380893b00888f26f8fbd8a9052a0ca6313d1fc783c3aa"
+      "htmlHash": "7bc2073d8ea22fd41dc0025057f822cdf303ca44998daace2cc458ac21931725"
     },
     {
       "slug": "releases/0.3.0",
@@ -324,7 +332,7 @@
       "version": "0.3.0",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "c96613381544d47c43ffb0534fcc0b31c62bfa60bdf7b287277d87cff3ba5b85",
-      "htmlHash": "bebff0fdcb5787d674992085ae124d2aa1af6048a68f84fca8ebf168a042f148"
+      "htmlHash": "09130ad9c488c50e589a82de0be59e6bff280883c55f6e7c35b56bec87df942d"
     },
     {
       "slug": "releases/0.2.0",
@@ -332,7 +340,7 @@
       "version": "0.2.0",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "cd567009e38a60370d904326f761b771f2a2a36c614ed4098d88a00e41d713e5",
-      "htmlHash": "184dbde0310d6ef27e95595dee1540432d800ecc33c055d4c504f86aa9ce21c9"
+      "htmlHash": "6fff532000ff4ab1de48a74685375f1f9c593714c927eac3d110db34041d1175"
     }
   ]
 }
