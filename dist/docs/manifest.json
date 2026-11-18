@@ -1,12 +1,12 @@
 {
-  "version": "Plompy Local 0.13.0",
-  "updated": "2026-11-12",
+  "version": "Plompy Engine and Local",
+  "updated": "2026-11-18",
   "origin": "https://plompy.dev",
   "source": "dalkedev/plompy-engine/docs/local",
   "releaseSources": {
     "changelog": {
       "source": "CHANGELOG.md",
-      "hash": "83e31338f4857805e8c2aa9b72064eacd8ee9089abcc211e2caa6f30e8be1eed"
+      "hash": "b858f289112e6aba9bac1f98bddc99863a42cc5f67142d26f97d1e4905200341"
     },
     "catalog": {
       "source": "docs/releases/catalog.json",
@@ -17,202 +17,208 @@
     {
       "slug": "",
       "source": "introduction.md",
-      "sourceHash": "7039938ae1df57cb49a307d9ba33dc88574373cb6c0233cbcddd4ee4bc1ba5fc",
-      "htmlHash": "0899922b80aac62c2892eb094e2e56a34cc120eb3b26c3553b22eb22a54bb24a"
+      "sourceHash": "12479677e7d45fc1f33507387e6e618599d00ca24967ac4d2456033f0cb1d113",
+      "htmlHash": "74ac72992fad04a3e3ad16a0e5fcfc24e5db910208b0c9890dda146cb2604380"
     },
     {
       "slug": "quickstart",
       "source": "quickstart.md",
       "sourceHash": "44ad686e4d756d6203f8c8d177361cf8cb7c362fb29a206ced6e0d81b3444a4c",
-      "htmlHash": "5be556333fbc0e1af77170dfb58fe9b2f55a382aaf08e1496f812b54b11a29c5"
+      "htmlHash": "a2d0b4dc40307ebe0833e5374b3150d50a8ae2efd4c5621bc5258c5bab847dc8"
     },
     {
       "slug": "releases",
       "source": "releases.md",
       "sourceHash": "3459b020ca4125d685ce89c9997e657995a92e547e73a5af3f02c0fe6d283cf4",
-      "htmlHash": "3cc4c7d23b329f1f36fa9cbbc33ae7161cb0e51557a5261312ee5086ccb00027"
+      "htmlHash": "e2839d0e92fcd010f077a35ad085c3fcb14a74ab9d05d53bbc84e8a97c55de1d"
     },
     {
       "slug": "architecture",
       "source": "architecture.md",
       "sourceHash": "6d3aaf96a950726fe3d5207107a1bbad39e10f3b49193b4af1c386f062a401dc",
-      "htmlHash": "ac2cd2117a7aebb2390638a3c7e83917292521b558050f37ba66e7051f652bdc"
+      "htmlHash": "1aba9b71c1be237ee91cffb026c0ffb443875c5580149183021be070046167b7"
     },
     {
       "slug": "requirements",
       "source": "requirements.md",
       "sourceHash": "1389533d6b472edd60bda9cfd9698c22b5d90424ac792fd356d552fb271fd166",
-      "htmlHash": "967e510dcd15c59e2136f819e268b7e11a7f898eae3dfe5c0d3195654a3e6b54"
+      "htmlHash": "e5a12d9da6b697b1fda03f174f4e9972ca6884110fc7e41f1dd7fff0398f6e0d"
     },
     {
       "slug": "other-clients",
       "source": "other-clients.md",
       "sourceHash": "50079d2c0d3f17b11bc241a613ff603eaabc5880a068f02523f8d57da321b85f",
-      "htmlHash": "fc89333e12037da17fe0a9fbca95fedde182d6c734b21170253f01232e7015b5"
+      "htmlHash": "ad7b92bab2ee128d19107a9ab824505b0543d473a9aebd94f7d72df024ce1f29"
     },
     {
       "slug": "codex",
       "source": "codex.md",
       "sourceHash": "80881eb453ae8b29a6ad6bb3d63a89948424041003dfea81558c7bb85025d77c",
-      "htmlHash": "c51a8a9042ab1243097da7c9523745f06b7e902bc4e81da6243dcce4068e4ce3"
+      "htmlHash": "64b40edcd96fd06baac82bd0f312e6e2f4bdc07b15a3868eee73d751b10d4a2b"
     },
     {
       "slug": "claude-code",
       "source": "claude-code.md",
       "sourceHash": "f6357a18ce76c5a861b76c66242ee4d30f24e1c3450a7bd56008bd7dc75aeeb9",
-      "htmlHash": "d009021df512c895a83ae21cefd53fc9ddd13edbe3ad4f37d01d566743085ebb"
+      "htmlHash": "ac0c56fea80c36edb666c3d3bbac3c395c4f01545879d32e1c08b03f38d6a096"
     },
     {
       "slug": "opencode",
       "source": "opencode.md",
       "sourceHash": "aa2049ef9139d0a955a91eb6f90f32e9be9fdebd73eff4b42ac66be43975f9a2",
-      "htmlHash": "92d6b46cbd75bd56e0c2413d88c42ac3704e0ef1a22ada1acff70c1f386b63ba"
+      "htmlHash": "15269ca507e39968d4ec0d4ff0430f883ebe779e5c16c28eec6f7bcb5f6279c4"
     },
     {
       "slug": "ollama",
       "source": "ollama.md",
       "sourceHash": "05f00267a63fc2900d35dedd6c4869ab90e8ff20d6060f525e1fe191c61074ad",
-      "htmlHash": "f0082822389eddaeef23a0f80c420b8555f9d12ac8d3676b287d28c172739de3"
+      "htmlHash": "63741f98ac14771c97fa91e8366c48d7f67cac544df465e77146955b4306eff5"
     },
     {
       "slug": "integrations",
       "source": "integrations.md",
       "sourceHash": "0aa56be0a00aad6caafd466a67da3cd1f7c6375e1c7a9909fbf9bdc83088929a",
-      "htmlHash": "a96840554aaf3282265c05b2028f327374ff52d9dac2a9c2ea0c18a69dd29754"
+      "htmlHash": "2a69c2c8ea5fd01975f7247a2e70e381882841b606bf863fd5c7f30c022248ee"
     },
     {
       "slug": "credentials",
       "source": "credentials.md",
       "sourceHash": "310dbbb68eac59fce7f739a1ee9a66761e119bcec945d367bbdc4bdf7088da77",
-      "htmlHash": "9c946d4e45643b68a231a195b39c1a042332bd40ca62a401ed0c8df6d98a4dff"
+      "htmlHash": "831272156e0eab0b03604872525557e72663a8ab90047432428dcb861ae59105"
     },
     {
       "slug": "browser",
       "source": "browser.md",
       "sourceHash": "f8010d1a71ddede2520833a5c8954ebee5652bfeb5b9e9d5e81c810691270d60",
-      "htmlHash": "2fd97d356fa40c09a0aa436fa3d01f9921507365c6ea2f47bc30a93418437f9f"
+      "htmlHash": "2dae674e310a9f55847823a442a14a0ddda9a6f7ef9dfc24cd3dd783eae19856"
     },
     {
       "slug": "security",
       "source": "security.md",
       "sourceHash": "6b4ca73d0bb4be5438484d6b18ce7ebf55cb71eee974be42d953fe76e6d2bb18",
-      "htmlHash": "77c274fd26e1b654ba47afd0f700100db13b4ea8f17236aab76804c3178bdeb2"
+      "htmlHash": "d64fcce2cdb322ce03c70ebaa6cc2bbddddfb29a6715d24338fcb3d30d3e02e2"
     },
     {
       "slug": "artifacts",
       "source": "artifacts.md",
       "sourceHash": "f2c747c62c26d62c5818f9f9ebe8f3b58d381182e9daeeb7d2c2219561494443",
-      "htmlHash": "f6b6e2a18e3872cfd0b5b677a84afb62e00d7a6444ee6a6de2ff016383b6ee66"
+      "htmlHash": "5a035862af2cb0d55880850ea6b30dfb53838c05c082bf4940056fc080dc1f62"
     },
     {
       "slug": "research",
       "source": "research.md",
       "sourceHash": "21d35cd399457effb520eb1b56d3802bd71b3d7ee268e548b587be2756430295",
-      "htmlHash": "19fff1dec866c85880262c5f6a117332174348f665ae0f7c8d25024757baa8a2"
+      "htmlHash": "0d7983d378f26ce9676e68046e587780f797d40b35dcb9ff5fe1ff749efba301"
     },
     {
       "slug": "source-build",
       "source": "source-build.md",
       "sourceHash": "c75d9f39ec3c5a7429627206b0ea0292b16a256bffd895aadc6216edb13300e9",
-      "htmlHash": "e954b8e7e1e2a500ca0240644e697ec2976d83f1fef5dc1b5e21a51d25a1701f"
+      "htmlHash": "289b1982b646f4d60b10295dfcf746d00965bf260c1d4c937a14f4777000d024"
     },
     {
       "slug": "maintenance",
       "source": "maintenance.md",
       "sourceHash": "0a1033e4414ffbaf4425b16b5bb68a60fafa9477c304ed86f4cbb4e6e21f2efe",
-      "htmlHash": "293ad9ea9a4e0589630c671dda4064e048280c219c2f9b2efa8c8feb28458858"
+      "htmlHash": "b8f72ad4029be2220a80fcf454df10ef27c4aa288f00ca8cb40b53329940fc87"
     },
     {
       "slug": "discord",
       "source": "discord.md",
-      "sourceHash": "0997a47d63eaa54a7b0ff143596a7b8279a7f677a8ba1221d676b8ebfa3297b2",
-      "htmlHash": "b2be3a08891177184c0e6168e93aa52d585c1fac0cc5d6a3ab84c4126a9a8c0d"
+      "sourceHash": "2763dee375b92dcb4a35762d7ff887df6cfa4f0c4d55542eb027f8fd841a3fbc",
+      "htmlHash": "fca4427d371f90e6add7183d84f66ae12b3fe5bba3bd68f4ae014e8486e8c695"
+    },
+    {
+      "slug": "personal-assistant",
+      "source": "personal-assistant.md",
+      "sourceHash": "619e5cc2c75384f446842f1944a84bceee13f02ebd8b29f9343c353289de6195",
+      "htmlHash": "f9e8f98f57561b9b04873bccfd9f7fc6343deb6c04604fa335a494ad5583a14f"
     },
     {
       "slug": "compatibility",
       "source": "compatibility.md",
       "sourceHash": "ab8b42f1979dcacc11ec35afc8a87245318a3587ada3d4bb66b66691429946c7",
-      "htmlHash": "0146444d223257f3a789a730ec376997bb8f74ee8a81620fee2319f7848d8d1f"
+      "htmlHash": "59304a8e9704007111238e48dfb178d7c1210c0614cfb16ffbab24024c332914"
     },
     {
       "slug": "troubleshooting",
       "source": "troubleshooting.md",
       "sourceHash": "6bf0d4d7fc2f3fb297eef80d0160ff1e0dab2b14a2b201ca6064d173d9e5fe7f",
-      "htmlHash": "dc08c92d8bfc581cc5c12c598acda427bef5e6f59efd63207b1f958e9943d210"
+      "htmlHash": "2626919b8143861ef0a12fcee4d5065d1ba3b42de02f1029c0bd506f75939513"
     },
     {
       "slug": "integrations/web",
       "source": "integrations/web.md",
       "sourceHash": "55681f3f2181370da7710ca5be77c3e49d6e7886145939c499d2c378f0cbf4b1",
-      "htmlHash": "4ef1c18035947ee54e191b3afdb7d232520c034deec63f85cc501525a2e823c1"
+      "htmlHash": "5ed3ff8a52d0171169d1ea0dfb1b814fc2227d6b2791319f9d948e859b65ba39"
     },
     {
       "slug": "integrations/playwright",
       "source": "integrations/playwright.md",
       "sourceHash": "9272d2c75dabc46f53c76a9217e964fa4a31747aff717170d53e048045501fb9",
-      "htmlHash": "dd14521a1b96ee7526b4dc6f6bb3cc281b61318c5d4371f70c78c294ceecfd90"
+      "htmlHash": "25e2ccc9791ffaf43a1d829f3581838c770cc97bd15ce17e51a65cf4e51c3aaa"
     },
     {
       "slug": "integrations/github",
       "source": "integrations/github.md",
       "sourceHash": "4292317152c92447559d7cea06ba3b1e7507b632131aa759a06f61f66386609f",
-      "htmlHash": "c90ad3631a8e7b62ab41f13817831b5e6f901fc7a7359b9f2b58ad8382424df5"
+      "htmlHash": "43b4b6bc55622bca2df8c9c088db8430c73ef6ab48172c45a8f921d35d6123f8"
     },
     {
       "slug": "integrations/firecrawl",
       "source": "integrations/firecrawl.md",
       "sourceHash": "848c8081fb2011c3d4a2366700487bba952a31e886d10f66b353f860b6eabe46",
-      "htmlHash": "12d2c28ebef3577ef1968e1ecd7797eaa3e0042ea6123203447fc9923bd68239"
+      "htmlHash": "4619bcd4da4366985291e02bed498cf1be9ee9fdff7aec46f5ca11308e7e749c"
     },
     {
       "slug": "integrations/perplexity",
       "source": "integrations/perplexity.md",
       "sourceHash": "df887fd74be2c5ea4a687f92a226636cf3525c4784364b1c61c5b4ecb89590fe",
-      "htmlHash": "7a48ee1cd3ac41c346830bf7c6745b8eef9bc3d7e57e742dcf58c8aa3c614769"
+      "htmlHash": "e0b91026c93c58662774227a05a7bf927e73955c84da6ad2fa5a12143c489f83"
     },
     {
       "slug": "integrations/openai-docs",
       "source": "integrations/openai-docs.md",
       "sourceHash": "9343946654545f14616b2c8922afcabe6994ddab35acd8aa3426f4c98d5ab184",
-      "htmlHash": "d1d69d09dc0b41ec853c3d1784625099490623679a2137f46239f2f2a1eb0d9f"
+      "htmlHash": "3acc23d96399d255a83f918db6853afd6f8e5275078bd344a9c8a8b6d3060fb6"
     },
     {
       "slug": "integrations/context7",
       "source": "integrations/context7.md",
       "sourceHash": "577f6f5f102b1c6f8c092b2a28e380a57de1a7adf3d4ebf30f4200a25f3aeaed",
-      "htmlHash": "e43c55c73bc9e690cbb5e01fda4fb7baf69e2c263f5aee39104f8be2b98bb0a4"
+      "htmlHash": "0b68375e1808e8dcad93a5379650aeb2478c4265319b1c7814a83e4e73a30dae"
     },
     {
       "slug": "integrations/posthog",
       "source": "integrations/posthog.md",
       "sourceHash": "8f4ed1a05fe19ff73f7b7767f513be9bb3ff1468ae6449168bada9872f607634",
-      "htmlHash": "38c89bfb53735ebd29df1987217ec93efd6d5fa12d0a7109f9f0a47d8d5d028c"
+      "htmlHash": "a443642a083cf0638248e29d8cdf078cf55775712964342b64ee00081d0bb03b"
     },
     {
       "slug": "integrations/custom",
       "source": "integrations/custom.md",
       "sourceHash": "9722a78c41e1b42334382ff299b3b3bf722b9a4725543796d18bfd53d9beb568",
-      "htmlHash": "86e58d97bd29c31bb8791049ce235d8bc7ce29268ecc2af2b7740f16aff469ad"
+      "htmlHash": "d555c10d1f9ba3e123e2594bb69a301e15662debd9782e6f43b0b4658debbd39"
     },
     {
       "slug": "integrations/camoufox",
       "source": "integrations/camoufox.md",
       "sourceHash": "9cb583a966e5a6f2da650cb86fe4c2f45a72fc54d2ab455216c723d276edea40",
-      "htmlHash": "5a3774ecda6a0c19d101e67d63cab2d31065de0f2f644d2b68e713182efbbc88"
+      "htmlHash": "59c4ba5260985e5695e9464b5c423bc4af02c274b2a3fa40fe3a65dc7da17fb0"
     },
     {
       "slug": "integrations/tinyfish",
       "source": "integrations/tinyfish.md",
       "sourceHash": "7edbdc89fcb850056e0284b3fb378cde846688cf2e8e820006d72af36f4758cd",
-      "htmlHash": "cbaf154570097eb6118033935c7bf9bc01883643320b499849c1f13cee211e42"
+      "htmlHash": "641959384554380bf8d530f5aceb2dc72fc68524b1cdce5ffe9dc0f88eb61255"
     },
     {
       "slug": "releases/1.0.0-alpha.1",
       "source": "CHANGELOG.md",
       "version": "1.0.0-alpha.1",
       "publicationSource": "docs/releases/catalog.json",
-      "sourceHash": "832708681df5f32b1e06a60add62731e54636292243d7247914814ac9e99f528",
-      "htmlHash": "513cd784f0a32ec63fe5413e0132e93e884ddb1a868d1965cb6467233bd74b21"
+      "sourceHash": "467d032a95bb7033716842fb7e279b4cf82c5b51150d6f2098a3def005f72d91",
+      "htmlHash": "aa69e4128c801afcdaad8dabefa2f6cfce0eec7554484b1260bb6335aa93c7c2"
     },
     {
       "slug": "releases/0.13.0",
@@ -220,7 +226,7 @@
       "version": "0.13.0",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "3584254d3a40c32e8966c2c7b58d41f0f41d0ca49974cdbbb029d358f49898b9",
-      "htmlHash": "2e7357778653d74dd271a0857827b3f3dae9c5d26a1321701f4b81cb7a7f427e"
+      "htmlHash": "4b44816ee4f1dbab4879d9ba141ec931708f313459433a53fef20c299d27eac9"
     },
     {
       "slug": "releases/0.12.0",
@@ -228,7 +234,7 @@
       "version": "0.12.0",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "efa0679d3bf15fe503c2224ba1c9ab4c56bd341f6953da8d1208a837f4d05708",
-      "htmlHash": "82bebcf8adab9728e2657fbdbc79a5fa4aed524b64d919354c6f45423f2b4fe6"
+      "htmlHash": "e584345a6997805adbcf4e04f6b34575bc3a542e0a2462dfa3446962bdfad551"
     },
     {
       "slug": "releases/0.11.1",
@@ -236,7 +242,7 @@
       "version": "0.11.1",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "ce531ba5430002ef44564ae3720b3e0a58cb0dbaa27997ff5f1dd7cd76e50b01",
-      "htmlHash": "1908f6e72b118543969b100bd78591e73e64fe7a27b5b08439e8180adaff3ae8"
+      "htmlHash": "95f7b4d6ba1409b34ef06c65e094e17f36b9051137e16f3001dc4cb134a8dc2f"
     },
     {
       "slug": "releases/0.11.0",
@@ -244,7 +250,7 @@
       "version": "0.11.0",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "5f39539bc52d6a593bcf430858b3c4b2ff10bfc5ef042fe807126464e2785bda",
-      "htmlHash": "c962853fa62243e67bad4e5c7186bf67f818ee69cabbdf65ebf19ebccb803b0b"
+      "htmlHash": "0b66c50a001e8d53ccb31563bf57a215a49fa45b4a49a5c89b4fc0f3e525e43b"
     },
     {
       "slug": "releases/0.10.0",
@@ -252,7 +258,7 @@
       "version": "0.10.0",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "f713038ff141df4939b785cf1f9531dc90409eb9f305caebba7a754710b64a2e",
-      "htmlHash": "bc05feee5cdbca294139a0c727e1d711e9ab4310c4abfad471b66b3f21a5df87"
+      "htmlHash": "6fd45625a47c01db8c6765ba1ff635e415e08ebac6a6cdf26664b26d37e121c7"
     },
     {
       "slug": "releases/0.9.0",
@@ -260,7 +266,7 @@
       "version": "0.9.0",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "50ff605b865507a8229973a37450b2010d4e76807bf776cb045aa949fd60fd99",
-      "htmlHash": "c40edfb24d60eef74ab6799a71b3d50c8a18501639dab1d5779c8237a6c7a126"
+      "htmlHash": "608a2a4315172fdb8e8bedbb3ce5b0326feeb0be546b4aad2dadbc5f875c7c3a"
     },
     {
       "slug": "releases/0.8.1",
@@ -268,7 +274,7 @@
       "version": "0.8.1",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "6829d89d280b0f5a259b5ff40f4975d11043344abdcfba25e0883ae22a9c7aa8",
-      "htmlHash": "4fb3bcc15f1cbc61cfe37ba2c0243361b3c2631efc98e01451b6b69759954dbb"
+      "htmlHash": "2038c402725210a571da8e21a12cadfcff4a234f0221bd735c333c0c26856580"
     },
     {
       "slug": "releases/0.8.0",
@@ -276,7 +282,7 @@
       "version": "0.8.0",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "d7aeb106b93e81ae6d663b20abb8700fb1a1d794a3e17b8a7f0554baa0e8454b",
-      "htmlHash": "49c0a761f1537431c86648422ff51783b9b5649cfc48ce0a61d8dc72af5e2c06"
+      "htmlHash": "da69c8ceb1541470d650ba3ee33c090876866ec0cd489343c8a9ec75de15df4d"
     },
     {
       "slug": "releases/0.7.0",
@@ -284,7 +290,7 @@
       "version": "0.7.0",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "8b893c07b6df93bf0fc9c40c494c35ef905af034247f7b10f97c173b3a7e54ec",
-      "htmlHash": "eb8719b0f69ca5d16636213c035fe347ca3172f4d637ffb6be0e4ea7a46116c8"
+      "htmlHash": "a89bfecb05f8e90065dcbb5a7e234cd607fa966f19096799a2529ed77706dbed"
     },
     {
       "slug": "releases/0.6.1",
@@ -292,7 +298,7 @@
       "version": "0.6.1",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "fdabe9ffe8d00e3a786af13def6556fe34c4fc995e383cfe5212431bacdedbaa",
-      "htmlHash": "62892e1025d77ab8c6d865f62146e10e43e853f6b24e4afe7a9089a74de01dae"
+      "htmlHash": "8401d6bad44e91c585e97b90f5fab13273635023a6923a2f427ee53dbd2ef654"
     },
     {
       "slug": "releases/0.6.0",
@@ -300,7 +306,7 @@
       "version": "0.6.0",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "55a822c0de9add930113355dd426b937530a0e4ab4833ff26bad5aab5e4215e2",
-      "htmlHash": "bb77d2cf08364fd502fdd069879fadd44dffac57e572ccd24c7b46f1f846051d"
+      "htmlHash": "7449b8ecb4ad5ab7f9c5f8a868c7a394a381ae4d0b7dc7f98d9006eac5329b87"
     },
     {
       "slug": "releases/0.5.0",
@@ -308,7 +314,7 @@
       "version": "0.5.0",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "9beea392aa7b88a7d3bcced6d399419d04053fd9aa7264c5c9a0c8f6853dc6ef",
-      "htmlHash": "65819fde4d8ef947605fba4804fc30c6638986927586ae983fd915c5d400083b"
+      "htmlHash": "7804b912455eab942a2305e2fd85872d29c75ef7472e348c4fa7e7bb1584a700"
     },
     {
       "slug": "releases/0.4.0",
@@ -316,7 +322,7 @@
       "version": "0.4.0",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "23fef9165ed175be89782c018742e85567bd0602f87a8ccfb0a83cc6d07f67d6",
-      "htmlHash": "6c7b7555926f7b7f3ca9d3d246348dfeb15d896fea00f7d6c8bba20b39bae5aa"
+      "htmlHash": "6d8d768f885e50c5ba5163460e884c8a5aeb45784a4d591b49f087998ed4a0f8"
     },
     {
       "slug": "releases/0.3.1",
@@ -324,7 +330,7 @@
       "version": "0.3.1",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "94351aa5e86c8124a67b11f0b369b43c16a23a114e45531458682c831880b3ec",
-      "htmlHash": "7bc2073d8ea22fd41dc0025057f822cdf303ca44998daace2cc458ac21931725"
+      "htmlHash": "2348b50b4a7efcc087991f68403bfcfcd6e7bd2c3c2878fa01d43b1655f6d684"
     },
     {
       "slug": "releases/0.3.0",
@@ -332,7 +338,7 @@
       "version": "0.3.0",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "c96613381544d47c43ffb0534fcc0b31c62bfa60bdf7b287277d87cff3ba5b85",
-      "htmlHash": "09130ad9c488c50e589a82de0be59e6bff280883c55f6e7c35b56bec87df942d"
+      "htmlHash": "f6cbdab4b181c863cd87de5974653f84a01c4127b468d1b9820a2383df73c5ab"
     },
     {
       "slug": "releases/0.2.0",
@@ -340,7 +346,7 @@
       "version": "0.2.0",
       "publicationSource": "docs/releases/catalog.json",
       "sourceHash": "cd567009e38a60370d904326f761b771f2a2a36c614ed4098d88a00e41d713e5",
-      "htmlHash": "6fff532000ff4ab1de48a74685375f1f9c593714c927eac3d110db34041d1175"
+      "htmlHash": "e76202e73ea43ac007f584975de67f9377878282d72b8a6e79ee955bd68ee154"
     }
   ]
 }
