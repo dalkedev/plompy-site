@@ -3,6 +3,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { runInNewContext } from 'node:vm';
 import { buildDocs, verifyGeneratedDocs } from './build-docs.mjs';
+import { docsRoute } from './doc-routes.mjs';
 
 const projectDir = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const defaultOrigin = 'https://plompy.dev';
@@ -216,7 +217,7 @@ export async function buildPages({ distDir = resolve(projectDir, 'dist'), siteUr
   const docs = docsSource && write
     ? await buildDocs({ sourceDir: docsSource, distDir, siteUrl: origin })
     : await verifyGeneratedDocs(distDir, origin);
-  const docsURLs = (docs?.pages ?? []).map(page => `${origin}/docs/${page.slug ? page.slug + '/' : ''}`);
+  const docsURLs = (docs?.pages ?? []).map(page => origin + docsRoute(page.slug));
   const pages = {
     'index.html': replaceMetadata(setPageLanguage(source, 'en'), 'en', origin),
     'pl/index.html': replaceMetadata(setPageLanguage(translated.html, 'pl'), 'pl', origin),

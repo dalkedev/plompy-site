@@ -45,7 +45,7 @@ The Sites deployment remains an owner-private preview at https://plompy-engine.v
 
 The hero uses the existing Plompy mascot and SVG connection paths. `ocean-hero.js` handles the greeting and visibility-based animation pause. `journey.js` maps native vertical scroll to a horizontal three-stage walkthrough on fine-pointer viewports at least 1000 × 650 px; mobile, touch and paused motion use normal vertical document flow. Stage controls are keyboard accessible. Both motion controls synchronize through `plompy:motion-toggle` and the document motion attribute. The global motion preference honors the operating system.
 
-The hero's `plompy-eyes-base.png` is an image-generated derivative of the original mascot with only its pupils removed. Two SVG pupils preserve the original neutral expression and look toward a hovered, keyboard-focused or touched diagram control. Gaze is bounded inside each eye and returns to neutral after interaction; paused or reduced motion uses an immediate pose change. The original `logo.png` remains the shared static brand asset.
+The hero's `plompy-eyes-base.png` is an image-generated derivative of the original mascot with only its pupils removed. Two SVG pupils preserve the original neutral expression and look toward a hovered, keyboard-focused or touched diagram control. Gaze is bounded inside each eye and returns to neutral after interaction; paused or reduced motion uses an immediate pose change. The site uses WebP derivatives for the hero and shared logo. The original PNGs remain available as source artwork.
 
 Production origin: `https://plompy.dev`. Vercel serves the static `dist` output; the existing Sites deployment remains an owner-private preview. Rebuild metadata before publishing when the origin changes.
 
@@ -100,7 +100,7 @@ provider or local-model support from offline fixtures.
 ## Release history
 
 `/docs/releases/` lists published versions and links to a permanent page such as
-`/docs/releases/0.13.0/`. The engine's `CHANGELOG.md` supplies change text;
+`/docs/releases/0.13.0`. The engine's `CHANGELOG.md` supplies change text;
 `docs/releases/catalog.json` supplies publication dates, assets and GitHub's latest
 stable designation. The builder generates version pages from these sources, so
 there is no second set of release notes to maintain. Development-only changelog

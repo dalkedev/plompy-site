@@ -93,7 +93,7 @@
 </defs></svg>
 <a class="skip" href="#main" data-i18n="skip">Przejdź do treści</a>
 <header class="site-header wrap">
-  <a class="brand" href="#" aria-label="plompy-engine: strona główna"><img src="/assets/logo.png" alt="" width="44" height="44"><span>plompy<span class="brand-suffix">-engine</span><span class="brand-dot">.</span></span></a>
+  <a class="brand" href="#" aria-label="plompy-engine: strona główna"><img src="/assets/logo.webp" alt="" width="44" height="44"><span>plompy<span class="brand-suffix">-engine</span><span class="brand-dot">.</span></span></a>
   <nav aria-label="Nawigacja główna">
     <a href="#how-it-works" data-i18n="navHow">Jak to działa</a><a href="#integrations" data-i18n="navTools">Integracje</a><a href="#make-it-yours" data-i18n="navCustom">Po Twojemu</a><a href="/docs/" data-i18n="docs">Dokumentacja</a>
   </nav>
@@ -104,10 +104,13 @@
   <div class="ocean-opening">
     <div class="ocean-intro">
       <h1 id="ocean-title" data-i18n="oceanTitle">Mała ryba.<br>Wielkie pomysły.</h1>
-      <p data-i18n="oceanIntro">Plompy łączy Discorda z agentami do kodu na Twoim serwerze z Linuksem. Każdy wątek zachowuje swoją sesję i kontekst.</p>
-      <div class="ocean-actions"><a href="#get-started" class="button button-primary"><span data-i18n="getStarted">Uruchom swój silnik</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a href="https://github.com/dalkedev/plompy-engine" class="text-link" data-i18n="viewSource">Zobacz kod</a></div>
+      <p data-i18n="oceanIntro">Daj lokalnemu agentowi dostęp do narzędzi przez MCP i Docker albo uruchamiaj zadania z prywatnych wątków Discorda na swoim serwerze z Linuksem.</p>
+      <div class="ocean-actions">
+        <a href="/docs/quickstart/" class="button button-primary"><span data-i18n="runLocally">Uruchom lokalnie</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a href="/docs/discord/" class="button button-outline"><span data-i18n="connectDiscord">Podłącz Discord</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
       <div class="ocean-links">
-        <a href="/docs/releases/0.13.0/" class="ocean-release"><span class="status-dot"></span><span data-i18n="oceanRelease">v0.13.0 · Wersja stabilna</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+        <a href="/docs/releases/0.13.0" class="ocean-release"><span class="status-dot"></span><span data-i18n="oceanRelease">v0.13.0 · Wersja stabilna</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
         <a href="#personal-assistant" class="ocean-release ocean-release-alpha"><span data-i18n="assistantPreview">Osobisty asystent · Alfa</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
@@ -130,7 +133,7 @@
         <span class="ocean-speech" data-i18n="oceanSpeech" role="status" aria-live="polite"></span>
         <button type="button" class="ocean-fish" aria-label="Przywitaj się z Plompy">
           <span class="ocean-fish-art" aria-hidden="true">
-            <img src="/assets/plompy-eyes-base.png" alt="" width="512" height="512" fetchpriority="high">
+            <img src="/assets/plompy-eyes-base.webp" alt="" width="512" height="512" fetchpriority="high">
             <svg class="ocean-eyes" viewBox="0 0 1254 1254" focusable="false">
               <circle class="ocean-pupil" cx="684" cy="638" r="26"/>
               <circle class="ocean-pupil" cx="973" cy="638" r="26"/>
@@ -179,7 +182,7 @@
                 <span class="journey-bubble j-bubble-a" aria-hidden="true"></span><span class="journey-bubble j-bubble-b" aria-hidden="true"></span>
                 <div class="journey-thread-header"><svg class="icon" aria-hidden="true"><use href="#i-discord"/></svg><span># ship-the-idea</span><small data-i18n="illustrative">Przykładowy przebieg</small></div>
                 <div class="journey-message journey-message-user"><span class="journey-person" data-i18n="journeyYou">Ty</span><p data-i18n="journeyRequest"><code>!work 30m</code> Dodaj walidację ilości w API. Pokryj przypadki brzegowe testami.</p></div>
-                <div class="journey-reply"><img src="/assets/logo.png" alt="" width="56" height="56"><div><span class="journey-person">Plompy</span><p data-i18n="journeyAccepted">Zadanie przyjęte. Sprawdzę projekt, przygotuję zmianę i uruchomię testy.</p></div></div>
+                <div class="journey-reply"><img src="/assets/logo.webp" alt="" width="56" height="56"><div><span class="journey-person">Plompy</span><p data-i18n="journeyAccepted">Zadanie przyjęte. Sprawdzę projekt, przygotuję zmianę i uruchomię testy.</p></div></div>
                 <div class="journey-queue"><span class="journey-queue-mark" aria-hidden="true"><svg class="icon"><use href="#i-check"/></svg></span><div><strong data-i18n="journeySavedQueue">Zapisane w kolejce.</strong><span>SQLite <span aria-hidden="true">/</span> queued</span></div><svg class="journey-down" aria-hidden="true" viewBox="0 0 80 60"><path d="M5 5C5 40 30 47 67 47m-11-9 12 9-12 9"/></svg></div>
               </div>
             </div>
@@ -194,7 +197,7 @@
               <div class="journey-visual journey-machine">
                 <svg class="journey-machine-wires" viewBox="0 0 600 440" preserveAspectRatio="none" aria-hidden="true"><path d="M300 110V180M300 260C300 330 70 295 70 360M300 260V360M300 260C300 330 530 295 530 360"/><path class="journey-machine-packet" pathLength="100" d="M300 100V260C300 330 530 295 530 360"/></svg>
                 <div class="journey-runners"><strong data-i18n="journeyChooseRunner">Wybrany przez Ciebie agent</strong><span>Codex <small data-i18n="default">domyślny</small></span><span>Claude Code / OpenCode <small data-i18n="experimental">eksperymentalny</small></span></div>
-                <div class="journey-host"><img src="/assets/logo.png" alt="" width="96" height="96"><div><strong>plompy-engine</strong><span data-i18n="journeyLinuxHost">Na Twojej maszynie z Linuksem</span></div><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></div>
+                <div class="journey-host"><img src="/assets/logo.webp" alt="" width="96" height="96"><div><strong>plompy-engine</strong><span data-i18n="journeyLinuxHost">Na Twojej maszynie z Linuksem</span></div><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></div>
                 <div class="journey-connected"><div><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg><strong>GitHub</strong><span data-i18n="journeyRepository">Twoje repozytorium</span></div><div><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><strong>Markdown</strong><span data-i18n="journeyInstructions">Twoje instrukcje</span></div><div><svg class="icon" aria-hidden="true"><use href="#i-browser"/></svg><strong data-i18n="journeyBrowser">Przeglądarka</strong><span data-i18n="journeyConnections">Twoje połączenia</span></div></div>
               </div>
             </div>
@@ -208,7 +211,7 @@
               </div>
               <div class="journey-visual journey-result">
                 <span class="journey-bubble j-bubble-c" aria-hidden="true"></span>
-                <div class="journey-result-sheet"><div class="journey-result-head"><img src="/assets/logo.png" alt="" width="48" height="48"><strong>Plompy</strong><span data-i18n="illustrative">Przykładowy przebieg</span></div><p data-i18n="journeyResult">Dodana walidacja ilości i testy regresji. Wartości ujemne są odrzucane; zero pozostaje poprawne.</p><pre><code>+ if (quantity &lt; 0) {
+                <div class="journey-result-sheet"><div class="journey-result-head"><img src="/assets/logo.webp" alt="" width="48" height="48"><strong>Plompy</strong><span data-i18n="illustrative">Przykładowy przebieg</span></div><p data-i18n="journeyResult">Dodana walidacja ilości i testy regresji. Wartości ujemne są odrzucane; zero pozostaje poprawne.</p><pre><code>+ if (quantity &lt; 0) {
 +   throw new InvalidQuantityError();
 + }</code></pre><div class="journey-result-saved"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="journeyResultSaved">Wynik zapisany. Sesja zachowana.</span></div></div>
                 <div class="journey-followup"><span data-i18n="journeyYou">Ty</span><p data-i18n="journeyFollowup">Super. Teraz zastosuj tę regułę w imporcie.</p><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></div>
@@ -218,7 +221,7 @@
         </div>
       </div>
       <div class="journey-bottom wrap">
-        <div class="journey-current" aria-hidden="true"><svg viewBox="0 0 1200 80" preserveAspectRatio="none"><path d="M0 54C180 8 250 78 420 42S650 19 790 46 1030 76 1200 25"/><path class="journey-current-active" pathLength="100" d="M0 54C180 8 250 78 420 42S650 19 790 46 1030 76 1200 25"/></svg><div class="journey-swimmer"><img src="/assets/logo.png" alt="" width="68" height="68"></div><span class="journey-current-bubble"></span></div>
+        <div class="journey-current" aria-hidden="true"><svg viewBox="0 0 1200 80" preserveAspectRatio="none"><path d="M0 54C180 8 250 78 420 42S650 19 790 46 1030 76 1200 25"/><path class="journey-current-active" pathLength="100" d="M0 54C180 8 250 78 420 42S650 19 790 46 1030 76 1200 25"/></svg><div class="journey-swimmer"><img src="/assets/logo.webp" alt="" width="68" height="68"></div><span class="journey-current-bubble"></span></div>
         <div class="journey-caption"><a href="#integrations"><span data-i18n="journeyContinue">Poznaj narzędzia</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
       </div>
     </div>
@@ -311,8 +314,16 @@
   <section id="make-it-yours" class="custom-section section-space"><svg class="shoreline" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 48C220 12 360 76 600 42S1060 16 1440 44V80H0Z"/></svg>
     <div class="wrap custom-layout"><div class="custom-copy"><h2 data-i18n="customTitle">Twój agent.<br>Twój sposób pracy.</h2><p data-i18n="customIntro">Nadaj Plompy’emu osobowość, styl pracy i jasne granice. Jego kontekst to zwykłe pliki Markdown, które możesz czytać, edytować i wersjonować w Git.</p><div class="custom-file-description" id="file-description"></div><a class="text-link" href="https://github.com/dalkedev/plompy-engine/tree/main/examples/workspace"><span data-i18n="browseTemplates">Przejrzyj szablony workspace</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></div><div class="editor"><div class="editor-top"><span>workspace/agent/</span><span data-i18n="exampleConfig">Przykładowa konfiguracja</span></div><div class="file-tabs" role="tablist" aria-label="Pliki kontekstu agenta"><button id="tab-soul" type="button" role="tab" data-file="soul" aria-selected="true" aria-controls="file-panel">SOUL.md</button><button id="tab-user" type="button" role="tab" data-file="user" aria-selected="false" aria-controls="file-panel" tabindex="-1">USER.md</button><button id="tab-policy" type="button" role="tab" data-file="policy" aria-selected="false" aria-controls="file-panel" tabindex="-1">POLICY.md</button><button id="tab-memory" type="button" role="tab" data-file="memory" aria-selected="false" aria-controls="file-panel" tabindex="-1">MEMORY.md</button></div><div id="file-panel" role="tabpanel" aria-labelledby="tab-soul" tabindex="0"><pre id="file-code"></pre></div><div class="editor-bottom"><span>Markdown</span><span data-i18n="localFiles">Lokalne pliki. Historia w Git.</span></div></div></div>
   </section>
-  <section id="get-started" class="start-section wrap section-space"><div class="section-heading"><h2 data-i18n="startTitle">Trochę konfiguracji.<br>Mnóstwo możliwości.</h2><p data-i18n="startIntro">Zacznij od demonstracji offline. Potem dodaj własnego bota Discord, zalogowanego agenta i maszynę z Linuksem.</p></div>
+  <section id="get-started" class="start-section wrap section-space"><div class="section-heading"><h2 data-i18n="startTitle">Skonfiguruj Plompy</h2></div>
     <div class="setup-entries">
+      <section class="setup-entry" aria-labelledby="local-heading">
+        <div><h3 id="local-heading" data-i18n="localTitle">Local MCP</h3><p data-i18n="localBody">Uruchom bramę przez Docker Compose i podłącz Codex, Claude Code lub OpenCode. Użyj modelu skonfigurowanego w agencie albo podłącz Ollama.</p></div>
+        <div class="setup-entry-actions"><a class="button button-primary" href="/docs/quickstart/" data-i18n="runLocally">Uruchom lokalnie</a><a class="text-link" href="/docs/other-clients/" data-i18n="connectAgent">Podłącz swojego agenta</a><a class="text-link" href="/docs/ollama/" data-i18n="localModel">Użyj lokalnego modelu</a></div>
+      </section>
+      <section class="setup-entry" aria-labelledby="discord-heading">
+        <div><h3 id="discord-heading" data-i18n="discordTitle">Silnik Discord</h3><p data-i18n="discordBody">Uruchom silnik na Linuksie z własnym botem, prywatnym forum i zalogowanym agentem. Każdy wątek zachowuje swoją sesję i kontekst.</p></div>
+        <div class="setup-entry-actions"><a class="button button-primary" href="/docs/discord/" data-i18n="connectDiscord">Podłącz Discord</a></div>
+      </section>
       <section class="setup-entry" id="personal-assistant" aria-labelledby="assistant-heading">
         <div>
           <div class="setup-entry-heading">
@@ -322,11 +333,10 @@
           <p data-i18n="assistantBody">Zapisuj notatki, prowadź listę zadań i ustawiaj jednorazowe przypomnienia w osobnym prywatnym wątku Discorda. Plompy obsługuje te polecenia bez wywoływania modelu.</p>
         </div>
         <div class="setup-entry-actions">
-          <a class="button button-primary" href="/docs/personal-assistant/" data-i18n="assistantSetup">Skonfiguruj asystenta</a>
-          <a class="text-link" href="/docs/releases/1.0.0-alpha.1/" data-i18n="assistantRelease">Informacje o wydaniu</a>
+          <a class="text-link" href="/docs/personal-assistant/" data-i18n="assistantSetup">Skonfiguruj asystenta</a>
+          <a class="text-link" href="/docs/releases/1.0.0-alpha.1" data-i18n="assistantRelease">Informacje o wydaniu</a>
         </div>
       </section>
-      <div class="setup-entry"><div><h3 data-i18n="localTitle">Twój agent. Twój model.</h3><p data-i18n="localBody">Plompy Local 0.13.0: gotowe obrazy Dockera dla Codex, Claude Code lub OpenCode. Wybierz model w chmurze lub lokalne Ollama.</p></div><div class="setup-entry-actions"><a class="button button-primary" href="/docs/quickstart/" data-i18n="runLocally">Uruchom lokalnie</a><a class="text-link" href="/docs/other-clients/" data-i18n="connectAgent">Podłącz swojego agenta</a><a class="text-link" href="/docs/ollama/" data-i18n="localModel">Użyj lokalnego modelu</a></div></div>
     </div>
     <div class="start-layout"><div class="install-block"><div class="install-header"><span data-i18n="offlineDemo">Wypróbuj demo offline</span><button type="button" id="copy-command"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg><span data-i18n="copy">Kopiuj</span></button></div><pre><code id="install-code">git clone --branch v0.13.0 --depth 1 \
   https://github.com/dalkedev/plompy-engine.git
@@ -341,7 +351,7 @@ npm run demo -- session</code></pre><p data-i18n="offlineNote">Przykładowe dane
       </article>
     </section>
   </section>
-  <section class="github-section"><svg class="shoreline" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 48C220 12 360 76 600 42S1060 16 1440 44V80H0Z"/></svg><div class="wrap"><div class="github-top"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="openInvitation">Otwarty kod. Otwarte zaproszenie.</span><a href="https://github.com/dalkedev/plompy-engine/blob/main/LICENSE">MIT</a></div><h2 data-i18n="githubTitle">Masz pomysł?<br>Narób trochę fal.</h2><div class="splash-fish" aria-hidden="true"><img src="/assets/logo.png" alt="" width="240" height="240" loading="lazy"></div><div class="github-bottom"><p data-i18n="githubBody">Zajrzyj do kodu. Wypróbuj integrację. Zgłoś pomysł. Zbuduj agenta, z którym sam chcesz pracować.</p><a href="https://github.com/dalkedev/plompy-engine" class="button button-dark"><span data-i18n="joinGithub">Wbijaj na GitHuba</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></div></div></section>
+  <section class="github-section"><svg class="shoreline" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 48C220 12 360 76 600 42S1060 16 1440 44V80H0Z"/></svg><div class="wrap"><div class="github-top"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg><span data-i18n="openInvitation">Otwarty kod. Otwarte zaproszenie.</span><a href="https://github.com/dalkedev/plompy-engine/blob/main/LICENSE">MIT</a></div><h2 data-i18n="githubTitle">Masz pomysł?<br>Narób trochę fal.</h2><div class="splash-fish" aria-hidden="true"><img src="/assets/logo.webp" alt="" width="240" height="240" loading="lazy"></div><div class="github-bottom"><p data-i18n="githubBody">Zajrzyj do kodu. Wypróbuj integrację. Zgłoś pomysł. Zbuduj agenta, z którym sam chcesz pracować.</p><a href="https://github.com/dalkedev/plompy-engine" class="button button-dark"><span data-i18n="joinGithub">Wbijaj na GitHuba</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></div></div></section>
 </main>
 <footer class="wrap"><a class="footer-brand" href="#">plompy-engine.</a><span data-i18n="footerTagline">Twoi agenci. Twoja maszyna. Twoje zasady.</span><a href="/docs/" data-i18n="docs">Dokumentacja</a><a href="/docs/releases/" data-i18n="releaseHistory">Historia wydań</a><a href="https://github.com/dalkedev/plompy-engine/blob/main/ROADMAP.md">Roadmap</a><a class="coffee-link" href="https://buymeacoffee.com/dalkedev"><svg class="icon" aria-hidden="true"><use href="#i-coffee"/></svg><span data-i18n="coffee">Postaw mi kawę</span></a><a href="https://github.com/dalkedev">by dalkedev</a></footer>
 </body>

@@ -6,6 +6,12 @@
 .ocean-intro>p{font-size:15px;line-height:1.9;color:#b8c2bd;max-width:350px;margin-top:27px}
 .ocean-actions{display:flex;align-items:center;gap:22px;margin-top:29px;flex-wrap:wrap}
 .ocean-actions .button{min-height:54px}
+.ocean-actions .button-outline{border:1px solid var(--line);color:var(--paper)}
+.ocean-actions .button-outline:hover{border-color:var(--sea-ink);color:var(--sea-ink)}
+@media(max-width:600px){
+  .ocean-intro .ocean-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .ocean-intro .ocean-actions .button{padding-inline:9px;gap:8px;text-align:center}
+}
 .ocean-links{display:flex;flex-wrap:wrap;gap:0 18px;margin-top:20px}
 .ocean-release{display:inline-flex;align-items:center;gap:9px;min-height:32px;font-size:11px;line-height:1.7;color:#aeb8b3}
 .ocean-release .icon{width:13px;height:13px}

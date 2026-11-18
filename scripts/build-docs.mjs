@@ -3,17 +3,24 @@ import { resolve, dirname, relative, sep } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { createHash } from 'node:crypto';
 import { createReleaseHistory, releaseMarkdown, releaseIndexHtml, releaseMetadataHtml } from './release-history.mjs';
+import { docsRoute as route, isReleaseSlug } from './doc-routes.mjs';
 
 const projectDir = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const hash = value => createHash('sha256').update(value).digest('hex');
 const slugify = value => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const inside = (base, path) => path === base || path.startsWith(base + sep);
-const route = slug => `/docs/${slug ? slug + '/' : ''}`;
 
 function resolveLink(href, source, sources) {
   if (/^(https?:|mailto:)/.test(href) || href.startsWith('#')) return href;
-  if (href.startsWith('/')) return href;
+  if (href.startsWith('/')) {
+    const [pathname, fragment] = href.split('#', 2);
+    const slug = pathname.slice('/docs/'.length).replace(/\/$/, '');
+    if (pathname.startsWith('/docs/') && isReleaseSlug(slug)) {
+      return route(slug) + (fragment ? '#' + fragment : '');
+    }
+    return href;
+  }
   const [path, fragment] = href.split('#');
   const resolved = resolve(dirname(source), path);
   const target = sources.get(resolved);
@@ -85,10 +92,10 @@ function pageHtml(page, manifest, rendered, origin) {
   return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101515"><title>${escape(page.title)} | Plompy Docs</title><meta name="description" content="${escape(page.description)}"><meta name="robots" content="index,follow"><link rel="canonical" href="${escape(canonical)}"><meta property="og:type" content="article"><meta property="og:title" content="${escape(page.title)} | Plompy Docs"><meta property="og:description" content="${escape(page.description)}"><meta property="og:url" content="${escape(canonical)}"><meta property="og:image" content="${origin}/assets/social-preview.jpg"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/assets/favicon.png"><link rel="stylesheet" href="/docs/docs.css"><script src="/docs/docs.js" defer></script><script type="application/ld+json">${JSON.stringify(structured).replaceAll('<','\\u003c')}</script></head>
 <body><a class="skip" href="#doc-main">Skip to content</a>
-<header class="docs-header"><a class="docs-brand" href="/" aria-label="Plompy home"><img src="/assets/logo.png" alt="" width="48" height="48"><span>plompy-engine<span class="brand-dot">.</span></span></a><a class="docs-home" href="/docs/">Docs</a><button class="search-open" type="button"><span>Search the guide</span><kbd aria-hidden="true">⌘ K</kbd></button><nav aria-label="Project links">${manifest.releaseHistory?'<a href="/docs/releases/">Releases</a>':''}<a href="/">Website</a><a href="https://github.com/dalkedev/plompy-engine">GitHub<span aria-hidden="true"> ↗</span></a></nav></header>
+<header class="docs-header"><a class="docs-brand" href="/" aria-label="Plompy home"><img src="/assets/logo.webp" alt="" width="48" height="48"><span>plompy-engine<span class="brand-dot">.</span></span></a><a class="docs-home" href="/docs/">Docs</a><button class="search-open" type="button"><span>Search the guide</span><kbd aria-hidden="true">⌘ K</kbd></button><nav aria-label="Project links">${manifest.releaseHistory?'<a href="/docs/releases/">Releases</a>':''}<a href="/">Website</a><a href="https://github.com/dalkedev/plompy-engine">GitHub<span aria-hidden="true"> ↗</span></a></nav></header>
 <div class="docs-shell"><aside class="docs-sidebar"><details class="mobile-nav"><summary>Browse documentation</summary><nav aria-label="Documentation">${nav}</nav></details><nav class="desktop-nav" aria-label="Documentation">${nav}</nav><p class="docs-version">${escape(manifest.version)}<span>Source guide · ${escape(manifest.updated)}</span></p></aside>
 <main id="doc-main" tabindex="-1"><div class="doc-breadcrumb"><a href="/docs/">Documentation</a><span aria-hidden="true">/</span>${page.release?'<a href="/docs/releases/">Release history</a><span aria-hidden="true">/</span>':''}<span>${escape(page.title)}</span></div><article class="doc-article">${rendered.html}</article><nav class="doc-pager" aria-label="${page.release?'Adjacent releases':'Adjacent documentation'}">${previous?`<a href="${route(previous.slug)}"><small>${page.release?'Newer release':'Previous'}</small><strong>${escape(previous.title)}</strong></a>`:'<span></span>'}${next?`<a href="${route(next.slug)}"><small>${page.release?'Earlier release':'Next'}</small><strong>${escape(next.title)}</strong></a>`:''}</nav><footer class="doc-footer"><span>Keep the thread. Follow the sources.</span><a href="https://buymeacoffee.com/dalkedev">Buy me a coffee ↗</a></footer></main>
-<aside class="docs-toc"><div><p>On this page</p><nav aria-label="On this page"><ul>${toc}</ul></nav><a class="doc-top" href="#doc-main">Back to top ↑</a><img src="/assets/logo.png" alt="" width="104" height="104" loading="lazy"></div></aside></div>
+<aside class="docs-toc"><div><p>On this page</p><nav aria-label="On this page"><ul>${toc}</ul></nav><a class="doc-top" href="#doc-main">Back to top ↑</a><img src="/assets/logo.webp" alt="" width="104" height="104" loading="lazy"></div></aside></div>
 <dialog class="search-dialog" aria-labelledby="search-title"><div class="search-top"><h2 id="search-title">Find your next step</h2><button class="search-close" type="button" aria-label="Close search">Close <kbd>Esc</kbd></button></div><label for="docs-search">Search documentation</label><input id="docs-search" type="search" placeholder="Try Codex, Ollama, API key…" autocomplete="off"><p id="search-status" role="status" aria-live="polite">Search titles and guide content.</p><ul id="search-results"></ul></dialog><p id="copy-status" class="sr-only" role="status" aria-live="polite"></p></body></html>\n`;
 }
 

@@ -1,11 +1,11 @@
 import assert from 'node:assert/strict';
 import { posix } from 'node:path';
+import { docsRoute, releaseVersionPattern } from './doc-routes.mjs';
 
 const repository = 'dalkedev/plompy-engine';
 const github = `https://github.com/${repository}`;
-const versionPattern = /^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$/;
 const escape = value => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-export const releaseRoute = version => `/docs/releases/${version}/`;
+const releaseRoute = version => docsRoute(`releases/${version}`);
 const dateLabel = date => new Date(date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
 const sentence = text => text.replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/[`*]/g, '').trim();
 const excerpt = text => text.length > 210 ? text.slice(0, 207).replace(/\s+\S*$/, '') + '…' : text;
@@ -32,7 +32,7 @@ export function createReleaseHistory(changelog, catalog) {
   const notes = parseChangelog(changelog), seen = new Set();
   const releases = catalog.releases.map(release => {
     const version = release.tag?.slice(1);
-    assert(release.tag?.startsWith('v') && versionPattern.test(version), 'Unsafe release version.');
+    assert(release.tag?.startsWith('v') && releaseVersionPattern.test(version), 'Unsafe release version.');
     assert(!seen.has(version), 'Duplicate published version.'); seen.add(version);
     assert.equal(release.url, `${github}/releases/tag/${release.tag}`, 'Unexpected release URL.');
     assert(Number.isFinite(Date.parse(release.publishedAt)), 'Invalid release date.');

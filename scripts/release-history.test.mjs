@@ -27,7 +27,7 @@ test('historical pages pin source links and explain their version boundary', () 
   assert.match(markdown, /historical release/);
   assert.match(markdown, /predates Plompy Local/);
   assert.match(markdown, /blob\/v0\.12\.0\/docs\/migration-plompy\.md/);
-  assert.match(markdown, /\/docs\/releases\/0\.13\.0\//);
+  assert.match(markdown, /\/docs\/releases\/0\.13\.0\)/);
   assert.doesNotMatch(markdown, /0\.14\.0|Not published yet/);
 });
 
@@ -50,17 +50,19 @@ test('generates all version pages with metadata, search, source hashes and intac
     ...['quickstart', 'other-clients', 'compatibility'].map(slug => ({ slug, source: `${slug}.md`, title: slug, description: slug, group: 'Start' })),
   ];
   await writeFile(join(source, 'navigation.json'), JSON.stringify({ version: 'Test', updated: '2026-11-12', releaseHistory: true, pages }));
-  for (const page of pages) await writeFile(join(source, page.source), page.slug === '' ? '# Your agent.<br>A\u00a0little more reach.\n' : `# ${page.title}\n`);
+  for (const page of pages) await writeFile(join(source, page.source), page.slug === '' ? '# Your agent.<br>A\u00a0little more reach.\n\n[Old link](/docs/releases/0.13.0/#what-changed)\n' : `# ${page.title}\n`);
   await writeFile(join(engine, 'CHANGELOG.md'), changelog); await writeFile(join(engine, 'docs/releases/catalog.json'), JSON.stringify(catalog));
   const result = await buildDocs({ sourceDir: source, distDir: dist });
   assert.equal(result.pages.length, 7); assert(result.releaseSources.changelog.hash); assert(result.releaseSources.catalog.hash);
   const html = await readFile(join(dist, 'docs/releases/0.13.0/index.html'), 'utf8');
-  assert.match(html, /rel="canonical" href="https:\/\/plompy.dev\/docs\/releases\/0\.13\.0\/"/);
+  assert.match(html, /rel="canonical" href="https:\/\/plompy.dev\/docs\/releases\/0\.13\.0"/);
+  assert.match(html, /property="og:url" content="https:\/\/plompy.dev\/docs\/releases\/0\.13\.0"/);
   assert.match(html, /"datePublished":"2026-11-12T16:45:24Z"/); assert.match(html, />Latest stable</);
-  assert.match(html, /aria-label="Adjacent releases"/); assert.match(html, /Earlier release/);
+  assert.match(html, /aria-label="Adjacent releases"/); assert.match(html, /href="\/docs\/releases\/0\.12\.0"><small>Earlier release/);
   const search = JSON.parse(await readFile(join(dist, 'docs/search-index.json'), 'utf8'));
-  assert(search.some(page => page.url === '/docs/releases/0.12.0/' && page.text.includes('migration guide')));
+  assert(search.some(page => page.url === '/docs/releases/0.12.0' && page.text.includes('migration guide')));
   assert(!search.some(page => page.url.includes('0.14.0')));
   const intro = await readFile(join(dist, 'docs/index.html'), 'utf8'); assert.match(intro, /Your agent\.<br>A\u00a0little more reach\./);
+  assert.match(intro, /href="\/docs\/releases\/0\.13\.0#what-changed"/);
   const index = await readFile(join(dist, 'docs/releases/index.html'), 'utf8'); assert.match(index, /class="release-timeline"/); assert.match(index, /2 releases/);
 });
