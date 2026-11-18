@@ -32,7 +32,7 @@ The Vercel deployment at `https://plompy.dev` is public. The separate Sites prev
 
 After each deployment, verify that `/`, `/pl/`, `/sitemap.xml`, `/robots.txt` and `/assets/social-preview.jpg` return the intended content to an unauthenticated request. Confirm that the host sends no `X-Robots-Tag: noindex` header. Language links must be ordinary links to `/` and `/pl/`; page language must follow the URL, without redirecting visitors based on browser settings or local storage. Inspect both pages with JavaScript disabled to confirm the core content remains present.
 
-Published release detail URLs such as `/docs/releases/0.13.0` should return HTTP 200 directly. Confirm that they match the sitemap, canonical metadata, internal links and documentation search. Older links with a final slash should redirect to the same detail page.
+Published release detail URLs such as `/docs/releases/0.13.1` should return HTTP 200 directly. Confirm that they match the sitemap, canonical metadata, internal links and documentation search. Older links with a final slash should redirect to the same detail page.
 
 Google Search Console ownership was verified and `/sitemap.xml` processed both language pages on 2026-11-12. After domain changes, verify the new property, submit its sitemap, and inspect both language URLs. Check the rendered content, selected canonical and crawl access. Indexing can take time and is not guaranteed. Keep release requirements and integration support aligned with the project documentation when updating the page.
 

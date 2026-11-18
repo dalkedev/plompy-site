@@ -27,7 +27,7 @@ Open [the English preview](http://127.0.0.1:4173/) or [the Polish preview](http:
 
 `dist/index.html`: English copy, page structure and links. `dist/app.js`: Polish copy, interactive scenes, integration descriptions and file examples. `dist/style.css`: core layout, approved navbar/footer interactions and responsive styles. `dist/catalog.css`: tool catalog and visible FAQ layout. `dist/motion.css`: repeating signal animation. `dist/assets/`: local fonts, artwork and licenses. `scripts/build-pages.mjs`: static language pages and SEO output. Edit the English source and Polish dictionary, then rebuild; do not hand-edit generated `dist/pl/index.html`.
 
-Product claims reflect the 0.13.0 engine and Local MCP documentation, reviewed on 2026-11-12. Update the release link and installation command together when the supported version changes. Examples are synthetic and no real model, Discord account or VPS is connected to the page.
+The landing targets the stable 0.13.1 engine and Local MCP kit. The personal assistant remains an opt-in Discord preview in 1.0.0-alpha.1. Update the stable release link and offline demo command together. Examples are synthetic and use no real model, Discord account or VPS.
 
 Plompy's mascot logo and social preview live in `dist/assets/`; the corresponding engine brand assets live in `dalkedev/plompy-engine/assets/brand/`. Keep these synchronized when the identity changes. Sora and IBM Plex Mono are distributed with their OFL licenses in `dist/assets/`.
 
@@ -89,9 +89,10 @@ OpenCode V1/V2 configuration and Ollama as an optional model provider. Its
 compatibility page records actual clients separately from deterministic model
 fixtures and paid provider access.
 
-The guide targets Plompy Local 0.13.0 and its versioned starter kit, core image and
-optional browser image. Its primary path needs no source checkout or host Node
-installation; development builds have a separate guide. Publish the matching
+The guide targets Plompy Local 0.13.1 and its versioned starter kit, core image and
+optional browser image. Docker publishes the gateway on a configurable local
+loopback port. The primary path needs no source checkout or host Node
+installation. Development builds have a separate guide. Publish the matching
 engine release, images and downloadable kit before deploying release-specific
 documentation. Website publication alone does not publish those artifacts.
 Update the compatibility page from actual acceptance evidence; do not infer
@@ -100,15 +101,17 @@ provider or local-model support from offline fixtures.
 ## Release history
 
 `/docs/releases/` lists published versions and links to a permanent page such as
-`/docs/releases/0.13.0`. The engine's `CHANGELOG.md` supplies change text;
+`/docs/releases/0.13.1`. The engine's `CHANGELOG.md` supplies change text.
 `docs/releases/catalog.json` supplies publication dates, assets and GitHub's latest
 stable designation. The builder generates version pages from these sources, so
 there is no second set of release notes to maintain. Development-only changelog
 entries are excluded, and older notes link to their matching Git tag.
 
 After the engine release and assets are public, run `node docs/releases/sync.mjs`
-in the engine checkout, review its catalog update, then run the canonical docs
-build and checks above. `scripts/release-history.mjs` handles the history rendering;
+in the engine's main checkout. Check that the catalog identifies the stable
+release and still lists the assistant prerelease. Build and check the site using
+that checkout's canonical docs, which include both versions.
+`scripts/release-history.mjs` handles the history rendering and
 its tests cover publication boundaries, pinned source links, metadata, search and
 generated-page integrity. The docs manifest records the changelog and catalog
 hashes. A standalone site build uses the committed output without contacting

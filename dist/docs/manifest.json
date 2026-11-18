@@ -6,31 +6,31 @@
   "releaseSources": {
     "changelog": {
       "source": "CHANGELOG.md",
-      "hash": "b858f289112e6aba9bac1f98bddc99863a42cc5f67142d26f97d1e4905200341"
+      "hash": "ee3fd32be637d19e74b6bbc0080746e6b11ed8e09458a30f2e23228aa69c4f22"
     },
     "catalog": {
       "source": "docs/releases/catalog.json",
-      "hash": "bed5ac5d37fbd9fcb19d00ebec1b0ff893f6f2b3cda5644e74d0e2d90d79a2d4"
+      "hash": "847017bb26a9a7c2348872b51cefa32da92d84c3a89e5f3b02391f05d4d7c433"
     }
   },
   "pages": [
     {
       "slug": "",
       "source": "introduction.md",
-      "sourceHash": "12479677e7d45fc1f33507387e6e618599d00ca24967ac4d2456033f0cb1d113",
-      "htmlHash": "6514c2190298c405f26f493d0b41c3a171c5a2a99189c70ffaed794a7d2d6fd8"
+      "sourceHash": "f5343738eddd502a5eb01c41aefb86752ff5dcb440c23fbe23dfa2979cee1028",
+      "htmlHash": "4fcf3095be4288d1c8b66d02df11f1afe724422fb0cf32bc0591d2aa92beb8fb"
     },
     {
       "slug": "quickstart",
       "source": "quickstart.md",
-      "sourceHash": "7de3ccb44723848000da0f4fb0b6870e771ef10140431b0af66b2768a024cf20",
-      "htmlHash": "8ba681fa646d6a1c84b23a7cac9caf4845154684dc0e74665faca5639813aac7"
+      "sourceHash": "bd0475797663206dfd4d2044c05bcc47f3c215dc115802a218aee170554d33b3",
+      "htmlHash": "5ec662c766df71f42bb5b05396a434a066b64c8aa482852e1c4d0ca28a18a262"
     },
     {
       "slug": "releases",
       "source": "releases.md",
       "sourceHash": "3459b020ca4125d685ce89c9997e657995a92e547e73a5af3f02c0fe6d283cf4",
-      "htmlHash": "5669d698ccd455add0b8e60a2b427d751c5d6fe43deae08e5711da038d83e9c4"
+      "htmlHash": "470b75f17d85db6e1df928dce81e188bf6cbecee9696d70c41440f7ab92e8493"
     },
     {
       "slug": "architecture",
@@ -41,8 +41,8 @@
     {
       "slug": "requirements",
       "source": "requirements.md",
-      "sourceHash": "1389533d6b472edd60bda9cfd9698c22b5d90424ac792fd356d552fb271fd166",
-      "htmlHash": "c619acaa59ec1bc33556d0327147082099217639b22bf9ae318526691e63cc76"
+      "sourceHash": "de8a681c43988b7aebf5bc28ffdbe879e15e9f6f6c06d1450479fef4e7b41be2",
+      "htmlHash": "6fd94bf986f6b8954cb27759859322b3c19eea20d1c2300b6cbfe1b5adb7888b"
     },
     {
       "slug": "other-clients",
@@ -89,8 +89,8 @@
     {
       "slug": "browser",
       "source": "browser.md",
-      "sourceHash": "f8010d1a71ddede2520833a5c8954ebee5652bfeb5b9e9d5e81c810691270d60",
-      "htmlHash": "c853e3fa3c692c0822a1fb85d06473f23bb3c1b4416b9b59c6f29eca2796c26f"
+      "sourceHash": "983ecdceb57e4e7a39ac7a7dff43751abef607670415628067a0df06886f1078",
+      "htmlHash": "494183530a7622c3396ed7a4aa02d359f02cef69e234cba6dbf90c07adcd93df"
     },
     {
       "slug": "security",
@@ -113,20 +113,20 @@
     {
       "slug": "source-build",
       "source": "source-build.md",
-      "sourceHash": "5eac9dc027855777f475fccc382ca1ac43b8e0de7bba4f40159c5d378039f520",
-      "htmlHash": "444697b7a565261e06667215a9f32847316d68e0617d915aa37d7baf80a357c3"
+      "sourceHash": "6aece71fc267b65132a837cd97fd7aa00143ac07524d7cb60aeaf84a071417fa",
+      "htmlHash": "ba46d23eb1cd28aecf7b62131cc56443112a19f413e7dfc14f94006e05080b36"
     },
     {
       "slug": "maintenance",
       "source": "maintenance.md",
-      "sourceHash": "0a1033e4414ffbaf4425b16b5bb68a60fafa9477c304ed86f4cbb4e6e21f2efe",
-      "htmlHash": "e457ef3fa3f5b34ea2e7b8d4b2ac87ef102b9afeeb5491cc113e5952605e4465"
+      "sourceHash": "03024ea6f072310b7addddc10966c69d454de4254953317caea8fe7b6731c80a",
+      "htmlHash": "2c5f1f322a975754332becf5fac061aad8102d9abfd15b4d32ffe33a3c727fe4"
     },
     {
       "slug": "discord",
       "source": "discord.md",
-      "sourceHash": "aa9b8a6fc7daa209272fb00d158d4c42f240e36db8ebb6c46d400fcc40e37edf",
-      "htmlHash": "2a334563eb3944e760cfc2667a48010e20a1cdf2a79416ff534487cea16722f2"
+      "sourceHash": "dea6eeb9f02feaa3431c430995c70830dc1658c2965c2f5419e592cda3abc4f3",
+      "htmlHash": "f2f1972047ac2888cc90885f3c48f0669492a5cef3b026acfc136b48ba52567f"
     },
     {
       "slug": "personal-assistant",
@@ -137,14 +137,14 @@
     {
       "slug": "compatibility",
       "source": "compatibility.md",
-      "sourceHash": "ab8b42f1979dcacc11ec35afc8a87245318a3587ada3d4bb66b66691429946c7",
-      "htmlHash": "469ea19ee7ea3d96a93f581074669feb96386628f732b6286828e668f8bb7501"
+      "sourceHash": "a82026e5ec6d6dc3ed0c6fa87abba5ede18beee07d0fe3782716cfb72ca2ea84",
+      "htmlHash": "26433281f0f40b13dfb53d773349ea5132043b7ab1897f3ba09140fa8d1f20e5"
     },
     {
       "slug": "troubleshooting",
       "source": "troubleshooting.md",
-      "sourceHash": "736ea0a8b7ee801c19a18757056db8b70a9b1b50b875e4648f8e5e022b4048f2",
-      "htmlHash": "80358706d73bb98fceec5d4f75f24727bc9457151fe75e1697d1b53df9e623d9"
+      "sourceHash": "53911ea189f669c210df5a2e3b7b783958a41d6893ebb39b9a76d9b779878588",
+      "htmlHash": "532f3a77a0efa7a4a2e10c98001a46372e794ff3d53400f0b5cb6d61512d926b"
     },
     {
       "slug": "integrations/web",
@@ -213,140 +213,148 @@
       "htmlHash": "ac9d2e74be841ed8e355f371522ef88e5044eb071f2e46b35d273eafaecb1634"
     },
     {
+      "slug": "releases/0.13.1",
+      "source": "CHANGELOG.md",
+      "version": "0.13.1",
+      "publicationSource": "docs/releases/catalog.json",
+      "sourceHash": "892d7b2458012c2cc2587de43f35c3961b04cbaece58c6093af498aa8398e2fb",
+      "htmlHash": "8199af8dfd16cc7dea30280961677112bfc0a489a0216653301d98fbf4b6d5b1"
+    },
+    {
       "slug": "releases/1.0.0-alpha.1",
       "source": "CHANGELOG.md",
       "version": "1.0.0-alpha.1",
       "publicationSource": "docs/releases/catalog.json",
-      "sourceHash": "774bf893d075557733378a0f1aff3137843ead8e6a3f3ff834fc60efbf02c58f",
-      "htmlHash": "a156fd84d4d10f400d1a456238ee7290f40c0d68181bef292949d580128fb173"
+      "sourceHash": "44f27035f96a7bc701daf6f4887e26a07cc7f22f778daf7c670e7c9a9f628c88",
+      "htmlHash": "64080f8fe8ab0d4bb2ce578fdb1205db956983278b597fe05d96e5532a8b9628"
     },
     {
       "slug": "releases/0.13.0",
       "source": "CHANGELOG.md",
       "version": "0.13.0",
       "publicationSource": "docs/releases/catalog.json",
-      "sourceHash": "3584254d3a40c32e8966c2c7b58d41f0f41d0ca49974cdbbb029d358f49898b9",
-      "htmlHash": "48524f5877a560c35f743783eeb23cccc094a2b8ab43f57a9ca6d05ba673b01e"
+      "sourceHash": "3aacf7b9279583f073bc6d457c6f162429330788107e537ecb63117c99448464",
+      "htmlHash": "73ee735c840aa0da41649aaf61fdc592409c1bb9148215139f854dfaa02637e5"
     },
     {
       "slug": "releases/0.12.0",
       "source": "CHANGELOG.md",
       "version": "0.12.0",
       "publicationSource": "docs/releases/catalog.json",
-      "sourceHash": "af42c7fd23cf4c4ee12a1afd045f54d7bc1dcc0858830ecccbe08d1cf3f0b8ff",
-      "htmlHash": "55a5ebfaf794e48595abe078f71dc97749d6d42403bb9967a14e7c7a6fe9e483"
+      "sourceHash": "fbfeb0689ebadb1fa9c1aefeea205d17c49a3061acbb53b5aa70d32342073238",
+      "htmlHash": "6bd7808a3603221c7be9dca66002cf566ff13f628aa924496545a5b9c4c838bd"
     },
     {
       "slug": "releases/0.11.1",
       "source": "CHANGELOG.md",
       "version": "0.11.1",
       "publicationSource": "docs/releases/catalog.json",
-      "sourceHash": "09471a19b24d9bfaa0bb655bb64ea87dd42d3c16cc36f0879c84072564e8f8da",
-      "htmlHash": "61b0586371e6923eced198a0ddc5b2dcfbf7b798199689a463318001f2d90d84"
+      "sourceHash": "a8f06de66f3ebb0e1faf6a2cff475586ebc523b2b96fa72a224c4bc2f10ba53b",
+      "htmlHash": "35df7e7e100e546c2de9d73efada0d429ec462e7e9f111a8e5a3d27964a5ec3d"
     },
     {
       "slug": "releases/0.11.0",
       "source": "CHANGELOG.md",
       "version": "0.11.0",
       "publicationSource": "docs/releases/catalog.json",
-      "sourceHash": "e199ee4b24d9f0cad18bb938b4a7bc632190b2c11cee08507d2d270ccdbb223f",
-      "htmlHash": "1a5d71c4ef4d05854012d31341ec85eae8a4e33cd092ee86ef71f384e45f9f2d"
+      "sourceHash": "877a6f915ca35145907b2aedc81ab7d77e39e4fdb1523f0a66398dd0de6a080a",
+      "htmlHash": "2195326a3c6a49b0993f4345d8b7e63c08fe94e774c46fda5c5b1ce4feaf3e50"
     },
     {
       "slug": "releases/0.10.0",
       "source": "CHANGELOG.md",
       "version": "0.10.0",
       "publicationSource": "docs/releases/catalog.json",
-      "sourceHash": "62c78806f32e096cfd63a580c06aa739b8b043f0084df691d33dded3ca981f3b",
-      "htmlHash": "1ef8be6b64f8d2a2c02a74b1e457818d41f31970f6a5d8523d2e841fa4b207ec"
+      "sourceHash": "4d713d0b81d90c3cdbba9315945ef3d6072ca62817e65e9c083ca66d443f2d09",
+      "htmlHash": "b615d376cb62687f876f6add32bd72991b8d3551c9125e9dab95145a80eaf52b"
     },
     {
       "slug": "releases/0.9.0",
       "source": "CHANGELOG.md",
       "version": "0.9.0",
       "publicationSource": "docs/releases/catalog.json",
-      "sourceHash": "a281c5327818f6e9e22be0c7f392994224bf0d3fd2644c5b2310942e96bdacd0",
-      "htmlHash": "1c68600a0e83708dd7af80d9e13a2150565f211cf32b5b42811228e21ea9fda8"
+      "sourceHash": "11337ebed0b3ab8f6a1871f3fab8b7bc1f470a5df2ec8cb3f2f99efb56612e95",
+      "htmlHash": "9ded0e25f6652844957a18f7d6bd6f028783fa4f0f318364f9c6eba0c5c48d91"
     },
     {
       "slug": "releases/0.8.1",
       "source": "CHANGELOG.md",
       "version": "0.8.1",
       "publicationSource": "docs/releases/catalog.json",
-      "sourceHash": "f61e4b6ddfc1ed60c279ba91265a0c508b0f45cb63dab048e7a923a63d7cdef5",
-      "htmlHash": "20ff6cf9a4668c1ab4eba5b3e824282fc4b156ff7c4358502313aeec2ce46ca6"
+      "sourceHash": "7f639f9c989712e59d611572cc4546f7a930f25ed1c84f6e13a46084a61533a0",
+      "htmlHash": "1fd5b8faf2f2e92e7439c480e8eeca576525665160c920a98419263419ecfac1"
     },
     {
       "slug": "releases/0.8.0",
       "source": "CHANGELOG.md",
       "version": "0.8.0",
       "publicationSource": "docs/releases/catalog.json",
-      "sourceHash": "75e9c010e0c555590430f7d36d835c7150f9485e4e0d42849c52b64a006a4e9a",
-      "htmlHash": "ed10cf2debea970a4a45ae066bf273975242b3c93d5ccdd8db5a2d66bf1cc718"
+      "sourceHash": "a457315fffba1e706064fb9f7095a593202308b88abf6fbb063d2234789ba0ce",
+      "htmlHash": "a87047e046718fdb58180cf045d36476822a116c024bd3316dc309782b609973"
     },
     {
       "slug": "releases/0.7.0",
       "source": "CHANGELOG.md",
       "version": "0.7.0",
       "publicationSource": "docs/releases/catalog.json",
-      "sourceHash": "83b7f9407308637908a8ad850545b8bc23c3fc19d0885e615f255d7207865fa2",
-      "htmlHash": "0fadcc8b3013158af2915ece84ac0af4c9397cd4fd241348ff7bd30e6ad9b49f"
+      "sourceHash": "849989dcb305d8634602550767473efc7009c07859a5b1f06f7c11a4a489e0de",
+      "htmlHash": "eee0945f28a92c02b22e616ff8eeafc2e80cca6dd3ef2cbffc3cbc1acdc99098"
     },
     {
       "slug": "releases/0.6.1",
       "source": "CHANGELOG.md",
       "version": "0.6.1",
       "publicationSource": "docs/releases/catalog.json",
-      "sourceHash": "f3dc1bb64ae1f808eac0229f74b15cf56472a7317706e6999281f55f2f401967",
-      "htmlHash": "d88a3fa9e2297d3cc196a2a29cdba8ab7a1a40c91f469b926c79f2b96cc083fa"
+      "sourceHash": "61bc6263a2840451d148319794ee7c48009edcf0d5a333cbdd35014b08b8da9c",
+      "htmlHash": "cceec21ed6d8ea6ab8985346897e08fc8300f96471c371333629047f92810dd2"
     },
     {
       "slug": "releases/0.6.0",
       "source": "CHANGELOG.md",
       "version": "0.6.0",
       "publicationSource": "docs/releases/catalog.json",
-      "sourceHash": "eb2ad1c36da633de42cdc754014fdd557a95e91059e35f9e31d7bffafc0ff663",
-      "htmlHash": "d3cff47a590e91f7ebc888b2f0f2771b439f14dfb4fcc2505e03d9355f0a0405"
+      "sourceHash": "1be8841c04e577b4dab6df6281c8ca0fe9b211be04f82105eb7217d24921a59f",
+      "htmlHash": "ed53d75381f5d94e83d4f83d0f19387dbe972949269263e70ca8933bf3c00cb9"
     },
     {
       "slug": "releases/0.5.0",
       "source": "CHANGELOG.md",
       "version": "0.5.0",
       "publicationSource": "docs/releases/catalog.json",
-      "sourceHash": "ac4d9c9363829168d0fe7ab9865a43a6402ac18b7f9cb00e2aab4f2a4644f708",
-      "htmlHash": "c07ec5db1e54c445fb581ba279e8202868e4c3e8ffc26fbdb438fb13ed9a0dda"
+      "sourceHash": "bbddf67a9c76a0cde49d8561ed9639b55460eff50f449a247f839a7d17e21067",
+      "htmlHash": "7587238a52d606a43a4bc965a0680dfa3643a5a0abf15a5a3bae29544f596491"
     },
     {
       "slug": "releases/0.4.0",
       "source": "CHANGELOG.md",
       "version": "0.4.0",
       "publicationSource": "docs/releases/catalog.json",
-      "sourceHash": "006cb2545dad7c50195ec08bf2f8dcd56086b9b8d2ff41f192b08ee685c8821f",
-      "htmlHash": "94798c0b85191f68650c1ac833a703ba678aba31577760aa613deac41dd24f91"
+      "sourceHash": "87c4bde87e38ce821abf72f69099ad2f9cc579e9a1209c6971e3abf8a7ad91fe",
+      "htmlHash": "6633c500ee92fba444c34cad0086cf548dfdc2fea69add8b9133c29e1f9bcd5d"
     },
     {
       "slug": "releases/0.3.1",
       "source": "CHANGELOG.md",
       "version": "0.3.1",
       "publicationSource": "docs/releases/catalog.json",
-      "sourceHash": "ae9dc2cc4e19536846f2d1d0e2439f33a884a1e40dc0aaf10381bf15d6068991",
-      "htmlHash": "d52b7104fb76500962b3663898af24181311a0ecc78f965ef80026caec70750a"
+      "sourceHash": "ac42f80cab22b5329886ecf6e8f5510fc70c469d70f9cfd36dac69b8c8bc4bc7",
+      "htmlHash": "3c38265ffe8c76d26ac84620334010bb93ef53c8657ed054d3cf85dcdd1ab7e9"
     },
     {
       "slug": "releases/0.3.0",
       "source": "CHANGELOG.md",
       "version": "0.3.0",
       "publicationSource": "docs/releases/catalog.json",
-      "sourceHash": "3305fc15a8ca01b83524de325f607e95f40774d94ce5d79afba374c2c9168f0d",
-      "htmlHash": "c29f8db8ca01556742591efea24d6d9189fb043884e41db98649dc2d3e278b87"
+      "sourceHash": "6a181373fba23840463f04d179891638173be8c8851d1a2321a7f18b6b6504a7",
+      "htmlHash": "fb83d0123407ca807b4d5543ccd78570a226ef880e43fc741b822f82b09d98fe"
     },
     {
       "slug": "releases/0.2.0",
       "source": "CHANGELOG.md",
       "version": "0.2.0",
       "publicationSource": "docs/releases/catalog.json",
-      "sourceHash": "67d2cc65c55b83f1014db499f223926d8f5eb7876fb953e348c6bedd9ace7f00",
-      "htmlHash": "c955f3137a3cd8fd34a2e98babc030aff445d5319ad46574c874cb7eeff4aaec"
+      "sourceHash": "795639f724a6f77f898e72c740ce83232ee97441d213f50c248241a1d5672060",
+      "htmlHash": "b121a0bcb2a818ea441f8517132fd38cfa6f19c7c0f96ad569e1e372f53a85c1"
     }
   ]
 }

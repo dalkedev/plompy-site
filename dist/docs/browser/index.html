@@ -12,7 +12,7 @@ docker compose --profile browser pull local-browser
 docker compose --profile browser run --rm -T local-browser \
   node scripts/integrations.mjs add playwright --mode local
 docker compose --profile browser up -d local-browser</code></pre></div>
-<p>The selected image is <code>ghcr.io/dalkedev/plompy-engine:0.13.0-local-browser</code>. Check it before reconnecting the client:</p>
+<p>The selected image is <code>ghcr.io/dalkedev/plompy-engine:0.13.1-local-browser</code>. Check it before reconnecting the client:</p>
 <div class="doc-code"><div class="code-caption"><span>sh</span><button type="button" class="copy-code" aria-label="Copy code example">Copy</button></div><pre tabindex="0"><code>docker compose --profile browser exec -T local-browser \
   node scripts/integrations.mjs test --mode local</code></pre></div>
 <p>Run local status and ask your host client to rediscover tools. A core image with a Playwright entry in its config does not acquire Chromium automatically; it must use the browser image.</p>

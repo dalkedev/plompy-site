@@ -8,7 +8,7 @@
 <h2 id="update-a-versioned-installation">Update a versioned installation<a class="heading-anchor" href="#update-a-versioned-installation" aria-label="Link to Update a versioned installation">#</a></h2>
 <p>Read the target release notes and download its Local starter kit. Keep a copy of your current Compose files and record the running image digest first. Stop the selected service and take a private backup before replacing the kit files.</p>
 <p>Use the new kit in the same deployment directory, preserving your deliberate configuration changes. The kit uses the fixed Compose project name <code>plompy-local</code> and named volumes for config, secrets and artifacts. Preserve that name, or your explicit <code>-p</code> project name, when updating. Do not run two services against the same volumes and port.</p>
-<p>For the current 0.13.0 kit, the core image is pinned to <code>ghcr.io/dalkedev/plompy-engine:0.13.0-local</code>. After installing the intended kit:</p>
+<p>For the current 0.13.1 kit, the core image is pinned to <code>ghcr.io/dalkedev/plompy-engine:0.13.1-local</code>. After installing the intended kit:</p>
 <div class="doc-code"><div class="code-caption"><span>sh</span><button type="button" class="copy-code" aria-label="Copy code example">Copy</button></div><pre tabindex="0"><code>docker compose pull local
 docker compose up -d local
 docker compose exec -T local \

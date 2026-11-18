@@ -6,7 +6,7 @@
 <main id="doc-main" tabindex="-1"><div class="doc-breadcrumb"><a href="/docs/">Documentation</a><span aria-hidden="true">/</span><span>Build from source</span></div><article class="doc-article"><h1>Build a selected source revision</h1>
 <p>The <a href="/docs/quickstart/">starter kit</a> is the shortest route to a running gateway. Use this guide when you want to inspect or modify the implementation and build your own images. Source builds require Git and Docker Compose; the Docker build installs the locked Node dependencies.</p>
 <h2 id="check-out-the-release">Check out the release<a class="heading-anchor" href="#check-out-the-release" aria-label="Link to Check out the release">#</a></h2>
-<div class="doc-code"><div class="code-caption"><span>sh</span><button type="button" class="copy-code" aria-label="Copy code example">Copy</button></div><pre tabindex="0"><code>git clone --branch v0.13.0 --depth 1 https://github.com/dalkedev/plompy-engine.git
+<div class="doc-code"><div class="code-caption"><span>sh</span><button type="button" class="copy-code" aria-label="Copy code example">Copy</button></div><pre tabindex="0"><code>git clone --branch v0.13.1 --depth 1 https://github.com/dalkedev/plompy-engine.git
 cd plompy-engine
 docker compose -f compose.local.yaml build local
 docker compose -f compose.local.yaml run --rm -T local \
@@ -17,7 +17,7 @@ docker compose -f compose.local.yaml exec -T local \
 <p>The repository&#39;s <code>compose.local.yaml</code> builds <code>Dockerfile.local</code> and uses development image names. The repository&#39;s plain <code>compose.yaml</code> starts the separate Discord engine. Always keep <code>-f compose.local.yaml</code> on source-build commands.</p>
 <p>The Local source Compose project and downloaded starter kit both default to the project name <code>plompy-local</code>. Use a different project name and loopback port for an independent development instance with its own volumes.</p>
 <h2 id="use-a-different-host-port">Use a different host port<a class="heading-anchor" href="#use-a-different-host-port" aria-label="Link to Use a different host port">#</a></h2>
-<p>This requires a source revision or starter kit that supports <code>PLOMPY_LOCAL_HOST_PORT</code>; published 0.13.0 and 1.0.0-alpha.1 use a fixed port. Choose an available TCP port from <code>1024</code> to <code>65535</code> and set it in the local Compose <code>.env</code> file. Use a unique Compose project name for a second instance. For example, with a separate checkout of current source, set:</p>
+<p>Choose an available TCP port from <code>1024</code> to <code>65535</code> and set <code>PLOMPY_LOCAL_HOST_PORT</code> in the local Compose <code>.env</code> file. Use a unique Compose project name for a second instance. For example, with a separate checkout, set:</p>
 <div class="doc-code"><div class="code-caption"><span>dotenv</span><button type="button" class="copy-code" aria-label="Copy code example">Copy</button></div><pre tabindex="0"><code>COMPOSE_PROJECT_NAME=plompy-local-dev
 PLOMPY_LOCAL_HOST_PORT=17331</code></pre></div>
 <p>Build and start with <code>-f compose.local.yaml</code> as above. To apply the port to a running installation, run <code>docker compose -f compose.local.yaml up -d --force-recreate local</code> using its existing project name. Docker still publishes only on <code>127.0.0.1</code>. Private config, the access token and artifacts stay in their volumes. Check the actual port and regenerate your client fragment before reconnecting:</p>
