@@ -184,7 +184,7 @@ function replaceMetadata(html, language, origin) {
     '@context': 'https://schema.org',
     '@graph': [
       { '@type': 'WebSite', '@id': `${rootURL}#website`, name: siteName, alternateName: ['plompy-engine', 'plompy.dev'], url: rootURL, inLanguage: ['en', 'pl'] },
-      { '@type': 'SoftwareSourceCode', '@id': `${rootURL}#software`, name: 'plompy-engine', alternateName: siteName, description: meta.description, url: pageURL,
+      { '@type': 'SoftwareSourceCode', '@id': `${rootURL}#software`, name: 'plompy-engine', alternateName: [siteName, 'Szpont Engine', 'szpont-engine'], description: meta.description, url: pageURL,
         codeRepository: repository, license: `${repository}/blob/main/LICENSE`, programmingLanguage: 'TypeScript', runtimePlatform: 'Node.js on Linux' },
     ],
   };
