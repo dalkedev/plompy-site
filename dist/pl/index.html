@@ -11,9 +11,11 @@
   <link rel="stylesheet" href="/ocean-hero.css">
   <link rel="stylesheet" href="/journey.css">
   <link rel="stylesheet" href="/reef.css">
+  <link rel="stylesheet" href="/routes.css">
   <script src="/app.js" defer></script>
   <script src="/ocean-hero.js" defer></script>
   <script src="/journey.js" defer></script>
+  <script src="/routes.js" defer></script>
   <title>Plompy: Agenci AI na Twoim serwerze, sterowani z Discorda</title>
   <meta name="description" content="Plompy uruchamia agentów AI z Discorda na Twoim serwerze z Linuksem. Zachowuje sesje i kontekst w Markdown oraz udostępnia narzędzia przez MCP.">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -105,6 +107,11 @@
     <div class="ocean-intro">
       <h1 id="ocean-title" data-i18n="oceanTitle">Mała ryba.<br>Wielkie pomysły.</h1>
       <p data-i18n="oceanIntro">Daj lokalnemu agentowi dostęp do narzędzi przez MCP i Docker albo uruchamiaj zadania z prywatnych wątków Discorda na swoim serwerze z Linuksem.</p>
+      <div class="route-invitation">
+        <span data-i18n="tryRoutes">Wypróbuj trasę</span>
+        <a data-route-open="local" href="#route-local">Local MCP</a>
+        <a data-route-open="discord" href="#route-discord">Discord</a>
+      </div>
       <div class="ocean-actions">
         <a href="/docs/quickstart/" class="button button-primary"><span data-i18n="runLocally">Uruchom lokalnie</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         <a href="/docs/discord/" class="button button-outline"><span data-i18n="connectDiscord">Podłącz Discord</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
@@ -128,7 +135,7 @@
         <path class="ocean-tide" d="M175 54C192 42 212 48 227 60S266 75 281 59M413 452C425 444 435 444 446 452S468 460 480 451"/>
         <circle class="ocean-dot" cx="162" cy="204" r="3"/><circle class="ocean-dot" cx="455" cy="188" r="3"/>
       </svg>
-      <a class="ocean-discord ocean-map-link" href="#how-it-works"><span class="ocean-discord-mark"><svg aria-hidden="true"><use href="#i-discord"/></svg></span><strong>Discord</strong><small data-i18n="oceanAnywhere">Ty, z dowolnego miejsca.</small><span class="ocean-mini-message" data-i18n="oceanMessage">zbudujmy coś</span></a>
+      <a class="ocean-discord ocean-map-link" data-ocean-route="discord" href="#how-it-works"><span class="ocean-discord-mark"><svg aria-hidden="true"><use href="#i-discord"/></svg></span><strong>Discord</strong><small data-i18n="oceanAnywhere">Ty, z dowolnego miejsca.</small><span class="ocean-mini-message" data-i18n="oceanMessage">zbudujmy coś</span></a>
       <div class="ocean-swimmer">
         <span class="ocean-speech" data-i18n="oceanSpeech" role="status" aria-live="polite"></span>
         <button type="button" class="ocean-fish" aria-label="Przywitaj się z Plompy">
@@ -142,15 +149,71 @@
           <span class="ocean-fish-hint" data-i18n="oceanFishHint">przywitaj się</span>
         </button>
       </div>
-      <div class="ocean-host"><strong>plompy-engine</strong><span data-i18n="oceanHost">Na Twojej maszynie z Linuksem</span></div>
-      <a class="ocean-destination ocean-coding ocean-map-link" href="#integrations"><span class="ocean-node-icon"><svg aria-hidden="true"><use href="#i-code"/></svg></span><strong data-i18n="codingAgents">Agenci do kodu</strong><small>Codex / Claude / OpenCode</small></a>
-      <a class="ocean-destination ocean-tools ocean-map-link" href="#integrations"><span class="ocean-node-icon"><svg aria-hidden="true"><use href="#i-browser"/></svg></span><strong data-i18n="yourTools">Twoje narzędzia</strong><small data-i18n="oceanToolNames">GitHub / Przeglądarka / MCP</small></a>
-      <a class="ocean-destination ocean-memory ocean-map-link" href="#make-it-yours"><span class="ocean-node-icon"><svg aria-hidden="true"><use href="#i-book"/></svg></span><strong data-i18n="yourContext">Twój kontekst</strong><small>Markdown / Memory / Git</small></a>
+      <div class="ocean-host" data-ocean-route="discord"><strong>plompy-engine</strong><span data-i18n="oceanHost">Na Twojej maszynie z Linuksem</span></div>
+      <a class="ocean-destination ocean-coding ocean-map-link" data-ocean-route="discord" href="#integrations"><span class="ocean-node-icon"><svg aria-hidden="true"><use href="#i-code"/></svg></span><strong data-i18n="codingAgents">Agenci do kodu</strong><small>Codex / Claude / OpenCode</small></a>
+      <a class="ocean-destination ocean-tools ocean-map-link" data-ocean-route="discord" href="#integrations"><span class="ocean-node-icon"><svg aria-hidden="true"><use href="#i-browser"/></svg></span><strong data-i18n="yourTools">Twoje narzędzia</strong><small data-i18n="oceanToolNames">GitHub / Przeglądarka / MCP</small></a>
+      <a class="ocean-destination ocean-memory ocean-map-link" data-ocean-route="discord" href="#make-it-yours"><span class="ocean-node-icon"><svg aria-hidden="true"><use href="#i-book"/></svg></span><strong data-i18n="yourContext">Twój kontekst</strong><small>Markdown / Memory / Git</small></a>
+      <a class="ocean-discord ocean-map-link" data-ocean-route="local" hidden href="#route-local"><span class="ocean-discord-mark"><svg aria-hidden="true"><use href="#i-code"/></svg></span><strong data-i18n="mapClient">Twój agent</strong><small>Codex / Claude / OpenCode</small><span class="ocean-mini-message" data-i18n="mapSample">Odczytaj stronę</span></a>
+      <div class="ocean-host" data-ocean-route="local" hidden><strong>Plompy Local</strong><span data-i18n="mapGateway">Na Twoim komputerze</span></div>
+      <a class="ocean-destination ocean-coding ocean-map-link" data-ocean-route="local" hidden href="#route-local"><span class="ocean-node-icon"><svg aria-hidden="true"><use href="#i-browser"/></svg></span><strong data-i18n="mapRead">Odczyt</strong><small>web_fetch</small></a>
+      <a class="ocean-destination ocean-tools ocean-map-link" data-ocean-route="local" hidden href="#route-local"><span class="ocean-node-icon"><svg aria-hidden="true"><use href="#i-code"/></svg></span><strong data-i18n="mapExport">Zapis</strong><small>artifacts_export</small></a>
+      <a class="ocean-destination ocean-memory ocean-map-link" data-ocean-route="local" hidden href="#route-local"><span class="ocean-node-icon"><svg aria-hidden="true"><use href="#i-book"/></svg></span><strong data-i18n="mapArtifact">Twój plik</strong><small>JSON</small></a>
+      <span class="ocean-return-label" data-ocean-route="local" hidden data-i18n="mapReturn">i z powrotem z plikiem</span>
       <div class="ocean-bubbles" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
-      <span class="ocean-return-label" data-i18n="oceanReturn">i z powrotem do Twojego wątku</span>
+      <span class="ocean-return-label" data-ocean-route="discord" data-i18n="oceanReturn">i z powrotem do Twojego wątku</span>
     </div>
   </div>
-  <div class="ocean-bottom"><a class="ocean-dive" href="#how-it-works"><span class="ocean-dive-icon" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span><span data-i18n="oceanDive">Płyń za rybą.<br>Zobacz, jak to działa.</span></a><span class="ocean-bottom-note" data-i18n="oceanBottomNote">Mały silnik. Cały ocean możliwości.</span><button type="button" class="motion-toggle" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-pause"/></svg><span data-i18n="pauseMotion">Zatrzymaj animacje</span></button></div>
+  <div class="ocean-bottom"><a class="ocean-dive" href="#routes"><span class="ocean-dive-icon" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span><span data-i18n="oceanDive">Płyń za rybą.<br>Zobacz, jak to działa.</span></a><span class="ocean-bottom-note" data-i18n="oceanBottomNote">Mały silnik. Cały ocean możliwości.</span><button type="button" class="motion-toggle" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-pause"/></svg><span data-i18n="pauseMotion">Zatrzymaj animacje</span></button></div>
+</section>
+<section class="route-lab" id="routes" aria-labelledby="routes-heading">
+  <div class="wrap">
+    <div class="route-intro">
+      <h2 id="routes-heading" data-i18n="routesTitle">Prześledź zadanie w Plompy</h2>
+      <p data-i18n="routesLead">Dwie symulacje w przeglądarce. Wypróbuj je na przykładowych danych, a potem uruchom wybrany scenariusz u siebie.</p>
+    </div>
+    <div class="route-switch" role="group" aria-labelledby="routes-heading" data-route-js>
+      <button type="button" data-route-select="local" aria-pressed="true" aria-controls="route-local">Local MCP</button>
+      <button type="button" data-route-select="discord" aria-pressed="false" aria-controls="route-discord">Discord</button>
+    </div>
+    <noscript><p data-i18n="noJsRoute">Włącz JavaScript, aby wypróbować interaktywne kroki. Instrukcje konfiguracji są dostępne bez niego.</p></noscript>
+    <article class="route-scene" id="route-local" tabindex="-1" aria-labelledby="route-local-title">
+      <div class="route-story">
+        <h3 id="route-local-title" data-i18n="localHeading">Zapisz źródło w pliku.</h3>
+        <p data-i18n="localExplanation">Odczytaj dołączoną próbkę dokumentacji Plompy. Zapisz w pliku JSON tytuł strony, adres źródła i czas odczytu.</p>
+        <div class="route-controls" data-route-js>
+          <button class="button button-primary" type="button" id="route-read" data-i18n="localRead">Odczytaj próbkę</button>
+          <button class="route-secondary" type="button" id="route-local-reset" hidden data-i18n="routeReset">Zacznij od nowa</button>
+        </div>
+        <a class="route-guide" href="/docs/quickstart/" data-i18n="runLocally">Uruchom lokalnie</a>
+      </div>
+      <div class="route-display" data-route-display="local">
+        <div class="route-console-head"><span><svg class="icon" aria-hidden="true"><use href="#i-browser"/></svg>Local MCP</span><small data-i18n="simulationNote">Symulacja w przeglądarce</small></div>
+        <div class="route-source" data-source-url="https://plompy.dev/docs/"><div><small data-i18n="sampleDoc">Próbka dokumentacji</small><p data-source-title lang="en">Introduction | Plompy Docs</p><code>plompy.dev/docs/</code></div><img src="/assets/logo.webp" alt="" loading="lazy" width="74" height="74"></div>
+        <div class="route-record"><p class="route-file">plompy-first-result.json</p><p id="route-empty" data-i18n="localEmpty">Tu pojawi się Twój rekord.</p><pre id="route-record" hidden></pre></div>
+        <p class="route-notice" id="route-local-notice" role="status"></p>
+      </div>
+    </article>
+    <article class="route-scene" id="route-discord" tabindex="-1" aria-labelledby="route-discord-title">
+      <div class="route-story">
+        <h3 id="route-discord-title" data-i18n="discordHeading">Przerwij pracę agenta.</h3>
+        <p data-i18n="discordExplanation">W prywatnym wątku powstaje notka do wydania. Przerwij zadanie, zajrzyj do kolejki i zdecyduj, co zrobić z zapisaną sesją.</p>
+        <div class="route-controls" data-route-js>
+          <button class="button button-primary" type="button" id="route-advance" data-i18n="discordAction">Przerwij zadanie</button>
+          <button class="route-secondary" type="button" id="route-hold" hidden data-i18n="pauseDecision">Pozostaw wstrzymane</button>
+        </div>
+        <a class="route-guide" href="/docs/discord/" data-i18n="connectDiscord">Podłącz Discord</a>
+      </div>
+      <div class="route-display">
+        <div class="route-console-head"><span><svg class="icon" aria-hidden="true"><use href="#i-discord"/></svg># release</span><small data-i18n="simulationNote">Symulacja w przeglądarce</small></div>
+        <div class="route-log">
+          <div class="route-job"><img src="/assets/logo.webp" loading="lazy" alt="" width="48" height="48"><p id="route-job" data-i18n="discordInitial">Trwa przygotowanie notki do wydania.</p></div>
+          <pre id="route-log">#release · running · Codex</pre>
+        </div>
+        <p class="sr-only" id="route-discord-notice" role="status"></p>
+        <a class="route-guide route-transcript" href="https://github.com/dalkedev/plompy-engine/blob/v0.13.1/assets/screenshots/recovery.txt" data-i18n="discordSource">Zobacz zapis odzyskiwania</a>
+      </div>
+    </article>
+  </div>
 </section>
 <section class="journey" id="how-it-works" aria-labelledby="journey-heading">
   <div class="wrap journey-heading">
