@@ -14,7 +14,8 @@ Open [the English preview](http://127.0.0.1:4173/) or [the Polish preview](http:
 ## Features
 
 - Static English `/` and Polish `/pl/` pages, selected through native links with `aria-current`.
-- Discord → self-hosted engine → tools → reply diagram with a continuous ten-second signal loop, mobile feedback and offscreen pause.
+- A selectable hero diagram shows the Local MCP path from agent to JSON file or the Discord path from thread to worker and back.
+- The bilingual `#routes` section lets visitors export a local JSON record from a bundled docs sample or replay explicit Discord recovery using the stable release's synthetic transcript. Both demos run in the browser.
 - Scroll-controlled, three-step synthetic conversation; direct step controls on all devices.
 - Ten keyboard-accessible integration tabs with a stable preview panel, runner-specific command previews and copy controls.
 - Always-visible answers about hosting, supported runners and recovery.
@@ -43,7 +44,7 @@ The Sites deployment remains an owner-private preview at https://plompy-engine.v
 
 ## Ocean walkthrough
 
-The hero uses the existing Plompy mascot and SVG connection paths. `ocean-hero.js` handles the greeting and visibility-based animation pause. `journey.js` maps native vertical scroll to a horizontal three-stage walkthrough on fine-pointer viewports at least 1000 × 650 px; mobile, touch and paused motion use normal vertical document flow. Stage controls are keyboard accessible. Both motion controls synchronize through `plompy:motion-toggle` and the document motion attribute. The global motion preference honors the operating system.
+The hero uses the existing Plompy mascot and SVG connection paths. `ocean-hero.js` handles the greeting and visibility-based animation pause. `routes.js` and `routes.css` connect the hero diagram to the Local MCP and Discord simulations. `journey.js` maps native vertical scroll to a horizontal three-stage walkthrough on fine-pointer viewports at least 1000 × 650 px; mobile, touch and paused motion use normal vertical document flow. Stage controls are keyboard accessible. Both motion controls synchronize through `plompy:motion-toggle` and the document motion attribute. The global motion preference honors the operating system.
 
 The hero's `plompy-eyes-base.png` is an image-generated derivative of the original mascot with only its pupils removed. Two SVG pupils preserve the original neutral expression and look toward a hovered, keyboard-focused or touched diagram control. Gaze is bounded inside each eye and returns to neutral after interaction; paused or reduced motion uses an immediate pose change. The site uses WebP derivatives for the hero and shared logo. The original PNGs remain available as source artwork.
 
