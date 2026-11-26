@@ -147,8 +147,30 @@ html[data-motion=off] :is(.language [data-lang], .header-github, .header-github 
 .setup-entry p{max-width:610px;font-size:13px;color:var(--muted)}
 .setup-entry-actions{display:flex;align-items:center;gap:22px;flex-shrink:0}
 .setup-entry-actions .text-link{white-space:nowrap}
+.setup-local {
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+  gap: clamp(24px, 5vw, 64px);
+}
+.setup-local .setup-entry-actions { flex-wrap: wrap; margin-top: 22px; }
+.local-demo { margin: 0; }
+.local-demo video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg);
+}
+.local-demo figcaption {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
 @media(max-width:900px){
   .setup-entry{align-items:flex-start;flex-direction:column;gap:22px}
+  .setup-local{grid-template-columns:1fr;}
   .setup-entry-actions{flex-wrap:wrap;gap:12px 20px}
 }
 

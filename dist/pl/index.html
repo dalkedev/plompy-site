@@ -379,9 +379,17 @@
   </section>
   <section id="get-started" class="start-section wrap section-space"><div class="section-heading"><h2 data-i18n="startTitle">Skonfiguruj Plompy</h2></div>
     <div class="setup-entries">
-      <section class="setup-entry" aria-labelledby="local-heading">
-        <div><h3 id="local-heading" data-i18n="localTitle">Local MCP</h3><p data-i18n="localBody">Uruchom bramę przez Docker Compose i podłącz Codex, Claude Code lub OpenCode. Jeśli port 7331 jest zajęty, ustaw inny port lokalny.</p></div>
-        <div class="setup-entry-actions"><a class="button button-primary" href="/docs/quickstart/" data-i18n="runLocally">Uruchom lokalnie</a><a class="text-link" href="/docs/other-clients/" data-i18n="connectAgent">Podłącz swojego agenta</a><a class="text-link" href="/docs/ollama/" data-i18n="localModel">Użyj lokalnego modelu</a></div>
+      <section class="setup-entry setup-local" aria-labelledby="local-heading">
+        <div>
+          <h3 id="local-heading" data-i18n="localTitle">Local MCP</h3><p data-i18n="localBody">Uruchom bramę przez Docker Compose i podłącz Codex, Claude Code lub OpenCode. Jeśli port 7331 jest zajęty, ustaw inny port lokalny.</p>
+          <div class="setup-entry-actions"><a class="button button-primary" href="/docs/quickstart/" data-i18n="runLocally">Uruchom lokalnie</a><a class="text-link" href="/docs/other-clients/" data-i18n="connectAgent">Podłącz swojego agenta</a><a class="text-link" href="/docs/ollama/" data-i18n="localModel">Użyj lokalnego modelu</a></div>
+        </div>
+        <figure class="local-demo">
+          <video controls playsinline preload="none" width="1200" height="720" poster="/assets/plompy-demo.webp" src="/assets/plompy-demo.mp4" aria-labelledby="local-demo-caption">
+            <a href="/assets/plompy-demo.mp4" data-i18n="localDemoDownload">Pobierz nagranie Plompy Local</a>
+          </video>
+          <figcaption id="local-demo-caption" data-i18n="localDemoCaption">Plompy Local odczytuje definicję kodu HTTP 429 z dokumentu RFC 6585, zapisuje notatkę w pliku <code>http-429.md</code> i otwiera zapisany plik.</figcaption>
+        </figure>
       </section>
       <section class="setup-entry" aria-labelledby="discord-heading">
         <div><h3 id="discord-heading" data-i18n="discordTitle">Silnik Discord</h3><p data-i18n="discordBody">Uruchom silnik na Linuksie z własnym botem, prywatnym forum i zalogowanym agentem. Każdy wątek zachowuje swoją sesję i kontekst.</p></div>
