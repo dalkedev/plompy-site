@@ -28,6 +28,8 @@ const pl = {
   mapReturn: "i z powrotem z plikiem",
   mapGateway: "Na Twoim komputerze",
   localTitle:"Local MCP",
+  localDemoDownload: "Pobierz nagranie Plompy Local",
+  localDemoCaption: "Plompy Local odczytuje definicję kodu HTTP 429 z dokumentu RFC 6585, zapisuje notatkę w pliku <code>http-429.md</code> i otwiera zapisany plik.",
   releaseHistory:"Historia wydań",
   localBody:"Uruchom bramę przez Docker Compose i podłącz Codex, Claude Code lub OpenCode. Jeśli port 7331 jest zajęty, ustaw inny port lokalny.",
   runLocally:"Uruchom lokalnie",
